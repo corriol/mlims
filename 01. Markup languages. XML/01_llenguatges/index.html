@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.0.5" name="generator"/>
+<title>Markup language - MLIMS</title>
+<link href="../../assets/stylesheets/main.77f3fd56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
+<meta content="#8bc34b" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Lato";--md-code-font-family:""}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="light-green" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#markup-language">
+          Salta el contingut
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MLIMS" class="md-header__button md-logo" href="../.." title="MLIMS">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            MLIMS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Markup language
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__options">
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Cerca" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Cerca" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MLIMS" class="md-nav__button md-logo" href="../.." title="MLIMS">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    MLIMS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Markup language and information management systems
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        01. Markup languages. XML
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="01. Markup languages. XML" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          01. Markup languages. XML
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../00_index/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Markup language
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Markup language
+      </a>
+<nav aria-label="Taula de continguts" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concept-of-markup-language">
+    Concept of markup language
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advantages">
+    Advantages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-features">
+    Common features
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fields-of-applicacion">
+    Fields of applicacion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-markup-language">
+    Types of markup language
+  </a>
+<nav aria-label="Types of markup language" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#procedural-and-presentation">
+    Procedural and presentation
+  </a>
+<nav aria-label="Procedural and presentation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#latex-a-procedural-markup-language">
+    Latex: a procedural markup language
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#descriptive-or-semantic">
+    Descriptive or semantic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02_xml/">
+        XML
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Taula de continguts" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concept-of-markup-language">
+    Concept of markup language
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advantages">
+    Advantages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-features">
+    Common features
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fields-of-applicacion">
+    Fields of applicacion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-markup-language">
+    Types of markup language
+  </a>
+<nav aria-label="Types of markup language" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#procedural-and-presentation">
+    Procedural and presentation
+  </a>
+<nav aria-label="Procedural and presentation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#latex-a-procedural-markup-language">
+    Latex: a procedural markup language
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#descriptive-or-semantic">
+    Descriptive or semantic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="markup-language">Markup language<a class="headerlink" href="#markup-language" title="Permanent link">¶</a></h1>
+<h2 id="concept-of-markup-language">Concept of markup language<a class="headerlink" href="#concept-of-markup-language" title="Permanent link">¶</a></h2>
+<p>Markup languages are ways of annotating an electronic document. Usually markup will either specify 
+how something should be displayed or what something means. The origin of the term is in typesetting, 
+where proofs were marked up with instructions about their visual appearance, but the term then broadened
+ to include the semantic perspective that we’re interested in here.</p>
+<p>The names of the most popular languages usually end with Markup Language and so are abbreviated as something-ML: for example,</p>
+<ul>
+<li>HTML – <em>Hypertext Markup Language</em></li>
+<li>KML – <em>Keyhole Markup Language</em></li>
+<li>MathML – <em>Mathematical Markup Language</em></li>
+<li>SGML – <em>Standard Generalized Markup Language</em></li>
+<li>XHTML – <em>eXtensible Hypertext Markup Language</em></li>
+<li>XML – <em>eXtensible Markup Language</em></li>
+</ul>
+<p>The most widely used markup language is HTML (HyperText Markup Language), the foundation of the World Wide Web.</p>
+<p>Some examples are: </p>
+<p>HTML 4.0</p>
+<div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Anatidae<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+   The family <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Anatidae<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> includes ducks, geese, and swans,
+   but <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>not<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> the closely related screamers.
+ <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>XML</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;note&gt;</span>
+  <span class="nt">&lt;to&gt;</span>Tove<span class="nt">&lt;/to&gt;</span>
+  <span class="nt">&lt;from&gt;</span>Jani<span class="nt">&lt;/from&gt;</span>
+  <span class="nt">&lt;heading&gt;</span>Reminder<span class="nt">&lt;/heading&gt;</span>
+  <span class="nt">&lt;body&gt;</span>Don't forget me this weekend!<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/note&gt;</span> 
+</code></pre></div>
+<h2 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">¶</a></h2>
+<p>Initially, markup languages ​​focused on document generation but thanks to its advantages
+its use has been extended to definition of data structures and sharing of information.</p>
+<p>The main advantages are:</p>
+<ul>
+<li>Ease of creation and reading.</li>
+<li>Compliance with defined and public storage standards.</li>
+<li>Incorporation of metadata.</li>
+<li>Definition of the structure of the data.</li>
+</ul>
+<h2 id="common-features">Common features<a class="headerlink" href="#common-features" title="Permanent link">¶</a></h2>
+<p>Markup languages ​​have stood out for a number of features which lead them to become 
+the most widely used types of languages ​​in modern computing for
+storing and representing data. Among the most interesting features
+that markup languages ​​offer are:</p>
+<ul>
+<li>They intermix the text of a document with markup instructions in the same data stream or file. </li>
+<li>They are based on plain text.</li>
+<li>They allow the use of metadata.</li>
+<li>They are easy to interpret and process.</li>
+<li>They are easy to create and flexible enough to represent very diverse data.</li>
+</ul>
+<p>Internet applications and many of the computer programs use
+them in one way or another.</p>
+<h2 id="fields-of-applicacion">Fields of applicacion<a class="headerlink" href="#fields-of-applicacion" title="Permanent link">¶</a></h2>
+<p>While the idea of markup language originated with text documents, there is an increasing use of markup languages in the presentation of other types of information, including playlists, vector graphics, web services, content syndication, and user interfaces. Most of these are XML applications, because XML is a well-defined and extensible language. </p>
+<p>Regarding the fields of application we can define the following classification:</p>
+<ul>
+<li>Documents in general:<ul>
+<li>Descriptive languages ​​such as XML, HTML 5, YAML.</li>
+<li>Presentation languages ​​such as RTF, Tex, HTML 4.</li>
+<li>Lightweight languages ​​like Markdown</li>
+</ul>
+</li>
+<li>Internet technologies:<ul>
+<li>HTML, XHTML, GladeXML, Atom, RSS, WSDL</li>
+</ul>
+</li>
+<li>Specialized languages:<ul>
+<li>SVG, XMPP, COLLADA</li>
+</ul>
+</li>
+</ul>
+<p>In [Markup language] (https://en.wikipedia.org/wiki/Markup_language) you will find more information.</p>
+<h2 id="types-of-markup-language">Types of markup language<a class="headerlink" href="#types-of-markup-language" title="Permanent link">¶</a></h2>
+<p>There are three main general categoris of electronic markup:</p>
+<ul>
+<li><strong>Presentation languages​​</strong>, aimed at specifying how
+the information must be represented. This kind of markup is used by traditional word-processing systems.</li>
+<li><strong>Procedural markup</strong>. Markup is embedded in text which provides instructions for programs to process the text. Well-known examples include troff, TeX, and PostScript.  </li>
+<li><strong>Descriptive or semantic languages​​</strong>: aimed at describing the structure of
+the data it contains.</li>
+</ul>
+<p>This is the most accepted classification, but as is often the case in the field
+of Computer Science, we can find languages ​​that have aspects of these
+categories and allow them to define the way the information is presented and to define it
+the structure.</p>
+<p>In the recent years, a number of small and largely unstandardized markup languages have been developed to allow authors to create formatted text via web browsers, such as the ones used in wikis and in web forums. These are sometimes called <strong>lightweight markup languages</strong>. Markdown, BBCode, and the markup language used by Wikipedia are examples of such languages. </p>
+<h3 id="procedural-and-presentation">Procedural and presentation<a class="headerlink" href="#procedural-and-presentation" title="Permanent link">¶</a></h3>
+<p>In these languages, what is done is to indicate how to do it
+the presentation of the data. Either through design information
+(mark bold, titles, etc.) or procedures to be performed by the software
+representation. The most popular example of these languages ​​is HTML, but there are some
+there are many more: TeX, Wikitext ...</p>
+<p>In these cases the documents can help us to determine in what way
+the document will be shown to whoever reads it.</p>
+<h4 id="latex-a-procedural-markup-language">Latex: a procedural markup language<a class="headerlink" href="#latex-a-procedural-markup-language" title="Permanent link">¶</a></h4>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\title</span><span class="nb">{</span>Introduction to LaTeX <span class="nb">{}}</span>
+<span class="k">\author</span><span class="nb">{</span>Author's Name<span class="nb">}</span>
+
+<span class="k">\maketitle</span>
+
+<span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
+The abstract text goes here.
+<span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+Here is the text of your introduction.
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>simple<span class="nb">_</span>equation<span class="nb">}</span>
+    <span class="k">\alpha</span>=<span class="k">\sqrt</span><span class="nb">{</span><span class="k">\beta</span><span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\subsection</span><span class="nb">{</span>Subsection Heading Here<span class="nb">}</span>
+Write your subsection text here.
+
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="na">[width = 3.0in]</span><span class="nb">{</span>myfigure<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Simulation Results<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>simulationfigure<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Conclusion<span class="nb">}</span>
+Write your conclusion here.
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</code></pre></div>
+<h3 id="descriptive-or-semantic">Descriptive or semantic<a class="headerlink" href="#descriptive-or-semantic" title="Permanent link">¶</a></h3>
+<p>These languages ​​describe the logical structure of the document
+ignoring how it will be represented in the programs. Only the marks are put
+with the aim of defining the parts that give structure to the document. The example
+more important is XML but there are others that are having a lot of support, such as
+for example JSON.</p>
+<p>In the following document we have an example of a file of marks that represents information about people:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;students&gt;</span>
+    <span class="nt">&lt;person&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Pere<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;lastname&gt;</span>Puig<span class="nt">&lt;/lastname&gt;</span>
+    <span class="nt">&lt;/person&gt;</span>
+    <span class="nt">&lt;person&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Manel<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;lastname&gt;</span>Garcia<span class="nt">&lt;/lastname&gt;</span>
+    <span class="nt">&lt;/person&gt;</span>
+<span class="nt">&lt;/students&gt;</span>
+</code></pre></div>
+We can clearly notice what this data is about: a list of students. At a glance,
+it is easy to determine that Pere and Manel are names and that Puig and Garcia are
+surnames. But through the hierarchy of data it can be inferred that Pere Puig
+and Manel Garcia are students as both first and last name are included inside
+of the <code>students</code> tag.</p>
+<p>This document shows the structure of the data it contains and also
+this can also be discovered by interpreting the labels their content
+semantic. From the knowledge we have it follows that Peter is the
+name of a person who is a student.</p>
+<div class="admonition todo">
+<p class="admonition-title">Activities</p>
+<ol>
+<li>Compare the various export possibilities when saving a document in LibreOffice Writer.</li>
+<li>
+<p>Type the following text in a plain text file:</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> level 1 header <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span> level 3 header <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</code></pre></div>
+Open this file with your browser. How does it look?
+Change the file extension to html. Does it show the same information? Why?</p>
+</li>
+<li>
+<p>Search the Internet for a classification of markup languages. Write down 3 examples of each type specifying their main use.</p>
+</li>
+<li>
+<p>Go to <a href="https://openclipart.org">openclipart.org</a>, search for "8 ball", download the simplest image you see. Open it with the text editor.</p>
+<p>Can you undestand the structure? Try to change the color of the ball (hint: the colors are formatted: #000000). </p>
+</li>
+</ol>
+</div>
+<h1 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">¶</a></h1>
+<ul>
+<li>https://port.sas.ac.uk/course/view.php?id=54&amp;section=1</li>
+<li>https://en.wikipedia.org/wiki/Markup_language</li>
+<li>https://www.youtube.com/watch?v=nQZEP8hENMs</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a class="md-footer__link md-footer__link--prev" href="../00_index/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Anterior
+              </span>
+              Introduction
+            </div>
+</div>
+</a>
+<a class="md-footer__link md-footer__link--next" href="../02_xml/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Següent
+              </span>
+              XML
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "C\u00f2pia al porta-retalls", "clipboard.copied": "Copiat al porta-retalls", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Cerca", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
