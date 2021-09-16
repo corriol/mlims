@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>XML - MLIMS</title>
+<title>2. XML - MLIMS</title>
 <link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <meta content="#8bc34b" name="theme-color"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#xml">
+<a class="md-skip" href="#2-xml">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              XML
+              2. XML
             
           </span>
 </div>
@@ -122,17 +122,17 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../01_llenguatges/">
-        Markup language
+        1. Markup language
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          XML
+          2. XML
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        XML
+        2. XML
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -342,6 +342,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activities">
+    Activities
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#bibliography-webography-and-credits">
@@ -572,6 +577,11 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#activities">
+    Activities
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#bibliography-webography-and-credits">
     Bibliography, webography and credits
   </a>
@@ -583,7 +593,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">¶</a></h1>
+<h1 id="2-xml">2. XML<a class="headerlink" href="#2-xml" title="Permanent link">¶</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <p><strong>Extensible Markup Language (XML)</strong> is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The World Wide Web Consortium's <a href="https://www.w3.org/TR/xml/">XML 1.0 Specification</a> of 1998 and several other related specifications—all of them free open standards—define XML.</p>
 <p>The design goals of XML emphasize simplicity, generality, and usability across the Internet.It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures such as those used in web services. </p>
@@ -826,22 +836,6 @@ Non-English letters (á, Á, ñ, Ñ ...) are allowed. However, it is advisable n
 reduce possible incompatibilities with programs that may not recognize them.</p>
 <p>As for the hyphen <code>-</code> and period <code>.</code>characters, although they are also allowed to name tags,
 it is also advisable to avoid its use.</p>
-<div class="admonition todo">
-<p class="admonition-title">Task 2. XML syntax errors</p>
-<p>Review the following XML document, detect errors, and rewrite it correctly </p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;frutas&gt;</span>  
-<span class="nt">&lt;/frutas&gt;</span>
-<span class="nt">&lt; frutas</span> <span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
-      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>cereza<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
-      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>naranja<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
-<span class="nt">&lt; frutas</span> <span class="err">\</span><span class="nt">&gt;</span>
-</code></pre></div>
-</div>
 <h2 id="attributes-in-xml">Attributes in XML<a class="headerlink" href="#attributes-in-xml" title="Permanent link">¶</a></h2>
 <p>Elements of an XML document can have attributes defined in the start tag. An attribute serves to provide
  extra information about the item that contains it.</p>
@@ -880,41 +874,6 @@ is everything between the opening and closing tags, even if they contain other e
 </code></pre></div>
 Attributes contained in an element, as in this case x, X and y, must be separated by whitespace, and is not
 significant his order.</p>
-<div class="admonition todo">
-<p class="admonition-title">Task 3. Creating XML documents</p>
-<p>Write an XML document that stores the following information:</p>
-<p><strong>Cities</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Country</th>
-<th>Continent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>New Delhi</td>
-<td>India</td>
-<td>Asia</td>
-</tr>
-<tr>
-<td>Lisbon</td>
-<td>Portugal</td>
-<td>Europe</td>
-</tr>
-<tr>
-<td>Cairo</td>
-<td>Egypt</td>
-<td>Africa</td>
-</tr>
-</tbody>
-</table>
-<p>Note: The continent must be represented by an attribute.</p>
-<p><strong>Historical facts</strong></p>
-<p><img alt="Historical facts" src="../assets/01-taula-fets-XML.png"/></p>
-<p>Note: only the description of each fact must be represented by an attribute.</p>
-</div>
 <h2 id="xml-declaration_1">XML declaration<a class="headerlink" href="#xml-declaration_1" title="Permanent link">¶</a></h2>
 <p>The XML declaration that can be written at the beginning of an XML document begins with the characters "&lt;?" and ends with "?&gt;".</p>
 <h3 id="version-and-coding">Version and coding<a class="headerlink" href="#version-and-coding" title="Permanent link">¶</a></h3>
@@ -974,12 +933,12 @@ Instead, write the following:
 <p>It should be noted that, in this case, to represent the symbol of the Euro (€), its value has been used for the first time.
 decimal (<code>&amp;#8364;</code>) in Unicode and, the second time, its hexadecimal value (<code>&amp;#x20AC;</code>).</p>
 <h2 id="comments-in-xml">Comments in XML<a class="headerlink" href="#comments-in-xml" title="Permanent link">¶</a></h2>
-<p>To write comments to an XML document, they must be written between the characters "&lt;! -" and "-&gt;". For example:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;!- This is a comment written in an XML document -&gt;</span>
+<p>To write comments to an XML document, they must be written between the characters <code>&lt;!--</code> and <code>--&gt;</code>. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="c">&lt;!-- This is a comment written in an XML document --&gt;</span>
 </code></pre></div>
 <p>Given the XML file "letras.xml":
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="cp">&lt;!- Example use of comments .--&gt;</span>
+<span class="c">&lt;!-- Example use of comments .--&gt;</span>
 <span class="nt">&lt;a&gt;</span>
    <span class="nt">&lt;b&gt;</span>
       <span class="nt">&lt;c</span> <span class="na">quantity=</span><span class="s">"4"</span><span class="nt">&gt;</span>cccc<span class="nt">&lt;/c&gt;</span>
@@ -987,7 +946,7 @@ decimal (<code>&amp;#8364;</code>) in Unicode and, the second time, its hexadeci
    <span class="nt">&lt;/b&gt;</span>
    <span class="nt">&lt;e&gt;</span>
       <span class="nt">&lt;f</span> <span class="na">quantity=</span><span class="s">"8"</span><span class="nt">&gt;</span>ffffffff<span class="nt">&lt;/f&gt;</span>
-      <span class="cp">&lt;!- g may appear several times .--&gt;</span>
+      <span class="c">&lt;!-- g may appear several times --&gt;</span>
       <span class="nt">&lt;g</span> <span class="na">quantity=</span><span class="s">"5"</span><span class="nt">&gt;</span>ggggg <span class="nt">&lt;/g&gt;</span>
       <span class="nt">&lt;g</span> <span class="na">quantity=</span><span class="s">"2"</span><span class="nt">&gt;</span>gg <span class="nt">&lt;/g&gt;</span>
    <span class="nt">&lt;/e&gt;</span>
@@ -996,10 +955,10 @@ decimal (<code>&amp;#8364;</code>) in Unicode and, the second time, its hexadeci
 In a browser you will see:</p>
 <p><img alt="Displaying the letras.xml file in Google Chrome - Example of the {Abrirllave.com XML tutorial" src="../assets/letras-xml-chrome.gif"/></p>
 <p>In an XML document, comments cannot be written within tags. For example, it is incorrect to write:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;element</span> <span class="err">&lt;!-</span> <span class="err">empty</span> <span class="err">element</span> <span class="err">-</span><span class="nt">&gt;</span> /&gt;
+<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;element</span> <span class="err">&lt;!--</span> <span class="err">empty</span> <span class="err">element</span> <span class="err">--</span><span class="nt">&gt;</span> /&gt;
 </code></pre></div>
 On the other hand, it should be noted that in the comments of an XML document it is not allowed to use two consecutive hyphens:</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;!- two hyphens in a row - in a comment gives error -&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="c">&lt;!-- two hyphens in a row - in a comment gives error --&gt;</span>
 </code></pre></div>
 So, it is not possible to nest comments in an XML document.</p>
 <h2 id="cdata-sections-in-xml">CDATA sections in XML<a class="headerlink" href="#cdata-sections-in-xml" title="Permanent link">¶</a></h2>
@@ -1007,10 +966,10 @@ So, it is not possible to nest comments in an XML document.</p>
 For example, this can be useful when you want to type text that contains any of the problematic characters: less than <code>&lt;</code>
 o ampersand <code>&amp;</code>.</p>
 <p>In an XML document, to include a CDATA section, we must start with the character string
-<div class="highlight"><pre><span></span><code>&lt;![CDATA [
+<div class="highlight"><pre><span></span><code><span class="err">&lt;</span>![CDATA [
 </code></pre></div>
- and ending with the characters 
- <div class="highlight"><pre><span></span><code>]]&gt;.
+and ending with the characters 
+<div class="highlight"><pre><span></span><code>]]&gt;.
 </code></pre></div></p>
 <p>A CDATA section may contain, for example, the source code of a program written in the C language:</p>
 <p><div class="highlight"><pre><span></span><code><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
@@ -1052,14 +1011,6 @@ some specific editors like <em>XML Copy Editor</em> or an IDE with some plugin l
 <li>The XML declaration must be in the first line written correctly.</li>
 <li>The <code>CDATA</code> sections and comments must be spelled correctly.</li>
 </ol>
-<div class="admonition todo">
-<p class="admonition-title">Task 4: The DAW modules</p>
-<p>Create an XML document in order to store the modules of the DAW training cycle indicating how many hours last each module and the year in which is taught.</p>
-</div>
-<div class="admonition todo">
-<p class="admonition-title">Task 5: Well-formed XML documents</p>
-<p>Resolve the tasks in the follow document: <a href="../assets/well-formed-documents.pdf">Activity statement</a>.</p>
-</div>
 <h2 id="using-namespaces-in-xml">Using namespaces in XML<a class="headerlink" href="#using-namespaces-in-xml" title="Permanent link">¶</a></h2>
 <p>XML namespaces are a mechanism for ensuring that the elements and attributes of an XML document have names
  unique. They are defined in a W3C recommendation. The problem they solve is the ambiguity that arises when a document
@@ -1177,6 +1128,66 @@ In the following example, a default namespace is initially defined for the <code
 <span class="nt">&lt;/example&gt;</span>
 </code></pre></div>
 In this case, the element <fishes> and its children do not belong in any namespace.</fishes></p>
+<h2 id="activities">Activities<a class="headerlink" href="#activities" title="Permanent link">¶</a></h2>
+<div class="admonition todo">
+<p class="admonition-title">Task 121. XML syntax errors</p>
+<p>Review the following XML document, detect errors, and rewrite it correctly </p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;frutas&gt;</span>  
+<span class="nt">&lt;/frutas&gt;</span>
+<span class="nt">&lt; frutas</span> <span class="nt">&gt;</span>
+   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>cereza<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
+   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
+   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>naranja<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
+   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
+<span class="nt">&lt; frutas</span> <span class="err">\</span><span class="nt">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition todo">
+<p class="admonition-title">Task 122. Creating XML documents</p>
+<p>Write an XML document that stores the following information:</p>
+<p><strong>Cities</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Country</th>
+<th>Continent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Delhi</td>
+<td>India</td>
+<td>Asia</td>
+</tr>
+<tr>
+<td>Lisbon</td>
+<td>Portugal</td>
+<td>Europe</td>
+</tr>
+<tr>
+<td>Cairo</td>
+<td>Egypt</td>
+<td>Africa</td>
+</tr>
+</tbody>
+</table>
+<p>Note: The continent must be represented by an attribute.</p>
+<p><strong>Historical facts</strong></p>
+<p><img alt="Historical facts" src="../assets/01-taula-fets-XML.png"/></p>
+<p>Note: only the description of each fact must be represented by an attribute.</p>
+</div>
+<div class="admonition todo">
+<p class="admonition-title">Task 123: The DAW modules</p>
+<p>Create an XML document in order to store the modules of the DAW training cycle indicating how many hours last each module and the year in which is taught.</p>
+</div>
+<div class="admonition todo">
+<p class="admonition-title">Task 124: Well-formed XML documents</p>
+<p>Resolve the tasks in the follow document: <a href="../assets/well-formed-documents.pdf">Activity statement</a>.</p>
+</div>
 <h2 id="bibliography-webography-and-credits">Bibliography, webography and credits<a class="headerlink" href="#bibliography-webography-and-credits" title="Permanent link">¶</a></h2>
 <ul>
 <li>Wikipedia contributors. (2020, September 13). Markup language. <em>In Wikipedia, The Free Encyclopedia.</em> 
@@ -1187,7 +1198,7 @@ Retrieved 15:51, September 15, 2020, from
 <li>Bartolomé Sintés Marco. (Juny de 2020). <em>XML: Lenguaje de marcas extensible</em>, disponible 
 en <a href="https://www.mclibre.org/consultar/xml/">https://www.mclibre.org/consultar/xml/</a></li>
 <li>Mozilla Contributors (June 2021). <em>XML introduction</em>. Available at <a href="https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction">https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction</a></li>
-<li>https://www.ibm.com/docs/en/scbn?topic=syntax-xml-rules</li>
+<li>IBM Corporation. (June 2020). <em>XML Syntax Rules</em>. Available at <a href="https://www.ibm.com/docs/en/scbn?topic=syntax-xml-rules">https://www.ibm.com/docs/en/scbn?topic=syntax-xml-rules</a></li>
 </ul>
 </article>
 </div>
@@ -1195,7 +1206,7 @@ en <a href="https://www.mclibre.org/consultar/xml/">https://www.mclibre.org/cons
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Markup language" class="md-footer__link md-footer__link--prev" href="../01_llenguatges/" rel="prev">
+<a aria-label="Previous: 1. Markup language" class="md-footer__link md-footer__link--prev" href="../01_llenguatges/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1204,7 +1215,7 @@ en <a href="https://www.mclibre.org/consultar/xml/">https://www.mclibre.org/cons
 <span class="md-footer__direction">
                 Previous
               </span>
-              Markup language
+              1. Markup language
             </div>
 </div>
 </a>
