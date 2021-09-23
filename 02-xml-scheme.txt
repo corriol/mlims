@@ -1,0 +1,80 @@
+
+# 2. Definició d'esquemes i vocabularis en XML
+## Objectius:
+* Entendre la necessitat de descriure la informació transmesa en els documents XML i les seves regles.
+* Identificar les tecnologies relacionades amb la definició de documents XML.
+* Analitzar l'estructura i la sintaxis específica utilitzada en la descripció.
+* Crear descripcions de documents XML.
+* Utilitzar descripcions en l'elaboració i la validació de documents XML.
+* Associar les descripcions amb els documents.
+* Documentar descripcions.
+
+## Continguts:
+1. Necessitat de descriure la informació. Documents XML vàlids.
+2. Utilització de mètodes de definició de documents XML.
+3. Creació de descripcions.
+4. Validació. Ferramentes de creació i validació.
+5. Extensibilitat dels esquemes. Tipus derivats. Esquemes múltiples documents.
+6. Documentació d'especificacions.
+
+## Criteris d'avaluació
+
+1. S'ha establert la necessitat de descriure la informació transmesa en els documents XML i
+les seves regles.
+2. S'han identificat les tecnologies relacionades amb la definició de documents XML.
+3. **S'ha analitzat l'estructura i la sintaxis específica utilitzada en la descripció.**
+4. **S'han creat descripcions de documents XML.**
+5. **S'han utilitzat descripcions en l'elaboració i la validació de documents XML.**
+6. S'han associat les descripcions amb els documents.
+7. S'utilitzen eines específiques.
+8. S'han documentat les descripcions.
+
+# 1. Introducció
+
+En la unitat 1 vas aprendre a crear document XML ben formats, és a dir,
+seguint les normes sintàctiques.
+
+En la unitat 2 vas utilitzar XHTML, un dialecte XML per a crear pàgines web.
+Els documents basats en XHTML els podíem validar mitjançat una lloc web
+de W3C. El mateix ocorria en els formats RSS i Atom vists en la unitat anterior.
+
+Es diu que un document XML és vàlid quan, a més d'estar ben format, no incompleix
+ninguna de les normes establertes en la seua estructura.
+
+L'objectiu de la següent unitat és aprendre com es poden definir les normes
+estructurals per a poder crear els nostres propis dialectes XML i a partir de
+les regles poder definir documents XML vàlids.
+
+Dita estructura es pot definir amb els següents llenguatges:
+* DTD (_Document Type Definition_, Definició de Tipus de Document).
+* XML Schema.
+* RELAX NG (_REgular LAnguage for XML Next Generation_).
+
+
+## DTD
+## Què és DTD?
+
+DTD (_Document Type Definition_, Definició de Tipus de Document) serveix per 
+definir l'estructura d'un document SGML o XML: els elements, atributs, entitats, 
+notacions, etc, que poden aparèixer, l'ordre i el nombre de vegades que poden 
+aparèixer, quins poden ser fills de quins, etc., permetent la seva validació.
+
+*  SGML (Standard Generalized Markup Language, Llenguatge de Marcat Generalitzat Estàndard). Vegeu: http://www.w3.org/MarkUp/SGML/.
+
+* XML (eXtensible Markup Language, Llenguatge de Marcat extensible) és un llenguatge desenvolupat per W3C (World Wide Web Consortium) que està basat en SGML.
+
+En http://www.w3.org/TR/xml/ es pot consultar la W3C Recommendation de XML, en la qual es fonamenta aquest tutorial, on s'explica -de forma introductòria a través d'exemples- com escriure i utilitzar DTD per validar documents XML.
+
+
+Un document XML és vàlid (_valid_) quan, a més d'estar ben format, no incompleix cap de les normes establertes en la seva estructura.
+
+## Crèdits i bibliografia 
+
+En aquesta unitat usarem com a referència el llibre _Lenguajes de Marcas y Sistemas de Gestión de Información_ de Carlos Pes
+
+* [Versió en línia](https://www.abrirllave.com/dtd/que-es-dtd.php)
+* [Versió en PDF](https://www.abrirllave.com/lmsgi/libro.php)
+
+i de Barlomé Sintes Marco:
+
+* [https://www.mclibre.org/consultar/xml/lecciones/xml-dtd.html](https://www.mclibre.org/consultar/xml/lecciones/xml-dtd.html)

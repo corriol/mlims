@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="bookmarks.xsd">
+    <website>
+        <name>Abrirllave</name>
+        <description>Tutoriales de informática.</description>
+        <url>http://www.abrirllave.com/</url>
+    </website>
+    <website>
+        <name>Wikipedia</name>
+        <description>La enciclopedia libre.</description>
+        <url>http://www.wikipedia.org/</url>
+    </website>
+    <website>
+        <name>W3C</name>
+        <description>World Wide Web Consortium.</description>
+        <url>http://www.w3.org/</url>
+    </website>
+</bookmarks>

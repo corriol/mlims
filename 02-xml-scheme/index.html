@@ -1,0 +1,957 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>2. Definition of schemas and vocabularies in XML - MLIMS</title>
+<link href="../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<meta content="#8bc34b" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Lato";--md-code-font-family:""}</style>
+<link href="../css/print-site.css" rel="stylesheet"/>
+<link href="../css/print-site-material.css" rel="stylesheet"/>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="light-green" data-md-color-scheme="" dir="ltr">
+<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#2-definition-of-schemas-and-vocabularies-in-xml">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MLIMS" class="md-header__button md-logo" data-md-component="logo" href=".." title="MLIMS">
+<img alt="logo" src="../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            MLIMS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              2. Definition of schemas and vocabularies in XML
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MLIMS" class="md-nav__button md-logo" data-md-component="logo" href=".." title="MLIMS">
+<img alt="logo" src="../assets/logo.png"/>
+</a>
+    MLIMS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+        1. Markup languages. XML
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="1. Markup languages. XML" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          1. Markup languages. XML
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-mlxml/00_index/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-mlxml/01_llenguatges/">
+        Markup languages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-mlxml/02_xml/">
+        XML
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#document-type-definitions">
+    Document Type Definitions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xml-schema-definition">
+    XML Schema Definition
+  </a>
+<nav aria-label="XML Schema Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#associate-a-schema-to-an-xml-document">
+    Associate a schema to an XML document
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-an-scheme-file">
+    Define an scheme file
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definition-of-elements">
+    Definition of elements
+  </a>
+<nav aria-label="Definition of elements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-personal-types">
+    Simple personal types
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elements-with-complex-type-content">
+    Elements with complex type content
+  </a>
+<nav aria-label="Elements with complex type content" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attributes">
+    Attributes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simplecontent">
+    'simpleContent'
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#content-made-up-of-elements">
+    Content made up of elements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#complexcontent">
+    'complexContent'
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#items-without-content">
+    Items without content
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mixed-content">
+    Mixed content
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-creating-an-xsd">
+    Example of creating an XSD
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statement">
+    Statement
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activities">
+    Activities
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#credits-and-bibliography">
+    Credits and bibliography
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="2-definition-of-schemas-and-vocabularies-in-xml">2. Definition of schemas and vocabularies in XML<a class="headerlink" href="#2-definition-of-schemas-and-vocabularies-in-xml" title="Permanent link">¶</a></h1>
+<details class="info"><summary>Objectives</summary><ul>
+<li>Understand the need to describe the information transmitted in XML documents and their rules.</li>
+<li>Identify technologies related to the definition of XML documents.</li>
+<li>Analyse the structure and specific syntax used in the description.</li>
+<li>Create descriptions of XML documents.</li>
+<li>Use descriptions in the preparation and validation of XML documents.</li>
+<li>Associate descriptions with documents.</li>
+<li>Document descriptions.</li>
+</ul>
+</details>
+<details class="info"><summary>Assessment criteria</summary><ol>
+<li>The need to describe the information transmitted in XML documents has been established and its rules.</li>
+<li>Technologies related to the definition of XML documents have been identified.</li>
+<li><strong>The specific structure and syntax used in the description has been analyzed.</strong></li>
+<li><strong>XML document descriptions have been created.</strong></li>
+<li><strong>Descriptions have been used in the development and validation of XML documents.</strong></li>
+<li>Descriptions have been associated with the documents.</li>
+<li>Specific tools are used.</li>
+<li>The descriptions have been documented.</li>
+</ol>
+</details>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>In unit 1 you have learned how to create <strong>well-formed XML documents</strong>, that is,
+following their syntactic rules.</p>
+<p>An XML document is said to be valid when, in addition to being well-formed, it does not break
+none of the rules established in its structure definition.</p>
+<p>The aim of this unit is to learn how structural rules can be defined
+ to be able to create our own XML dialects and how these rules can define valid XML documents.</p>
+<p>This kind of structure can be defined with the following languages:</p>
+<ul>
+<li>DTD (<em>Document Type Definition</em>).</li>
+<li>XML Schema.</li>
+<li>RELAX NG (<em>REgular LAnguage for XML Next Generation</em>).</li>
+</ul>
+<h3 id="document-type-definitions">Document Type Definitions<a class="headerlink" href="#document-type-definitions" title="Permanent link">¶</a></h3>
+<p>DTD (<em>document type definitions</em>) is a schema definition language that already existed before the advent of XML (used in SGML). It was designed to work with SGML and could be used in many of the markup languages ​​based on it, such as XML or HTML.</p>
+<p>When XML was defined, it was used to make a simplified version of DTD that was the original schema specification language. An associated advantage was that using a version of DTD would allow SGML compatibility to be maintained, and therefore DTDs were referenced in the XML specification (http://www.w3.org/TR/REC-xml/).</p>
+<p>The main purpose of DTDs is to provide a mechanism for validating the structures of XML documents and determining whether the document is valid or not. But this will not be the only advantage that DTDs will give us, but we can also use them to share information between organizations, because if someone else has our DTD they can send us information in our format and with the program we have fact we can process it.</p>
+<p>For a long time DTDs were the most widely used vocabulary definition system in XML but have now been overtaken by XML Schemas. However it is still widely used, especially because it is much simpler.</p>
+<p>The XML specification refers to DTDs as a method of defining XML vocabularies, but DTDs have a number of limitations that led the W3C to define a new specification. This specification was called the <em>W3C XML Schema Definition Language</em> (popularly called the XML Schema or XSD), and was created to replace the DTD as a vocabulary definition method for XML documents. Furthermore, unlike DTD, XSD is an XML dialect.</p>
+<p>For these reasons, we will focus on XML Schema.</p>
+<h2 id="xml-schema-definition">XML Schema Definition<a class="headerlink" href="#xml-schema-definition" title="Permanent link">¶</a></h2>
+<p>The latest specification can be found at <a href="https://www.w3.org/XML/Schema">www.w3.org/XML/Schema</a>.</p>
+<p>The success of XSD has been great, and it is now used for tasks other than simply validating XML. It is also used in other XML technologies such as XQuery, web services, etc.</p>
+<p>The most important features that XSD provides are:</p>
+<ol>
+<li>It is written in XML and therefore it is not necessary to learn a new language to define XML schemas.</li>
+<li>It has its own data system, so you can check the contents of the items.</li>
+<li>Supports namespaces to allow mixing different vocabularies.</li>
+<li>It allows reuse and follows programming patterns such as object inheritance and type substitution.</li>
+</ol>
+<h3 id="associate-a-schema-to-an-xml-document">Associate a schema to an XML document<a class="headerlink" href="#associate-a-schema-to-an-xml-document" title="Permanent link">¶</a></h3>
+<p>Unlike other definition languages ​​-such as DTDs, in which the association must be specified in the XML document- you do not need to modify the XML file to validate an XML with an XSD. However, it is also possible to do this by defining the namespace.</p>
+<p>To associate an XML document with a schema document, you need to define the namespace with the <code>xmlns</code> attribute, and use one of the language attributes to define the schema file:
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;urlset</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urlset.xsd"</span><span class="nt">&gt;</span>
+</code></pre></div></p>
+<p>References to the schema file can be defined in two ways, which can be seen in the table.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>noNamespaceSchemaLocation</code></td>
+<td>Used when no namespaces will be used in the document.</td>
+</tr>
+<tr>
+<td><code>schemaLocation</code></td>
+<td>Used when explicitly using namespace names in tags.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="define-an-scheme-file">Define an scheme file<a class="headerlink" href="#define-an-scheme-file" title="Permanent link">¶</a></h3>
+<p>XSD is based on XML and must therefore comply with XML rules:</p>
+<ul>
+<li>Although not required, the file is usually started with the XML declaration.</li>
+<li>There is only one root element, which in this case is <code>&lt;schema&gt;</code>.</li>
+</ul>
+<p>Due to the fact that an specific and well-known vocabulary is being used to be able to use the XML elements, the XSD namespace must always be specified: <code>"http: //www.w3.org/2001/XMLSchema"</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0"?&gt;</span>
+<span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/xs:schema&gt;</span>
+</code></pre></div>
+<p>The declaration of this namespace is defining that <code>xs</code> is the alias to refer to all tags in this namespace. Aliases for XSD are usually <code>xs</code> or <code>xsd</code>, but it doesn't really matter which one is used as long as it is used throughout the document.</p>
+<div class="admonition info">
+<p class="admonition-title">XSD tags</p>
+<p>XSD defines many tags and not all of them can be seen here. You can find all possible tags in the specification <a href="https://www.w3.org/TR/xmlschema11-1">www.w3.org/TR/xmlschema11-1</a>.</p>
+</div>
+<p>The <code>&lt;schema&gt;</code> tag can have different attributes, some of which we can see in the following table</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attributeFormDefault</td>
+<td>May be qualified if we make it mandatory to put the namespace in front of attributes or unqualified if we do not. By default it is used unqualified.</td>
+</tr>
+<tr>
+<td>elementFormDefault</td>
+<td>Used to define whether the namespace is required in front of the name. It can take qualified and unqualified values.</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Defines which version of the schema document we are defining (not the XML Schemas version).</td>
+</tr>
+</tbody>
+</table>
+<p>From the root element you can start defining the tags of the vocabulary you want to create.</p>
+<h3 id="definition-of-elements">Definition of elements<a class="headerlink" href="#definition-of-elements" title="Permanent link">¶</a></h3>
+<p>Elements are defined using the <code>&lt;element&gt;</code> tag, and at least the <code>name</code> and optionally the data type that the element will contain are specified with attributes. In the following example we define an element named <code>firstname</code> of type <code>string</code>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"firstname"</span> <span class="na">type=</span><span class="s">"xsi:string"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+The XSD divides the elements into two large groups based on the data they contain:</p>
+<ul>
+<li>Elements with simple type content: these are elements without attributes that only contain data.</li>
+<li>Items with complex type content: These are items that may have attributes, no content, or contain items.</li>
+</ul>
+<p>From the definition, it can be seen that there will almost always be some complex type, as the root will usually contain other elements.
+Items with simple type content.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Elements with simple type content are those that do not contain other elements or have attributes.</p>
+</div>
+<p>XSD version 1.1 defines about fifty different data types, which can be found in their definition <a href="www.w3.org/TR/xmlschema11-2">www.w3.org/TR/xmlschema11-2</a>. Among the most used are those in the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Data that can be stored there</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Character strings</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>Numeric values</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Can only contain ‘true’ or ‘false’ or (1 or 0)</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Dates in form (YYYY-MM-DD)</td>
+</tr>
+<tr>
+<td>anyURI</td>
+<td>Site references (URLs, disk paths…)</td>
+</tr>
+<tr>
+<td>base64binary</td>
+<td>Binary data encoded in base64</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>Integers</td>
+</tr>
+</tbody>
+</table>
+<p>From the basic types, the standard creates others with the aim of having data types that can be better adapted to the objectives of the person designing the scheme. Therefore there are the types called <code>positiveInteger</code>, <code>nonNegativeInteger</code>, <code>gYearMonth</code>, <code>unsignedInt</code>,... </p>
+<p>Data types allow you to restrict the values ​​that XML elements will contain. For example, if you start from the following definition:</p>
+<p><div class="highlight"><pre><span></span><code>...
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"position"</span> <span class="na">type=</span><span class="s">"xs: integer"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/xs:schema&gt;</span>
+</code></pre></div>
+An item can only be validated if its contents are an integer. For example, the following example will not validate:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;position&gt;</span>First<span class="nt">&lt;/position&gt;</span>
+</code></pre></div>
+<p>In the following table you can see examples of definitions of elements and values ​​that validate them.</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><xs:element name="“dia”" type="“xs:date”"></xs:element></td>
+<td><dia> 2011-09-15 </dia></td>
+</tr>
+<tr>
+<td><xs:element name="“height”" type="xs:integer"></xs:element></td>
+<td><height> 220 </height></td>
+</tr>
+<tr>
+<td><xs:element name="“name”" type="“xs:string”"></xs:element></td>
+<td><name> Pere Puig </name></td>
+</tr>
+<tr>
+<td><xs:element name="“size”" type="“xs:float”"></xs:element></td>
+<td><size> 1.7E2 </size></td>
+</tr>
+<tr>
+<td><xs:element name="“place”" type="“xs:anyURI”"></xs:element></td>
+<td><place> http://www.ioc.cat </place></td>
+</tr>
+</tbody>
+</table>
+<p>When a tag is defined in XSD, it is being defined that the tag must appear in the XML document once. It is quite common for labels to be repeated a certain number of times. In XSD this has been simplified by attributes of the <element> tag that determine the cardinality of the elements:</element></p>
+<ul>
+<li>minOccurs: allows you to define how many times an item must come out at least. A value of ‘0’ indicates that the item may not come out.</li>
+<li>maxOccurs: used to define the maximum number of times an item can be output. unbounded implies that there is no limit to the times you can go out.</li>
+</ul>
+<p>Using the attributes, you can set the <code>&lt;firstname&gt;</code> element to go out once and the <code>&lt;surname&gt;</code> element a maximum of twice.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"nom"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"surname"</span> <span class="na">maxOccurs =</span> <span class="s">"2"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+Values ​​can also be given to elements with the <code>fixed</code>, <code>default</code>, and <code>nullable</code> attributes.</p>
+<p>The <code>fixed</code> attribute allows you to define a required value for an element:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"centre"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="na">fixed=</span><span class="s">"IOC"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>So only content with the specified value (or nothing) can be defined:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;centre</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;centre&gt;</span> IOC <span class="nt">&lt;/centre&gt;</span>
+</code></pre></div>
+<p>But never a different value than specified:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;centre&gt;</span> Institut Cendrassos <span class="nt">&lt;/centre&gt;</span>
+</code></pre></div>
+Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets it be changed in the contents of the label.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;xsi:element</span> <span class="na">name=</span><span class="s">"centre"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="na">default=</span><span class="s">"IOC"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>The definition would validate with the following three cases:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;center</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;centre&gt;</span> IOC <span class="nt">&lt;/centre&gt;</span>
+<span class="nt">&lt;centre&gt;</span> Institut Cendrassos <span class="nt">&lt;/centre&gt;</span>
+</code></pre></div>
+<p>The <code>null</code> attribute is used to indicate whether null content is allowed. Therefore, you can only take the values <code>​​yes</code> or <code>no</code>.</p>
+<h4 id="simple-personal-types">Simple personal types<a class="headerlink" href="#simple-personal-types" title="Permanent link">¶</a></h4>
+<p>Because it can sometimes be interesting to define values ​​for items that do not necessarily have to match the standards, XSD allows you to define types of personal data. For example, if you want a numeric value but do not accept all values ​​but a subset of integers.</p>
+<p>To define personal simple types, the type is not placed in the element and a <simpletype> child is defined.</simpletype></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: element name = "person"&gt;
+        &lt;xs: simpleType&gt;
+           ...
+        &lt;/ xs: simpleType&gt;
+    &lt;/ xs: element&gt;
+</code></pre></div>
+<p>SimpleType specifies the modification you want to make. The most common is that the changes are made with list, union, restriction or extension.</p>
+<p>Although lists of values ​​can be defined, it is not highly recommended to use them. Most experts believe that it is better to define the values ​​in the list using label repetitions.</p>
+<p>Using list will allow you to define that an item can contain lists of values. Therefore, to specify that a <partitions> element can contain a list of dates would be defined:</partitions></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: element name = "matches"&gt;
+      &lt;xs: simpleType&gt;
+          &lt;xs: list itemType = "xs: date" /&gt;
+      &lt;/ xs: simpleType&gt;
+    &lt;/ xs: element&gt;
+</code></pre></div>
+<p>The tag would validate with something like:</p>
+<p><div class="highlight"><pre><span></span><code>    &lt;partits&gt; 2011-01-07 2011-01-15 2011-01-21 &lt;/partits&gt;
+</code></pre></div>
+SimpleType elements can also be defined with a name outside the elements and then used as a personal data type.</p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: simpleType name = "dies"&gt;
+        &lt;xs: list itemType = "xs: date" /&gt;
+    &lt;/ xs: simpleType&gt;
+
+    &lt;xs: element name = "matches" type = "days" /&gt;
+</code></pre></div>
+<p>Using custom named types, union type modifications can be created. Union modifiers are used to allow different types to be mixed into the contents of an element.</p>
+<p>Defining the <price> element will allow the element to be of type value or symbol type.</price></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: element name = "prices"&gt;
+        &lt;xs: sipleType&gt;
+            &lt;xs: union memberTypes = "symbol value" /&gt;
+        &lt;/ xs: simpleType&gt;
+    &lt;/ xs: element&gt;
+</code></pre></div>
+<p>With this we could assign values ​​like these:
+<div class="highlight"><pre><span></span><code>    &lt;price&gt; 25 € &lt;/price&gt;
+</code></pre></div></p>
+<p>But without a doubt the most interesting modifier is the one that allows to define restrictions to the base types. With the restriction modifier you can create data types in which only certain values ​​are accepted, the data meets a certain condition, and so on.</p>
+<p>The <birth> element can only have integer values ​​between 1850 and 2011 if defined as follows:</birth></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: simpleType name = "year_birth"&gt;
+        &lt;xs: restriction base = "xs: integer"&gt;
+            &lt;xs: maxInclusive value = "2011" /&gt;
+            &lt;xs: minInclusive value = "1850" /&gt;
+        &lt;/ xs: restriction&gt;
+    &lt;/ xs: simpleType&gt;
+
+    &lt;xs: element name = "birth" type = "year_birth" /&gt;
+</code></pre></div>
+<p>Restrictions of many types can be defined by means of attributes (Table.11). Normally the values ​​of the constraints are specified in the value attribute:
+Table: Attributes that allow to define restrictions in XSD
+Result Elements
+maxInclusive / maxExclusive Used to define the maximum numeric value that an item can take.
+minInclusive / minExclusive Set the minimum value for the value of an item.
+length With lenght we restrict the length that a text element can have. We can use <xs: minlength=""> and <xs: maxlenght=""> to be more accurate.
+enumeration Only allows the element to have one of the values ​​specified in the different <enumeration> lines.
+totalDigits Defines the number of digits of a numeric value.
+fractionDigits Used to specify the number of decimals that a numeric value can have.
+pattern Defines a regular expression to which the value of the element must fit in order to be valid.</enumeration></xs:></xs:></p>
+<p>For example, the value of the <answer> element can only have one of the three values ​​"A", "B" or "C" if it is defined in this way:</answer></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: element name = "answer"&gt;
+        &lt;xs: simpleType&gt;
+            &lt;xs: enumeration value = "A" /&gt;
+            &lt;xs: enumeration value = "B" /&gt;
+            &lt;xs: enumeration value = "C" /&gt;
+        &lt;/ xs: simpleType&gt;
+    &lt;/ xs: element&gt;
+</code></pre></div>
+<p>One of the most interesting constraints is those defined by the pattern attribute, which allows you to define constraints from regular expressions. As a general rule we have that if a character is specified in the pattern that character must appear in the content; the other possibilities can be seen in the table.12
+Table: Definition of regular expressions
+Symbol Equivalence
+. Any character
+ d Any digit
+ D Any non-digit character
+ s Non-printable characters: spaces, tabs, line breaks…
+ S Any printable character
+x * The one in front of * must come out 0 or more times
+x + The one in front of + must come out 1 or more times
+x? The one in front of? it may or may not come out
+[abc] There must be some character inside
+[0-9] There must be a value between the two specified, inclusive
+x {5} There must be 5 times what is in front of the square brackets
+x {5,} There must be 5 or more times the one in front
+x {5,8} There must be 5 to 8 times the front</p>
+<p>Using this system you can define highly customized data types. For example, we can define that a data must have the form of a DNI (8 digits, a hyphen and a capital letter) with this expression:</p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: simpleType name = "dni"&gt;
+        &lt;xs: restriction base = "xs: string"&gt;
+            &lt;xs: pattern value = "[0-9] {8} - [A-Z]" /&gt;
+        &lt;/ xs: restriction&gt;
+    &lt;/ xs: simpleType&gt;
+</code></pre></div>
+<p>Apart from the restrictions, there is also the extension element, which is used to add extra features to the types. It doesn't make much sense to come up with simple type elements but it can be used, for example, to add attributes to simple types (which makes them complex types).</p>
+<h3 id="elements-with-complex-type-content">Elements with complex type content<a class="headerlink" href="#elements-with-complex-type-content" title="Permanent link">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Elements with complex type content are those that have attributes, contain other elements, or have no content.</p>
+</div>
+<p>Items with complex content have received a lot of criticism because they are considered too complicated, but they should be used because in all schema files there will usually be a complex type: the root of the document.</p>
+<p>There are considered to be four major groups of complex content:</p>
+<div class="highlight"><pre><span></span><code>Those in its content have only data. Therefore, they are like those of simple types but with attributes.
+Items that contain only items in the content.
+The empty elements.
+Items with mixed content.
+</code></pre></div>
+<p>Elements with complex type are defined by specifying that the data type of the element is <xs: complextype="">.</xs:></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: element name = "class"&gt;
+        &lt;xs: complexType&gt;
+              ....
+        &lt;/ xs: complexType&gt;
+    &lt;/ xs: element&gt;
+</code></pre></div>
+<p>As with simple types, complex named types can be defined for reuse as custom types.</p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: complexType name = "course"&gt;
+         ...
+    &lt;/ xs: complexType&gt;
+
+    &lt;xs: element class type = "course" /&gt;
+</code></pre></div>
+<h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">¶</a></h4>
+<p>A basic feature of XSD is that only complex type elements can have attributes. In essence, there is not much difference between defining an element or an attribute, as it is done in the same way but using the attribute tag.</p>
+<p>The data types are the same and therefore can have basic types as in the following example:</p>
+<p><div class="highlight"><pre><span></span><code>    &lt;xs: attribute name = "number" type = "xs: integer" /&gt;
+</code></pre></div>
+Restrictions can be placed in the same way as in the elements. In this example, the year attribute cannot have values ​​greater than 2011 if it is defined as follows:</p>
+<p><div class="highlight"><pre><span></span><code>    &lt;xs: attribute name = "any"&gt;
+        &lt;xs: simpleType&gt;
+            &lt;xs: restriction base = "xs: integer"&gt;
+                &lt;xs: maxInclusive value = "2011" /&gt;
+            &lt;/ xs: restriction&gt;
+        &lt;/ xs: simpleType&gt;
+    &lt;/ xs: attribute&gt;
+</code></pre></div>
+Unless otherwise specified, attributes are always optional.</p>
+<p>The <attribute> tag has a series of attributes that allow you to define extra features about the attributes (Table.13).
+Table: Most important attributes of xs: attribute
+Attribute Use
+use Specifies whether the attribute is required, optional, or prohibited.
+default Sets a default value.
+fixed Used to define required values ​​for attributes.
+form Defines whether the attribute should go with the namespace alias (qualified) or not (unqualified).</attribute></p>
+<p>For example, the year attribute must be specified if it is defined as follows:</p>
+<div class="highlight"><pre><span></span><code>&lt;xs: attribute name = "any" type = "xs: integer" use = "required" /&gt;
+</code></pre></div>
+<h4 id="simplecontent">'simpleContent'<a class="headerlink" href="#simplecontent" title="Permanent link">¶</a></h4>
+<p>If the element contains only text, the content of complexType will be a simpleContent. SimpleContent allows you to define restrictions or extensions to items that only have data as content.</p>
+<p>The most important difference is that in this case you can define attributes in the element. Attributes are added by defining an extension to the type used in the element.</p>
+<p>In this example, the <size> element has integer content and defines two attributes, length and width, that are also integers.</size></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: complexType name = "Size"&gt;
+        &lt;xs: simpleContent&gt;
+            &lt;xs: extension base = "xs: integer"&gt;
+               &lt;xs: attribute name = "length" type = "xs: integer" /&gt;
+               &lt;xs: attribute name = "width" type = "xs: integer" /&gt;
+            &lt;/ xs: extension&gt;
+        &lt;/ xs: simpleContent&gt;
+    &lt;/ xs: complexType&gt;
+</code></pre></div>
+<h4 id="content-made-up-of-elements">Content made up of elements<a class="headerlink" href="#content-made-up-of-elements" title="Permanent link">¶</a></h4>
+<p>Elements that contain other elements can also be defined in XSD within a <complextype> and can be some of the elements in the table.14.
+Table: Elements to define complex content
+Label Used for
+sequence Specify the content as an ordered list of items.
+choice Allows you to specify alternative items.
+all Define the content as a cluttered list of items.
+complexContent Extend or restrict complex content.</complextype></p>
+<p>The <sequence> element is one of the ways that XSD language allows you to specify the elements that should be part of an element's content. Even in the case where there is only a single tag it can be defined as a sequence.</sequence></p>
+<p>The most important condition they have is that the elements of the XML document to be validated must appear in the same order in which they are defined in the sequence.</p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: element name = "person"&gt;
+        &lt;xs: complexContent&gt;
+            &lt;xs: sequence&gt;
+                &lt;xs: element name = "name" type = "xs: string" /&gt;
+                &lt;xs: element name = "surname" type = "xs: string" maxOccurs = "2" /&gt;
+                &lt;xs: element name = "type" type = "xs: string" /&gt;
+            &lt;/ xs: sequence&gt;
+        &lt;/ xs: complexContent&gt;
+    &lt;/ xs: element&gt;
+</code></pre></div>
+<p>The example above defines that one or two surnames may appear before the appearance of <type>.</type></p>
+<div class="highlight"><pre><span></span><code>    &lt;person&gt;
+        &lt;name&gt; Marcel &lt;/name&gt;
+        &lt;cognom&gt; Puig &lt;/cognom&gt;
+        &lt;cognom&gt; Lozano &lt;/cognom&gt;
+        &lt;type&gt; Professor &lt;/type&gt;
+    &lt;/person&gt;
+</code></pre></div>
+<p>It will not validate any content if some item is not in exactly the same order.</p>
+<div class="highlight"><pre><span></span><code>    &lt;person&gt;
+        &lt;type&gt; Professor &lt;/type&gt;
+        &lt;cognom&gt; Puig &lt;/cognom&gt;
+        &lt;name&gt; Marcel &lt;/name&gt;
+    &lt;/person&gt;
+</code></pre></div>
+<p>Sequences may contain other sequences of elements.</p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: schema xmlns: xs = "http://www.w3.org/2001/XMLSchema" elementFormDefault = "qualified"&gt;
+        &lt;xs: element name = "person"&gt;
+            &lt;xs: complexType&gt;
+                &lt;xs: sequence&gt;
+                    &lt;xs: element name = "fullname"&gt;
+                        &lt;xs: complexType&gt;
+                            &lt;xs: sequence&gt;
+                                &lt;xs: element name = "name" type = "xs: string" /&gt;
+                                &lt;xs: element name = "surname" type = "xs: string" maxOccurs = "2" /&gt;
+                            &lt;/ xs: sequence&gt;
+                        &lt;/ xs: complexType&gt;
+                    &lt;/ xs: element&gt;
+                    &lt;xs: element name = "profession" type = "xs: string" /&gt;
+                &lt;/ xs: sequence&gt;
+            &lt;/ xs: complexType&gt;
+        &lt;/ xs: element&gt;
+    &lt;/ xs: schema&gt;
+</code></pre></div>
+<p>The <choice> element is used to choose one of the alternatives presented.</choice></p>
+<p>In this example, the person element may contain either the <namename> or <dni> tag, but not both.
+<div class="highlight"><pre><span></span><code>    &lt;xs: complexType name = "person"&gt;
+      &lt;xs: choice&gt;
+          &lt;xs: element name = "nomCognoms" type = "xs: string" /&gt;
+          &lt;xs: element name = "dni" type = "xs: string" /&gt;
+      &lt;/ xs: choice&gt;
+</code></pre></div></dni></namename></p>
+<p>Alternatives may include sequences or other <choice> elements. The following definition is a more elaborate example than the previous one and allows you to choose between the elements <name> and <surname> or <dni>.</dni></surname></name></choice></p>
+<p><div class="highlight"><pre><span></span><code>    &lt;xs: choice&gt;
+        &lt;xs: sequence&gt;
+            &lt;xs: element name = "name" type = "xs: string" /&gt;
+            &lt;xs: element name = "surname" type = "xs: string" maxOccurs = "2" /&gt;
+        &lt;/ xs: sequence&gt;
+        &lt;xs: element name = "dni" type = "xs: string" /&gt;
+    &lt;/ xs: choice&gt;
+</code></pre></div>
+The most important difference between the <all> and <sequence> element is the order. The <all> element allows you to specify a sequence of elements but allows them to be specified in any order.</all></sequence></all></p>
+<p>Therefore, if we define the <person> element as follows:</person></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: element name = "person"&gt;
+        &lt;xs: complexType&gt;
+            &lt;xs: all&gt;
+                &lt;xs: element name = "nom" /&gt;
+                &lt;xs: element name = "surname" /&gt;
+            &lt;/xs: all&gt;
+        &lt;/ xs: complexType&gt;
+    &lt;/ xs: element&gt;
+</code></pre></div>
+<p>It will help us to validate both this document:</p>
+<div class="highlight"><pre><span></span><code>    &lt;person&gt;
+        &lt;name&gt; Pere &lt;/name&gt;
+        &lt;cognom&gt; Garcia &lt;/nom&gt;
+</code></pre></div>
+<p>like this:</p>
+<div class="highlight"><pre><span></span><code>   &lt;person&gt;
+       &lt;cognom&gt; Garcia &lt;/nom&gt;
+       &lt;name&gt; Pere &lt;/name&gt;
+</code></pre></div>
+<p>But the limitations of this element that were not present in the ordered sequences must always be taken into account:</p>
+<div class="highlight"><pre><span></span><code>There can only be elements within it. There can be no sequences or alternatives.
+Cardinality cannot be used in the elements it contains, as it would cause a problem of non-determinism.
+</code></pre></div>
+<p>Therefore, the following example is incorrect, as it is requested that <surname> be able to exit twice.</surname></p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: all&gt;
+        &lt;xs: element name = "name" type = "xs: string" /&gt;
+        &lt;xs: element name = "surname" maxOccurs = "2" type = "xs: string" /&gt;
+    &lt;/xs: all&gt;
+</code></pre></div>
+<p>One possible way to allow the first and last names to be specified in any order would be to do the following:</p>
+<div class="highlight"><pre><span></span><code>    &lt;xs: complexType&gt;
+        &lt;xs: choice&gt;
+            &lt;xs: sequence&gt;
+                &lt;xs: element name = "name" type = "xs: string" /&gt;
+                &lt;xs: element name = "surname" type = "xs: string" maxOccurs = "2" /&gt;
+            &lt;/ xs: sequence&gt;
+            &lt;xs: sequence&gt;
+                &lt;xs: element name = "surname" type = "xs: string" maxOccurs = "2" /&gt;
+                &lt;xs: element name = "name" type = "xs: string" /&gt;
+            &lt;/ xs: sequence&gt;
+        &lt;/ xs: choice&gt;
+    &lt;/ xs: complexType&gt;
+</code></pre></div>
+<h4 id="complexcontent">'complexContent'<a class="headerlink" href="#complexcontent" title="Permanent link">¶</a></h4>
+<p>The complexContent tag allows you to define extensions or restrictions to a complex type that contains mixed content or just elements.</p>
+<p>This makes it possible to extend an existing complex content with an extension or to restrict its contents.</p>
+<p>For example, if you have already defined a fullname data type in which the <name> and <surname> elements are, you can reuse the definition to define a new data type, address book, in which the e-mail.</surname></name></p>
+<div class="highlight"><pre><span></span><code>&lt;xs: complexType name = "complexName"&gt;
+  &lt;xs: sequence&gt;
+      &lt;xs: element name = "name" type = "xs: string" /&gt;
+      &lt;xs: element name = "surname" type = "xs: string" maxOccurs = "2" /&gt;
+  &lt;!-- xs: sequence--&gt;
+&lt;!-- xs: complexType--&gt;
+
+&lt;xs: complexType name = "agenda"&gt;
+    &lt;xs: complexContent&gt;
+        &lt;xs: extension base = "fullName"&gt;
+            &lt;xs: sequence&gt;
+                 &lt;xs: element name = "email" type = "xs: string" /&gt;
+            &lt;!-- xs: sequence--&gt;
+        &lt;!-- xs: extension--&gt;
+    &lt;!-- xs: complexContent--&gt;
+&lt;!-- xs: complexType--&gt;
+</code></pre></div>
+<p>In this way, an agenda item can be defined:</p>
+<div class="highlight"><pre><span></span><code>&lt;xs: element name = "persona" type = "agenda" /&gt;
+</code></pre></div>
+<p>which must have the three elements <name>, <surname>, and <email>:</email></surname></name></p>
+<div class="highlight"><pre><span></span><code>&lt;person&gt;
+    &lt;name&gt; Pere &lt;/name&gt;
+    &lt;cognom&gt; Garcia &lt;/cognom&gt;
+    &lt;email&gt; pgarcia@ioc.cat &lt;/email&gt;
+&lt;/person&gt;
+</code></pre></div>
+<h4 id="items-without-content">Items without content<a class="headerlink" href="#items-without-content" title="Permanent link">¶</a></h4>
+<p>For XSD elements without content are always of complex type. The definition simply does not specify any content and we will have an empty element.</p>
+<div class="highlight"><pre><span></span><code>&lt;xs: element name = "delegate"&gt;
+    &lt;xs: complexType /&gt;
+&lt;!-- xs: element--&gt;
+</code></pre></div>
+<p>The definition allows you to define the item as follows:</p>
+<div class="highlight"><pre><span></span><code>&lt;delegate /&gt;
+</code></pre></div>
+<p>If the element needs attributes they are simply specified within the complexType.</p>
+<div class="highlight"><pre><span></span><code>&lt;xs: element name = "delegate"&gt;
+    &lt;xs: complexType&gt;
+        &lt;xs: attribute name = "any" use = "required" type = "xs: gYear" /&gt;
+    &lt;!-- xs: complexType--&gt;
+&lt;!-- xs: element--&gt;
+</code></pre></div>
+<p>And you can now define the attribute in the empty element:</p>
+<div class="highlight"><pre><span></span><code>&lt;delegate year = "2012" /&gt;
+</code></pre></div>
+<h4 id="mixed-content">Mixed content<a class="headerlink" href="#mixed-content" title="Permanent link">¶</a></h4>
+<p>Mixed content items are items that have both content and text content. It was designed to include elements in the middle of a narrative text.</p>
+<p>In XSD the mixed content is defined by putting the mixed = "true" attribute in the definition of the <complextype> element.</complextype></p>
+<div class="highlight"><pre><span></span><code>&lt;xs: element name = "letter"&gt;
+    &lt;xs: complexType mixed = "true"&gt;
+        &lt;xs: sequence&gt;
+            &lt;xs: element name = "name" type = "xs: string" /&gt;
+            &lt;xs: element name = "dia" type = "xs: gDay" /&gt;
+        &lt;!-- xs: sequence--&gt;
+    &lt;!-- xs: complexType--&gt;
+&lt;!-- xs: element--&gt;
+</code></pre></div>
+<p>This would allow us to validate content like this:</p>
+<div class="highlight"><pre><span></span><code>&lt;card&gt; Dear Sir &lt;name&gt; Peter &lt;name&gt;:
+
+I am sending you this letter to remind you that we have stayed for
+meet us on &lt;day&gt; 12 &lt;/day&gt;
+&lt;/carta&gt;
+</code></pre></div>
+<h3 id="example-of-creating-an-xsd">Example of creating an XSD<a class="headerlink" href="#example-of-creating-an-xsd" title="Permanent link">¶</a></h3>
+<p>XSD vocabulary definitions can be created from the idea of ​​what we want the data to contain or from a sample XML file.</p>
+<h3 id="statement">Statement<a class="headerlink" href="#statement" title="Permanent link">¶</a></h3>
+<p>We want to store in an XML document some website bookmarks:</p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;bookmarks&gt;</span>
+    <span class="nt">&lt;website&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Abrirllave<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>Tutoriales de informática.<span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;url&gt;</span>http://www.abrirllave.com/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/website&gt;</span>
+    <span class="nt">&lt;website&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Wikipedia<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>La enciclopedia libre.<span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;url&gt;</span>http://www.wikipedia.org/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/website&gt;</span>
+    <span class="nt">&lt;website&gt;</span>
+        <span class="nt">&lt;name&gt;</span>W3C<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>World Wide Web Consortium.<span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;url&gt;</span>http://www.w3.org/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/website&gt;</span>
+<span class="nt">&lt;/bookmarks&gt;</span>
+</code></pre></div>
+We need to create an XSD file to validate this XML document. </p>
+<p>The first step is to decide which kind of elements must be created. As the root
+element always contains elements we have to define it as a complex type.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"bookmarks"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:complexType&gt;</span>
+      <span class="nt">&lt;xs:sequence&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"website"</span> <span class="na">minOccurs=</span><span class="s">"1"</span> <span class="na">maxOccurs=</span><span class="s">"unbounded"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;xs:complexType&gt;</span>
+            <span class="nt">&lt;xs:sequence&gt;</span>            
+              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">type=</span><span class="s">"xs:string"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"url"</span> <span class="na">type=</span><span class="s">"xs:anyURI"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/xs:sequence&gt;</span>
+          <span class="nt">&lt;/xs:complexType&gt;</span>
+        <span class="nt">&lt;/xs:element&gt;</span>
+      <span class="nt">&lt;/xs:sequence&gt;</span>
+    <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;/xs:element&gt;</span>
+<span class="nt">&lt;/xs:schema&gt;</span>
+</code></pre></div>
+<h2 id="activities">Activities<a class="headerlink" href="#activities" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><code>200SimpleElements</code>: For the following elements write their simple elements definitions.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;city&gt;</span>Roma<span class="nt">&lt;/city&gt;</span>
+<span class="nt">&lt;birthday&gt;</span>1996-12-18<span class="nt">&lt;/birthday&gt;</span>
+<span class="nt">&lt;time&gt;</span>18:29:45<span class="nt">&lt;/time&gt;</span>
+<span class="nt">&lt;mark&gt;</span>7.5<span class="nt">&lt;/mark&gt;</span>
+<span class="nt">&lt;pass&gt;</span>true<span class="nt">&lt;/pass&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>201Fruits.xsd</code>: Given the following XML document</p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;fruits&gt;</span>
+    <span class="nt">&lt;item&gt;</span>
+        <span class="nt">&lt;id&gt;</span>1000<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Apple<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;price&gt;</span>4<span class="nt">&lt;/price&gt;</span>
+        <span class="nt">&lt;quantity&gt;</span>133<span class="nt">&lt;/quantity&gt;</span>
+    <span class="nt">&lt;/item&gt;</span> 
+    <span class="nt">&lt;item&gt;</span>
+        <span class="nt">&lt;id&gt;</span>1001<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Apricot<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;price&gt;</span>5<span class="nt">&lt;/price&gt;</span>
+        <span class="nt">&lt;quantity&gt;</span>175<span class="nt">&lt;/quantity&gt;</span>
+    <span class="nt">&lt;/item&gt;</span> 
+<span class="nt">&lt;/fruits&gt;</span>
+</code></pre></div>
+Create an XSD document to validate it. After that add some fruits and validate
+again.</p>
+</li>
+</ol>
+<h2 id="credits-and-bibliography">Credits and bibliography<a class="headerlink" href="#credits-and-bibliography" title="Permanent link">¶</a></h2>
+<p>In this unit we will use as a reference the book <em>Lenguajes de Marcas y Sistemas de Gestión de Información</em> by Carlos Pes</p>
+<ul>
+<li>[Online version] (https://www.abrirllave.com/dtd/que-es-dtd.php)</li>
+<li>[PDF version] (https://www.abrirllave.com/lmsgi/libro.php)</li>
+</ul>
+<p>and Barlomé Sintes Marco:</p>
+<ul>
+<li><a href="https://www.mclibre.org/consultar/xml/lecciones/xml-dtd.html">https://www.mclibre.org/consultar/xml/lecciones/xml-dtd.html</a></li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../js/print-site.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
