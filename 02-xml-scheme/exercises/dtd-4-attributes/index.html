@@ -130,6 +130,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+        2. XML scheme and vocabularies
+      </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -210,175 +215,175 @@
 <h3 id="formasxml">formas.xml<a class="headerlink" href="#formasxml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("formas.xml") está bien formado. Sin embargo, no es válido. 
 Para que lo sea, realizar los cambios necesarios en dicho documento, pero sin modificar la DTD interna.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE formas [</span>
-<span class="cp">   &lt;!ELEMENT formas (cuadrado, triangulo, circulo, otra)&gt;</span>
-   <span class="cp">&lt;!ELEMENT cuadrado (#PCDATA)&gt;</span>
-      <span class="cp">&lt;!ATTLIST cuadrado lados CDATA #REQUIRED&gt;</span>
-   <span class="cp">&lt;!ELEMENT triangulo (#PCDATA)&gt;</span>
-      <span class="cp">&lt;!ATTLIST triangulo lados CDATA #REQUIRED&gt;</span>
-   <span class="cp">&lt;!ELEMENT circulo (#PCDATA)&gt;</span>
-   <span class="cp">&lt;!ELEMENT otra EMPTY&gt;</span>
-      <span class="cp">&lt;!ATTLIST otra lados CDATA #REQUIRED&gt;</span>
-]&gt;
-
-<span class="nt">&lt;formas&gt;</span>
-   <span class="nt">&lt;cuadrado</span> <span class="na">lados=</span><span class="s">"4"</span><span class="nt">&gt;</span>tablero<span class="nt">&lt;/cuadrado&gt;</span>
-   <span class="nt">&lt;circulo&gt;</span>anilla<span class="nt">&lt;/circulo&gt;</span>
-   <span class="nt">&lt;triangulo&gt;</span>señal<span class="nt">&lt;/triangulo&gt;</span>
-   <span class="nt">&lt;otra</span> <span class="na">lados=</span><span class="s">"7"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/formas&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">&lt;!DOCTYPE formas [</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cp">   &lt;!ELEMENT formas (cuadrado, triangulo, circulo, otra)&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="cp">&lt;!ELEMENT cuadrado (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="cp">&lt;!ATTLIST cuadrado lados CDATA #REQUIRED&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>   <span class="cp">&lt;!ELEMENT triangulo (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="cp">&lt;!ATTLIST triangulo lados CDATA #REQUIRED&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>   <span class="cp">&lt;!ELEMENT circulo (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>   <span class="cp">&lt;!ELEMENT otra EMPTY&gt;</span>
+<span class="linenos" data-linenos="10 "></span>      <span class="cp">&lt;!ATTLIST otra lados CDATA #REQUIRED&gt;</span>
+<span class="linenos" data-linenos="11 "></span>]&gt;
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="nt">&lt;formas&gt;</span>
+<span class="linenos" data-linenos="14 "></span>   <span class="nt">&lt;cuadrado</span> <span class="na">lados=</span><span class="s">"4"</span><span class="nt">&gt;</span>tablero<span class="nt">&lt;/cuadrado&gt;</span>
+<span class="linenos" data-linenos="15 "></span>   <span class="nt">&lt;circulo&gt;</span>anilla<span class="nt">&lt;/circulo&gt;</span>
+<span class="linenos" data-linenos="16 "></span>   <span class="nt">&lt;triangulo&gt;</span>señal<span class="nt">&lt;/triangulo&gt;</span>
+<span class="linenos" data-linenos="17 "></span>   <span class="nt">&lt;otra</span> <span class="na">lados=</span><span class="s">"7"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/formas&gt;</span>
 </code></pre></div>
 <h3 id="empresasxml">empresas.xml<a class="headerlink" href="#empresasxml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("empresas.xml") está bien formado. Sin embargo, no es válido. 
 Para que lo sea, realizar los cambios necesarios en dicho documento, pero sin modificar la DTD interna.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE empresas [</span>
-<span class="cp">   &lt;!ELEMENT empresas (empresa)*&gt;</span>
-   <span class="cp">&lt;!ELEMENT empresa EMPTY&gt;</span>
-      <span class="cp">&lt;!ATTLIST empresa nombre CDATA #REQUIRED&gt;</span>
-      <span class="cp">&lt;!ATTLIST empresa fecha_de_fundacion CDATA #IMPLIED&gt;</span>
-]&gt;
-
-<span class="nt">&lt;empresas&gt;</span>
-   <span class="nt">&lt;empresa</span> <span class="na">fecha_de_fundacion=</span><span class="s">"1976"</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/empresa&gt;</span>
-   <span class="nt">&lt;empresa&gt;</span>Google<span class="nt">&lt;/empresa&gt;</span>
-   <span class="nt">&lt;empresa</span> <span class="na">fecha_de_fundacion=</span><span class="s">"1975"</span><span class="nt">&gt;</span>Microsoft<span class="nt">&lt;/empresa&gt;</span>
-<span class="nt">&lt;/empresas&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">&lt;!DOCTYPE empresas [</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cp">   &lt;!ELEMENT empresas (empresa)*&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="cp">&lt;!ELEMENT empresa EMPTY&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="cp">&lt;!ATTLIST empresa nombre CDATA #REQUIRED&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>      <span class="cp">&lt;!ATTLIST empresa fecha_de_fundacion CDATA #IMPLIED&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>]&gt;
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nt">&lt;empresas&gt;</span>
+<span class="linenos" data-linenos="10 "></span>   <span class="nt">&lt;empresa</span> <span class="na">fecha_de_fundacion=</span><span class="s">"1976"</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/empresa&gt;</span>
+<span class="linenos" data-linenos="11 "></span>   <span class="nt">&lt;empresa&gt;</span>Google<span class="nt">&lt;/empresa&gt;</span>
+<span class="linenos" data-linenos="12 "></span>   <span class="nt">&lt;empresa</span> <span class="na">fecha_de_fundacion=</span><span class="s">"1975"</span><span class="nt">&gt;</span>Microsoft<span class="nt">&lt;/empresa&gt;</span>
+<span class="linenos" data-linenos="13 "></span><span class="nt">&lt;/empresas&gt;</span>
 </code></pre></div>
 <h3 id="articulosxml">articulos.xml<a class="headerlink" href="#articulosxml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("articulos.xml") está bien formado. Sin embargo, no es válido. 
 Para que lo sea, realizar los cambios necesarios en dicho documento, 
 pero sin modificar la DTD interna.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE articulos [</span>
-<span class="cp">   &lt;!ELEMENT articulos (articulo)+&gt;</span>
-   <span class="cp">&lt;!ELEMENT articulo (#PCDATA)&gt;</span>
-      <span class="cp">&lt;!ATTLIST articulo color CDATA #FIXED "rojo"&gt;</span>
-]&gt;
-
-<span class="nt">&lt;articulos&gt;</span>
-   <span class="nt">&lt;articulo</span> <span class="na">nombre=</span><span class="s">"bolígrafo"</span> <span class="na">color=</span><span class="s">"rojo"</span><span class="nt">/&gt;</span>
-   <span class="nt">&lt;articulo</span> <span class="na">nombre=</span><span class="s">"cuaderno"</span><span class="nt">/&gt;</span>
-   <span class="nt">&lt;articulo</span> <span class="na">nombre=</span><span class="s">"rotulador"</span> <span class="na">color=</span><span class="s">"amarillo"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/articulos&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">&lt;!DOCTYPE articulos [</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cp">   &lt;!ELEMENT articulos (articulo)+&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="cp">&lt;!ELEMENT articulo (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="cp">&lt;!ATTLIST articulo color CDATA #FIXED "rojo"&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>]&gt;
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nt">&lt;articulos&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>   <span class="nt">&lt;articulo</span> <span class="na">nombre=</span><span class="s">"bolígrafo"</span> <span class="na">color=</span><span class="s">"rojo"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>   <span class="nt">&lt;articulo</span> <span class="na">nombre=</span><span class="s">"cuaderno"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="11 "></span>   <span class="nt">&lt;articulo</span> <span class="na">nombre=</span><span class="s">"rotulador"</span> <span class="na">color=</span><span class="s">"amarillo"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;/articulos&gt;</span>
 </code></pre></div>
 <h3 id="geografiaxml">geografia.xml<a class="headerlink" href="#geografiaxml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("geografia.xml") está bien formado. 
 Sin embargo, no es válido. Para que lo sea, realizar los cambios necesarios en 
 dicho documento, pero sin modificar la DTD interna.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE geografia [</span>
-<span class="cp">   &lt;!ELEMENT geografia (paises, ciudades)&gt;</span>
-   <span class="cp">&lt;!ELEMENT paises (pais)*&gt;</span>
-      <span class="cp">&lt;!ELEMENT pais (#PCDATA)&gt;</span>
-         <span class="cp">&lt;!ATTLIST pais codpais ID #REQUIRED&gt;</span>
-   <span class="cp">&lt;!ELEMENT ciudades (ciudad)*&gt;</span>
-      <span class="cp">&lt;!ELEMENT ciudad (#PCDATA)&gt;</span>
-         <span class="cp">&lt;!ATTLIST ciudad pais IDREF #IMPLIED&gt;</span>
-]&gt;
-
-<span class="nt">&lt;geografia&gt;</span>
-   <span class="nt">&lt;paises&gt;</span>
-      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"1"</span><span class="nt">&gt;</span>Argentina<span class="nt">&lt;/pais&gt;</span>
-      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"2"</span><span class="nt">&gt;</span>Austria<span class="nt">&lt;/pais&gt;</span>
-      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"3"</span><span class="nt">&gt;</span>Japón<span class="nt">&lt;/pais&gt;</span>
-      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"4"</span><span class="nt">&gt;</span>Noruega<span class="nt">&lt;/pais&gt;</span>
-   <span class="nt">&lt;/paises&gt;</span>
-   <span class="nt">&lt;ciudades&gt;</span>
-      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">"3"</span><span class="nt">&gt;</span>Osaka<span class="nt">&lt;/ciudad&gt;</span>
-      <span class="nt">&lt;ciudad&gt;</span>Oslo<span class="nt">&lt;/ciudad&gt;</span>
-      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">""</span><span class="nt">&gt;</span>Sevilla<span class="nt">&lt;/ciudad&gt;</span>
-      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">"3"</span><span class="nt">&gt;</span>Tokio<span class="nt">&lt;/ciudad&gt;</span>
-      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">"2"</span><span class="nt">&gt;</span>Viena<span class="nt">&lt;/ciudad&gt;</span>
-   <span class="nt">&lt;/ciudades&gt;</span>
-<span class="nt">&lt;/geografia&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">&lt;!DOCTYPE geografia [</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cp">   &lt;!ELEMENT geografia (paises, ciudades)&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="cp">&lt;!ELEMENT paises (pais)*&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="cp">&lt;!ELEMENT pais (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>         <span class="cp">&lt;!ATTLIST pais codpais ID #REQUIRED&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>   <span class="cp">&lt;!ELEMENT ciudades (ciudad)*&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="cp">&lt;!ELEMENT ciudad (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>         <span class="cp">&lt;!ATTLIST ciudad pais IDREF #IMPLIED&gt;</span>
+<span class="linenos" data-linenos="10 "></span>]&gt;
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;geografia&gt;</span>
+<span class="linenos" data-linenos="13 "></span>   <span class="nt">&lt;paises&gt;</span>
+<span class="linenos" data-linenos="14 "></span>      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"1"</span><span class="nt">&gt;</span>Argentina<span class="nt">&lt;/pais&gt;</span>
+<span class="linenos" data-linenos="15 "></span>      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"2"</span><span class="nt">&gt;</span>Austria<span class="nt">&lt;/pais&gt;</span>
+<span class="linenos" data-linenos="16 "></span>      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"3"</span><span class="nt">&gt;</span>Japón<span class="nt">&lt;/pais&gt;</span>
+<span class="linenos" data-linenos="17 "></span>      <span class="nt">&lt;pais</span> <span class="na">codpais=</span><span class="s">"4"</span><span class="nt">&gt;</span>Noruega<span class="nt">&lt;/pais&gt;</span>
+<span class="linenos" data-linenos="18 "></span>   <span class="nt">&lt;/paises&gt;</span>
+<span class="linenos" data-linenos="19 "></span>   <span class="nt">&lt;ciudades&gt;</span>
+<span class="linenos" data-linenos="20 "></span>      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">"3"</span><span class="nt">&gt;</span>Osaka<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos="21 "></span>      <span class="nt">&lt;ciudad&gt;</span>Oslo<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos="22 "></span>      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">""</span><span class="nt">&gt;</span>Sevilla<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos="23 "></span>      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">"3"</span><span class="nt">&gt;</span>Tokio<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos="24 "></span>      <span class="nt">&lt;ciudad</span> <span class="na">pais=</span><span class="s">"2"</span><span class="nt">&gt;</span>Viena<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos="25 "></span>   <span class="nt">&lt;/ciudades&gt;</span>
+<span class="linenos" data-linenos="26 "></span><span class="nt">&lt;/geografia&gt;</span>
 </code></pre></div>
 <h3 id="declaracionesxml">declaraciones.xml<a class="headerlink" href="#declaracionesxml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("declaraciones.xml") está bien formado. 
 Sin embargo, no es válido. Para que lo sea, realizar los cambios necesarios 
 en la DTD interna de dicho documento.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE declaraciones [</span>
-<span class="cp">   &lt;!ELEMENT declaraciones (consonante | tipo_de_dato | variable)&gt;</span>
-   <span class="cp">&lt;!ELEMENT consonante (#PCDATA)&gt;</span>
-      <span class="cp">&lt;!ATTLIST consonante valor CDATA #REQUIRED&gt;</span>
-   <span class="cp">&lt;!ELEMENT tipo_de_dato (#PCDATA)&gt;</span>
-   <span class="cp">&lt;!ELEMENT variable (#PCDATA)&gt;</span>
-      <span class="cp">&lt;!ATTLIST variable tipo CDATA #REQUIRED&gt;</span>
-]&gt;
-
-<span class="nt">&lt;declaraciones&gt;</span>
-   <span class="nt">&lt;consonante</span> <span class="na">valor=</span><span class="s">"3.141592"</span><span class="nt">&gt;</span>PI<span class="nt">&lt;/consonante&gt;</span>
-   <span class="nt">&lt;variable</span> <span class="na">tipo=</span><span class="s">"real"</span><span class="nt">&gt;</span>radio<span class="nt">&lt;/variable&gt;</span>
-   <span class="nt">&lt;variable&gt;</span>area<span class="nt">&lt;/variable&gt;</span>
-   <span class="nt">&lt;variable&gt;</span>longitud<span class="nt">&lt;/variable&gt;</span>
-<span class="nt">&lt;/declaraciones&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">&lt;!DOCTYPE declaraciones [</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cp">   &lt;!ELEMENT declaraciones (consonante | tipo_de_dato | variable)&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="cp">&lt;!ELEMENT consonante (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="cp">&lt;!ATTLIST consonante valor CDATA #REQUIRED&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>   <span class="cp">&lt;!ELEMENT tipo_de_dato (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>   <span class="cp">&lt;!ELEMENT variable (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="cp">&lt;!ATTLIST variable tipo CDATA #REQUIRED&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>]&gt;
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="nt">&lt;declaraciones&gt;</span>
+<span class="linenos" data-linenos="12 "></span>   <span class="nt">&lt;consonante</span> <span class="na">valor=</span><span class="s">"3.141592"</span><span class="nt">&gt;</span>PI<span class="nt">&lt;/consonante&gt;</span>
+<span class="linenos" data-linenos="13 "></span>   <span class="nt">&lt;variable</span> <span class="na">tipo=</span><span class="s">"real"</span><span class="nt">&gt;</span>radio<span class="nt">&lt;/variable&gt;</span>
+<span class="linenos" data-linenos="14 "></span>   <span class="nt">&lt;variable&gt;</span>area<span class="nt">&lt;/variable&gt;</span>
+<span class="linenos" data-linenos="15 "></span>   <span class="nt">&lt;variable&gt;</span>longitud<span class="nt">&lt;/variable&gt;</span>
+<span class="linenos" data-linenos="16 "></span><span class="nt">&lt;/declaraciones&gt;</span>
 </code></pre></div>
 <h3 id="saludosxml">saludos.xml<a class="headerlink" href="#saludosxml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("saludos.xml") está bien formado. Sin embargo, 
 no es válido. Para que lo sea, realizar los cambios necesarios en la DTD interna de dicho documento.</p>
-<div class="highlight"><pre><span></span><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE saludos [
-   &lt;!ELEMENT saludos (saludo*)&gt;
-   &lt;!ELEMENT saludo (#PCDATA)&gt;
-      &lt;!ATTLIST saludo idioma (ALE | FRA | ITA) "ESP"&gt;
-]&gt;
-
-&lt;saludos&gt;
-   &lt;saludo idioma="ALE"&gt;Hallo&lt;/saludo&gt;
-   &lt;saludo&gt;Hola&lt;/saludo&gt;
-   &lt;saludo idioma="ITA"&gt;Ciao&lt;/saludo&gt;
-   &lt;saludo idioma="FRA"&gt;Salut&lt;/saludo&gt;
-   &lt;saludo idioma="POR"&gt;Olá&lt;/saludo&gt;
-&lt;/saludos&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<span class="linenos" data-linenos=" 2 "></span>&lt;!DOCTYPE saludos [
+<span class="linenos" data-linenos=" 3 "></span>   &lt;!ELEMENT saludos (saludo*)&gt;
+<span class="linenos" data-linenos=" 4 "></span>   &lt;!ELEMENT saludo (#PCDATA)&gt;
+<span class="linenos" data-linenos=" 5 "></span>      &lt;!ATTLIST saludo idioma (ALE | FRA | ITA) "ESP"&gt;
+<span class="linenos" data-linenos=" 6 "></span>]&gt;
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>&lt;saludos&gt;
+<span class="linenos" data-linenos=" 9 "></span>   &lt;saludo idioma="ALE"&gt;Hallo&lt;/saludo&gt;
+<span class="linenos" data-linenos="10 "></span>   &lt;saludo&gt;Hola&lt;/saludo&gt;
+<span class="linenos" data-linenos="11 "></span>   &lt;saludo idioma="ITA"&gt;Ciao&lt;/saludo&gt;
+<span class="linenos" data-linenos="12 "></span>   &lt;saludo idioma="FRA"&gt;Salut&lt;/saludo&gt;
+<span class="linenos" data-linenos="13 "></span>   &lt;saludo idioma="POR"&gt;Olá&lt;/saludo&gt;
+<span class="linenos" data-linenos="14 "></span>&lt;/saludos&gt;
 </code></pre></div>
 <h3 id="cinexml">cine.xml<a class="headerlink" href="#cinexml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("cine.xml") está bien formado. Sin embargo, 
 no es válido. Para que lo sea, realizar los cambios necesarios en la DTD interna de dicho documento.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE cine [</span>
-<span class="cp">   &lt;!ELEMENT peliculas (pelicula)*&gt;</span>
-      <span class="cp">&lt;!ELEMENT pelicula (#PCDATA)&gt;</span>
-         <span class="cp">&lt;!ATTLIST pelicula codpel ID (P1 | P2 | P3 | P4) "P0"&gt;</span>
-   <span class="cp">&lt;!ELEMENT actores (actor)*&gt;</span>
-      <span class="cp">&lt;!ELEMENT actor (#PCDATA)&gt;</span>
-         <span class="cp">&lt;!ATTLIST actor filmografia IDREF #REQUIRED&gt;</span>
-]&gt;
-
-<span class="nt">&lt;cine&gt;</span>
-   <span class="nt">&lt;peliculas&gt;</span>
-      <span class="nt">&lt;pelicula&gt;</span>Avatar<span class="nt">&lt;/pelicula&gt;</span>
-      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P1"</span><span class="nt">&gt;</span>Gran Torino<span class="nt">&lt;/pelicula&gt;</span>
-      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P2"</span><span class="nt">&gt;</span>Invictus<span class="nt">&lt;/pelicula&gt;</span>
-      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P3"</span><span class="nt">&gt;</span>Million dollar baby<span class="nt">&lt;/pelicula&gt;</span>
-      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P4"</span><span class="nt">&gt;</span>Oblivion<span class="nt">&lt;/pelicula&gt;</span>
-      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P5"</span><span class="nt">&gt;</span>Unforgiven<span class="nt">&lt;/pelicula&gt;</span>
-   <span class="nt">&lt;/peliculas&gt;</span>
-   <span class="nt">&lt;actores&gt;</span>
-      <span class="nt">&lt;actor</span> <span class="na">filmografia=</span><span class="s">"P1 P3 P5"</span><span class="nt">&gt;</span>Clint Eastwood<span class="nt">&lt;/actor&gt;</span>
-      <span class="nt">&lt;actor</span> <span class="na">filmografia=</span><span class="s">"P2 P3 P4 P5"</span><span class="nt">&gt;</span>Morgan Freeman<span class="nt">&lt;/actor&gt;</span>
-      <span class="nt">&lt;actor</span> <span class="na">filmografia=</span><span class="s">"P4"</span><span class="nt">&gt;</span>Tom Cruise<span class="nt">&lt;/actor&gt;</span>
-   <span class="nt">&lt;/actores&gt;</span>
-<span class="nt">&lt;/cine&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">&lt;!DOCTYPE cine [</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cp">   &lt;!ELEMENT peliculas (pelicula)*&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>      <span class="cp">&lt;!ELEMENT pelicula (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>         <span class="cp">&lt;!ATTLIST pelicula codpel ID (P1 | P2 | P3 | P4) "P0"&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>   <span class="cp">&lt;!ELEMENT actores (actor)*&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="cp">&lt;!ELEMENT actor (#PCDATA)&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>         <span class="cp">&lt;!ATTLIST actor filmografia IDREF #REQUIRED&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>]&gt;
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="nt">&lt;cine&gt;</span>
+<span class="linenos" data-linenos="12 "></span>   <span class="nt">&lt;peliculas&gt;</span>
+<span class="linenos" data-linenos="13 "></span>      <span class="nt">&lt;pelicula&gt;</span>Avatar<span class="nt">&lt;/pelicula&gt;</span>
+<span class="linenos" data-linenos="14 "></span>      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P1"</span><span class="nt">&gt;</span>Gran Torino<span class="nt">&lt;/pelicula&gt;</span>
+<span class="linenos" data-linenos="15 "></span>      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P2"</span><span class="nt">&gt;</span>Invictus<span class="nt">&lt;/pelicula&gt;</span>
+<span class="linenos" data-linenos="16 "></span>      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P3"</span><span class="nt">&gt;</span>Million dollar baby<span class="nt">&lt;/pelicula&gt;</span>
+<span class="linenos" data-linenos="17 "></span>      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P4"</span><span class="nt">&gt;</span>Oblivion<span class="nt">&lt;/pelicula&gt;</span>
+<span class="linenos" data-linenos="18 "></span>      <span class="nt">&lt;pelicula</span> <span class="na">codpel=</span><span class="s">"P5"</span><span class="nt">&gt;</span>Unforgiven<span class="nt">&lt;/pelicula&gt;</span>
+<span class="linenos" data-linenos="19 "></span>   <span class="nt">&lt;/peliculas&gt;</span>
+<span class="linenos" data-linenos="20 "></span>   <span class="nt">&lt;actores&gt;</span>
+<span class="linenos" data-linenos="21 "></span>      <span class="nt">&lt;actor</span> <span class="na">filmografia=</span><span class="s">"P1 P3 P5"</span><span class="nt">&gt;</span>Clint Eastwood<span class="nt">&lt;/actor&gt;</span>
+<span class="linenos" data-linenos="22 "></span>      <span class="nt">&lt;actor</span> <span class="na">filmografia=</span><span class="s">"P2 P3 P4 P5"</span><span class="nt">&gt;</span>Morgan Freeman<span class="nt">&lt;/actor&gt;</span>
+<span class="linenos" data-linenos="23 "></span>      <span class="nt">&lt;actor</span> <span class="na">filmografia=</span><span class="s">"P4"</span><span class="nt">&gt;</span>Tom Cruise<span class="nt">&lt;/actor&gt;</span>
+<span class="linenos" data-linenos="24 "></span>   <span class="nt">&lt;/actores&gt;</span>
+<span class="linenos" data-linenos="25 "></span><span class="nt">&lt;/cine&gt;</span>
 </code></pre></div>
 <h3 id="lunasxml">lunas.xml<a class="headerlink" href="#lunasxml" title="Permanent link">¶</a></h3>
 <p>El siguiente documento XML ("lunas.xml") está bien formado. Sin embargo, no es válido. 
 Para que lo sea, realizar los cambios necesarios en la DTD interna de dicho documento.</p>
-<div class="highlight"><pre><span></span><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE lunas [
-   &lt;!ELEMENT luna EMPTY&gt;
-      &lt;!ATTLIST luna numero ID #REQUIRED&gt;
-      &lt;!ATTLIST luna nombre ID #REQUIRED&gt;
-      &lt;!ATTLIST luna planeta #IMPLIED&gt;
-]&gt;
-
-&lt;lunas&gt;
-   &lt;luna numero="N234" nombre="Galatea"/&gt;
-   &lt;luna numero="N479" nombre="Mimas" planeta="Saturno"/&gt;
-   &lt;luna numero="N566" nombre="Diode" planeta="Saturno"/&gt;
-   &lt;luna numero="N607" nombre="Miranda" planeta="Urano"/&gt;
-&lt;/lunas&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<span class="linenos" data-linenos=" 2 "></span>&lt;!DOCTYPE lunas [
+<span class="linenos" data-linenos=" 3 "></span>   &lt;!ELEMENT luna EMPTY&gt;
+<span class="linenos" data-linenos=" 4 "></span>      &lt;!ATTLIST luna numero ID #REQUIRED&gt;
+<span class="linenos" data-linenos=" 5 "></span>      &lt;!ATTLIST luna nombre ID #REQUIRED&gt;
+<span class="linenos" data-linenos=" 6 "></span>      &lt;!ATTLIST luna planeta #IMPLIED&gt;
+<span class="linenos" data-linenos=" 7 "></span>]&gt;
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>&lt;lunas&gt;
+<span class="linenos" data-linenos="10 "></span>   &lt;luna numero="N234" nombre="Galatea"/&gt;
+<span class="linenos" data-linenos="11 "></span>   &lt;luna numero="N479" nombre="Mimas" planeta="Saturno"/&gt;
+<span class="linenos" data-linenos="12 "></span>   &lt;luna numero="N566" nombre="Diode" planeta="Saturno"/&gt;
+<span class="linenos" data-linenos="13 "></span>   &lt;luna numero="N607" nombre="Miranda" planeta="Urano"/&gt;
+<span class="linenos" data-linenos="14 "></span>&lt;/lunas&gt;
 </code></pre></div>
 <h2 id="credits-i-bibliografia">Crèdits i bibliografia<a class="headerlink" href="#credits-i-bibliografia" title="Permanent link">¶</a></h2>
 <p>Aquests exercicis estan extrets del llibre <em>Lenguajes de Marcas y Sistemas de Gestión de Información</em> de Carlos Pes</p>

@@ -356,6 +356,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-xml-scheme/">
+        2. XML scheme and vocabularies
+      </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -667,14 +672,14 @@
 </tbody>
 </table>
 <p>Given the "entities.xml" file:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="nt">&lt;entities&gt;</span>
-   <span class="nt">&lt;less_than&gt;</span> <span class="ni">&amp;lt;</span> <span class="nt">&lt;/less_than&gt;</span>
-   <span class="nt">&lt;greater_than&gt;</span> <span class="ni">&amp;gt;</span> <span class="nt">&lt;/greater_than&gt;</span>
-   <span class="nt">&lt;double_quote&gt;</span> <span class="ni">&amp;quot;</span> <span class="nt">&lt;/double_quote&gt;</span>
-   <span class="nt">&lt;simple_quote&gt;</span> <span class="ni">&amp;apos;</span> <span class="nt">&lt;/simple_quote&gt;</span>
-   <span class="nt">&lt;ampersand&gt;</span> <span class="ni">&amp;amp;</span> <span class="nt">&lt;/ampersand&gt;</span>
-<span class="nt">&lt;/entities&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;entities&gt;</span>
+<span class="linenos" data-linenos="3 "></span>   <span class="nt">&lt;less_than&gt;</span> <span class="ni">&amp;lt;</span> <span class="nt">&lt;/less_than&gt;</span>
+<span class="linenos" data-linenos="4 "></span>   <span class="nt">&lt;greater_than&gt;</span> <span class="ni">&amp;gt;</span> <span class="nt">&lt;/greater_than&gt;</span>
+<span class="linenos" data-linenos="5 "></span>   <span class="nt">&lt;double_quote&gt;</span> <span class="ni">&amp;quot;</span> <span class="nt">&lt;/double_quote&gt;</span>
+<span class="linenos" data-linenos="6 "></span>   <span class="nt">&lt;simple_quote&gt;</span> <span class="ni">&amp;apos;</span> <span class="nt">&lt;/simple_quote&gt;</span>
+<span class="linenos" data-linenos="7 "></span>   <span class="nt">&lt;ampersand&gt;</span> <span class="ni">&amp;amp;</span> <span class="nt">&lt;/ampersand&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nt">&lt;/entities&gt;</span>
 </code></pre></div>
 <p>When you open it in Google Chrome you can see:</p>
 <p><img alt="Viewing the entities.xml file in Google Chrome - Example of the Abrirllave.com XML tutorial" src="../assets/entidades-xml-chrome.gif"/></p>
@@ -683,37 +688,37 @@ the corresponding characters are displayed (for example &lt;).</p>
 <h2 id="structure-and-syntax">Structure and syntax<a class="headerlink" href="#structure-and-syntax" title="Permanent link">¶</a></h2>
 <p>XML documents are composed by plain text and tags defined by developers.</p>
 <p><strong>Elements are represented by tags</strong>. If we want to save people's name we should write:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;name&gt;</span>Elsa<span class="nt">&lt;/name&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;name&gt;</span>Elsa<span class="nt">&lt;/name&gt;</span>
 </code></pre></div>
 This is the basic syntax in order to write an XML elemente:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;tag&gt;</span>text<span class="nt">&lt;/tag&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;tag&gt;</span>text<span class="nt">&lt;/tag&gt;</span>
 </code></pre></div>
 It is important to remark that between the start tag (<code>&lt;stag&gt;</code>) and the end tag (<code>&lt;/tag&gt;</code>) we have written the data (<code>text</code>) we would storage. <code>Elsa</code> in the example. </p>
 <h3 id="empty-tags">Empty tags<a class="headerlink" href="#empty-tags" title="Permanent link">¶</a></h3>
 <p>In a XML document an element could not contain any value. If so, we should write:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;tag&gt;&lt;/tag&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;tag&gt;&lt;/tag&gt;</span>
 </code></pre></div>
 A simpler alternative way of writing this is kind of elements is: </p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;tag</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;tag</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 <p>To write an empty element <code>name</code>, we should write:
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;name&gt;&lt;/name&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;name&gt;&lt;/name&gt;</span>
 </code></pre></div>
 Or:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;name</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;name</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 <h3 id="relation-between-parent-and-childs">Relation between parent and childs<a class="headerlink" href="#relation-between-parent-and-childs" title="Permanent link">¶</a></h3>
 <p>An parent element could contain one or many elements:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;people&gt;</span>
-   <span class="nt">&lt;name&gt;</span>Elsa<span class="nt">&lt;/name&gt;</span>
-   <span class="nt">&lt;woman</span> <span class="nt">/&gt;</span>
-   <span class="nt">&lt;birthday&gt;</span>
-      <span class="nt">&lt;day&gt;</span>18<span class="nt">&lt;/day&gt;</span>
-      <span class="nt">&lt;month&gt;</span>6<span class="nt">&lt;/month&gt;</span>
-      <span class="nt">&lt;year&gt;</span>1996<span class="nt">&lt;/year&gt;</span>
-   <span class="nt">&lt;/birthday&gt;</span>
-   <span class="nt">&lt;city&gt;</span>Pamplona<span class="nt">&lt;/city&gt;</span>
-<span class="nt">&lt;/people&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;people&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>   <span class="nt">&lt;name&gt;</span>Elsa<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>   <span class="nt">&lt;woman</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="nt">&lt;birthday&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;day&gt;</span>18<span class="nt">&lt;/day&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>      <span class="nt">&lt;month&gt;</span>6<span class="nt">&lt;/month&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="nt">&lt;year&gt;</span>1996<span class="nt">&lt;/year&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>   <span class="nt">&lt;/birthday&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>   <span class="nt">&lt;city&gt;</span>Pamplona<span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="10 "></span><span class="nt">&lt;/people&gt;</span>
 </code></pre></div>
 <p>In this example, the <code>people</code> element contains four elements (children): "name", "woman", "birthday" and "city". In addition, the "birthday" element contains three  elements (children): "day", "month" and "year".</p>
 <p>Notice that of all the elements in this example, only the "woman" element is empty.</p>
@@ -732,10 +737,10 @@ D --&gt; H[year]
 <p>In this way, the structure of any XML document can be represented as an inverted tree of elements. It is said that the elements are the ones that give semantic structure to the document.</p>
 <h4 id="elements-with-mixed-content">Elements with mixed content<a class="headerlink" href="#elements-with-mixed-content" title="Permanent link">¶</a></h4>
 <p>An element type has mixed content when elements of that type may contain character data, optionally interspersed with child elements. In this case, the types of the child elements may be constrained, but not their order or their number of occurrences:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;description&gt;</span>
-   character data <span class="nt">&lt;br/&gt;</span> more text <span class="nt">&lt;br/&gt;</span> 
-   and <span class="nt">&lt;strong&gt;</span>more data<span class="nt">&lt;/strong&gt;</span>
-<span class="nt">&lt;/description&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;description&gt;</span>
+<span class="linenos" data-linenos="2 "></span>   character data <span class="nt">&lt;br/&gt;</span> more text <span class="nt">&lt;br/&gt;</span> 
+<span class="linenos" data-linenos="3 "></span>   and <span class="nt">&lt;strong&gt;</span>more data<span class="nt">&lt;/strong&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;/description&gt;</span>
 </code></pre></div>
 Mixed content is a very effective way of marking up textual data, the most obvious example being HTML.</p>
 <h2 id="xml-syntax-rules">XML Syntax Rules<a class="headerlink" href="#xml-syntax-rules" title="Permanent link">¶</a></h2>
@@ -750,54 +755,54 @@ Mixed content is a very effective way of marking up textual data, the most obvio
 <h3 id="all-xml-elements-must-have-a-closing-tag">All XML elements must have a closing tag<a class="headerlink" href="#all-xml-elements-must-have-a-closing-tag" title="Permanent link">¶</a></h3>
 <p>It is illegal to omit the closing tag when you are creating XML syntax. XML elements must have a closing tag.</p>
 <p>Incorrect:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;body&gt;</span>See Spot run.
-<span class="nt">&lt;body&gt;</span>See Spot catch the ball.
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;body&gt;</span>See Spot run.
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;body&gt;</span>See Spot catch the ball.
 </code></pre></div>
 <p>Correct:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;body&gt;</span>See Spot run.<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;body&gt;</span>See Spot catch the ball.<span class="nt">&lt;/body&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;body&gt;</span>See Spot run.<span class="nt">&lt;/body&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;body&gt;</span>See Spot catch the ball.<span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
 <h3 id="all-xml-elements-must-be-properly-nested">All XML elements must be properly nested<a class="headerlink" href="#all-xml-elements-must-be-properly-nested" title="Permanent link">¶</a></h3>
 <p>Improper nesting of tags makes no sense to XML.</p>
 <p>Incorrect:</p>
-<div class="highlight"><pre><span></span><code>&lt;b&gt;&lt;i&gt;This text is bold and italic.&lt;/b&gt;&lt;/i&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;b&gt;&lt;i&gt;This text is bold and italic.&lt;/b&gt;&lt;/i&gt;
 </code></pre></div>
 <p>Correct:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;b&gt;&lt;i&gt;</span>This text is bold and italic.<span class="nt">&lt;/i&gt;&lt;/b&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;b&gt;&lt;i&gt;</span>This text is bold and italic.<span class="nt">&lt;/i&gt;&lt;/b&gt;</span>
 </code></pre></div>
 <h3 id="all-xml-documents-must-have-a-root-element">All XML documents must have a root element<a class="headerlink" href="#all-xml-documents-must-have-a-root-element" title="Permanent link">¶</a></h3>
 <p>All XML documents must contain a single tag pair to define a root element. All other elements must be within this root element. All elements can have sub elements (child elements). Sub elements must be correctly nested within their parent element.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;root&gt;</span>
-  <span class="nt">&lt;child&gt;</span>
-    <span class="nt">&lt;subchild&gt;</span>.....<span class="nt">&lt;/subchild&gt;</span>
-  <span class="nt">&lt;/child&gt;</span>
-<span class="nt">&lt;/root&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;root&gt;</span>
+<span class="linenos" data-linenos="2 "></span>  <span class="nt">&lt;child&gt;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nt">&lt;subchild&gt;</span>.....<span class="nt">&lt;/subchild&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;/child&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
 <h3 id="attribute-values-must-always-be-quoted">Attribute values must always be quoted<a class="headerlink" href="#attribute-values-must-always-be-quoted" title="Permanent link">¶</a></h3>
 <p>It is illegal to omit quotation marks around attribute values. XML elements can have attributes in name/value pairs; however, the attribute value must always be quoted.</p>
 <p>Incorrect:</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version= “1.0” encoding=“ISO-8859-1”?&gt;</span>
-<span class="nt">&lt;note</span> <span class="na">date=</span><span class="s">05/05/05</span><span class="nt">&gt;</span>
-<span class="nt">&lt;to&gt;</span>Dick<span class="nt">&lt;/to&gt;</span>
-<span class="nt">&lt;from&gt;</span>Jane<span class="nt">&lt;/from&gt;</span>
-<span class="nt">&lt;/note&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version= “1.0” encoding=“ISO-8859-1”?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;note</span> <span class="na">date=</span><span class="s">05/05/05</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;to&gt;</span>Dick<span class="nt">&lt;/to&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;from&gt;</span>Jane<span class="nt">&lt;/from&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;/note&gt;</span>
 </code></pre></div>
 Correct:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version= “1.0” encoding=“ISO-8859-1”?&gt;</span>
-<span class="nt">&lt;note</span> <span class="na">date=</span><span class="s">”05/05/05”</span><span class="nt">&gt;</span>
-<span class="nt">&lt;to&gt;</span>Dick<span class="nt">&lt;/to&gt;</span>
-<span class="nt">&lt;from&gt;</span>Jane<span class="nt">&lt;/from&gt;</span>
-<span class="nt">&lt;/note&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version= “1.0” encoding=“ISO-8859-1”?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;note</span> <span class="na">date=</span><span class="s">”05/05/05”</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;to&gt;</span>Dick<span class="nt">&lt;/to&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;from&gt;</span>Jane<span class="nt">&lt;/from&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;/note&gt;</span>
 </code></pre></div>
 <p>In the incorrect document, the <code>date</code> attribute in the <code>note</code> element is not quoted.</p>
 <h3 id="xml-tags-are-case-sensitive">XML tags are case sensitive<a class="headerlink" href="#xml-tags-are-case-sensitive" title="Permanent link">¶</a></h3>
 <p>When you create XML documents, the tag <body> is different from the tag <body>.</body></body></p>
 <p>Incorrect:</p>
-<div class="highlight"><pre><span></span><code>&lt;Body&gt;See Spot run.&lt;/body&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;Body&gt;See Spot run.&lt;/body&gt;
 </code></pre></div>
 <p>Correct:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;body&gt;</span>See Spot run.<span class="nt">&lt;/body&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;body&gt;</span>See Spot run.<span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
 <p>In addition, they have to fullfil the follow rules:</p>
 <ul>
@@ -807,27 +812,27 @@ Correct:</p>
 <li>The first character must be a letter or a hyphen under "_".</li>
 </ul>
 <p>The following elements are breaking some rules:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/ciudad&gt;</span>
-<span class="nt">&lt;día&gt;</span>18<span class="nt">&lt;/dia&gt;</span>
-<span class="nt">&lt;mes&gt;</span>6<span class="nt">&lt;mes/&gt;</span>
-<span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/finciudad&gt;</span>
-<span class="nt">&lt;_rojo&gt;</span>
-<span class="nt">&lt;2colores&gt;</span>Rojo y Naranja<span class="nt">&lt;/2colores&gt;</span>
-<span class="nt">&lt;persona&gt;&lt;nombre&gt;</span>Elsa<span class="nt">&lt;/persona&gt;&lt;/nombre&gt;</span>
-<span class="nt">&lt;color</span> <span class="err">favorito</span><span class="nt">&gt;</span>azul<span class="err">&lt;</span>/color favorito&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;día&gt;</span>18<span class="nt">&lt;/dia&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;mes&gt;</span>6<span class="nt">&lt;mes/&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/finciudad&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;_rojo&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nt">&lt;2colores&gt;</span>Rojo y Naranja<span class="nt">&lt;/2colores&gt;</span>
+<span class="linenos" data-linenos="7 "></span><span class="nt">&lt;persona&gt;&lt;nombre&gt;</span>Elsa<span class="nt">&lt;/persona&gt;&lt;/nombre&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nt">&lt;color</span> <span class="err">favorito</span><span class="nt">&gt;</span>azul<span class="err">&lt;</span>/color favorito&gt;
 </code></pre></div>
 <p>We must write them:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/ciudad&gt;</span>
-<span class="nt">&lt;día&gt;</span>18<span class="nt">&lt;/día&gt;</span>
-<span class="nt">&lt;mes&gt;</span>6<span class="nt">&lt;/mes&gt;</span>
-<span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/ciudad&gt;</span>
-<span class="nt">&lt;_rojo/&gt;</span>
-<span class="nt">&lt;colores2&gt;</span>Rojo y Naranja<span class="nt">&lt;/colores2&gt;</span>
-<span class="nt">&lt;Aficiones</span> <span class="nt">&gt;</span>Cine, Bailar, Nadar<span class="nt">&lt;/Aficiones &gt;</span>
-<span class="nt">&lt;persona&gt;&lt;nombre&gt;</span>Elsa<span class="nt">&lt;/nombre&gt;&lt;/persona&gt;</span>
-<span class="nt">&lt;color.favorito&gt;</span>azul<span class="nt">&lt;/color.favorito&gt;</span>
-<span class="nt">&lt;color-favorito&gt;</span>azul<span class="nt">&lt;/color-favorito&gt;</span>
-<span class="nt">&lt;color_favorito&gt;</span>azul<span class="nt">&lt;/color_favorito&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;día&gt;</span>18<span class="nt">&lt;/día&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nt">&lt;mes&gt;</span>6<span class="nt">&lt;/mes&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nt">&lt;ciudad&gt;</span>Pamplona<span class="nt">&lt;/ciudad&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="nt">&lt;_rojo/&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="nt">&lt;colores2&gt;</span>Rojo y Naranja<span class="nt">&lt;/colores2&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="nt">&lt;Aficiones</span> <span class="nt">&gt;</span>Cine, Bailar, Nadar<span class="nt">&lt;/Aficiones &gt;</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nt">&lt;persona&gt;&lt;nombre&gt;</span>Elsa<span class="nt">&lt;/nombre&gt;&lt;/persona&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nt">&lt;color.favorito&gt;</span>azul<span class="nt">&lt;/color.favorito&gt;</span>
+<span class="linenos" data-linenos="10 "></span><span class="nt">&lt;color-favorito&gt;</span>azul<span class="nt">&lt;/color-favorito&gt;</span>
+<span class="linenos" data-linenos="11 "></span><span class="nt">&lt;color_favorito&gt;</span>azul<span class="nt">&lt;/color_favorito&gt;</span>
 </code></pre></div>
 Non-English letters (á, Á, ñ, Ñ ...) are allowed. However, it is advisable not to use them in order to
 reduce possible incompatibilities with programs that may not recognize them.</p>
@@ -844,17 +849,17 @@ it is also advisable to avoid its use.</p>
 <li>Price: 12.56</li>
 </ul>
 <p>Its representation in an XML document could be, for example:
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;product</span> <span class="na">code =</span> <span class="s">"G45"</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;name</span> <span class="na">color =</span> <span class="s">"black"</span> <span class="na">price =</span> <span class="s">"12.56"</span><span class="nt">&gt;</span> Wool hat <span class="nt">&lt;/ name&gt;</span>
-<span class="nt">&lt;/ product&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;product</span> <span class="na">code =</span> <span class="s">"G45"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="2 "></span>   <span class="nt">&lt;name</span> <span class="na">color =</span> <span class="s">"black"</span> <span class="na">price =</span> <span class="s">"12.56"</span><span class="nt">&gt;</span> Wool hat <span class="nt">&lt;/ name&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;/ product&gt;</span>
 </code></pre></div>
 In this example three attributes have been written: code, color and price. It should be noted that, its values ​​("G45",
 "black" and "12.56") have been enclosed in double quotes ("). However, they can also be enclosed in single quotes (').</p>
 <p>If, for example, the <code>code</code> attribute were to be represented as an element, it could be written:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;product&gt;</span>
-   <span class="nt">&lt;code&gt;</span> G45 <span class="nt">&lt;/code&gt;</span>
-   <span class="nt">&lt;name</span> <span class="na">color =</span> <span class="s">"black"</span> <span class="na">price =</span> <span class="s">"12.56"</span><span class="nt">&gt;</span> Wool hat <span class="nt">&lt;/ name&gt;</span>
-<span class="nt">&lt;/ product&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;product&gt;</span>
+<span class="linenos" data-linenos="2 "></span>   <span class="nt">&lt;code&gt;</span> G45 <span class="nt">&lt;/code&gt;</span>
+<span class="linenos" data-linenos="3 "></span>   <span class="nt">&lt;name</span> <span class="na">color =</span> <span class="s">"black"</span> <span class="na">price =</span> <span class="s">"12.56"</span><span class="nt">&gt;</span> Wool hat <span class="nt">&lt;/ name&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;/ product&gt;</span>
 </code></pre></div>
 As you can see, now the value of the code has not been written in double quotes.</p>
 <h3 id="elements-and-attributes">Elements and attributes<a class="headerlink" href="#elements-and-attributes" title="Permanent link">¶</a></h3>
@@ -864,10 +869,10 @@ is everything between the opening and closing tags, even if they contain other e
 <h3 id="syntax-rules">Syntax rules<a class="headerlink" href="#syntax-rules" title="Permanent link">¶</a></h3>
 <p>Attribute names must meet the same syntax rules as element names. In addition, all
  attributes of an element must be unique. For example, it is incorrect to write:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;data</span> <span class="na">x=</span><span class="s">"3"</span> <span class="na">x=</span><span class="s">"4"</span> <span class="na">i=</span><span class="s">"5"</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;data</span> <span class="na">x=</span><span class="s">"3"</span> <span class="na">x=</span><span class="s">"4"</span> <span class="na">i=</span><span class="s">"5"</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 <p>However, it is correct to write:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;data</span> <span class="na">x=</span><span class="s">"3"</span> <span class="na">X=</span><span class="s">"4"</span> <span class="na">i=</span><span class="s">"5"</span> <span class="nt">/&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;data</span> <span class="na">x=</span><span class="s">"3"</span> <span class="na">X=</span><span class="s">"4"</span> <span class="na">i=</span><span class="s">"5"</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 Attributes contained in an element, as in this case x, X and y, must be separated by whitespace, and is not
 significant his order.</p>
@@ -875,7 +880,7 @@ significant his order.</p>
 <p>The XML declaration that can be written at the beginning of an XML document begins with the characters "&lt;?" and ends with "?&gt;".</p>
 <h3 id="version-and-coding">Version and coding<a class="headerlink" href="#version-and-coding" title="Permanent link">¶</a></h3>
 <p>An XML document could contain the following XML declaration:</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
 </code></pre></div>
 In this XML statement, you are indicating that 1.0 is the version of XML used in the document and UTF-8
 (8-bit <em>Unicode Transformation Format</em>, 8-bit Unicode Transformation Format) is the character encoding
@@ -885,7 +890,7 @@ line of the document, and the "&lt;" character must be the first of that line, t
 <h3 id="standalone-attribute"><em>standalone</em> attribute<a class="headerlink" href="#standalone-attribute" title="Permanent link">¶</a></h3>
 <p>In an XML declaration, in addition to the version and encoding of the attributes, the <code>standalone</code> attribute can also be written,
  which can take two values ​​("yes" or "no"):</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8" standalone = "yes"?&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8" standalone = "yes"?&gt;</span>
 </code></pre></div>
 Typing <code>standalone =" yes "</code> indicates that the document is independent of others, such as one
 DTD (<em>Document Type Definition</em>, external Definition (or we will see later). Otherwise,
@@ -898,32 +903,32 @@ respectively.</p>
 <h3 id="problematic-characters-in-xml-less-than-and-ampersand">Problematic characters in XML: less than (&lt;) and ampersand (&amp;)<a class="headerlink" href="#problematic-characters-in-xml-less-than-and-ampersand" title="Permanent link">¶</a></h3>
 <p>In an XML document, the "&lt;" character is problematic because it indicates the beginning of a tag. So,
 instead of writing, for example:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;condition&gt;</span>a <span class="nt">&lt; b</span><span class="err">&lt;/condition</span><span class="nt">&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;condition&gt;</span>a <span class="nt">&lt; b</span><span class="err">&lt;/condition</span><span class="nt">&gt;</span>
 </code></pre></div>
 The entity reference should be used by typing:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;condition&gt;</span>a <span class="ni">&amp;lt;</span> b <span class="nt">&lt;/condition&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;condition&gt;</span>a <span class="ni">&amp;lt;</span> b <span class="nt">&lt;/condition&gt;</span>
 </code></pre></div>
 The <code>&gt;</code> character can be used in the text contained in an element, and it is not incorrect to write, for example:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;condition&gt;</span>a &gt; b<span class="nt">&lt;/condition&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;condition&gt;</span>a &gt; b<span class="nt">&lt;/condition&gt;</span>
 </code></pre></div>
 However, it is recommended to use your entity reference (<code>&amp;gt;</code>).</p>
 <p>In an XML document, the <em>ampersand</em> character is also problematic, as it is used to indicate the beginning of an
 reference to entity. For example, it is incorrect to write:
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;condition&gt;</span> a==1 <span class="err">&amp;&amp;</span> b==2 <span class="nt">&lt;/condition&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;condition&gt;</span> a==1 <span class="err">&amp;&amp;</span> b==2 <span class="nt">&lt;/condition&gt;</span>
 </code></pre></div>
 Instead, write the following:
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;condition&gt;</span> a==1 <span class="ni">&amp;amp;&amp;amp;</span> b==2 <span class="nt">&lt;/condition&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;condition&gt;</span> a==1 <span class="ni">&amp;amp;&amp;amp;</span> b==2 <span class="nt">&lt;/condition&gt;</span>
 </code></pre></div></p>
 <h3 id="character-references-in-xml">Character references in XML<a class="headerlink" href="#character-references-in-xml" title="Permanent link">¶</a></h3>
 <p>Unicode character references with &amp;# symbols can be written in an XML document, followed by the decimal value
  or hexadecimal of the Unicode character you want to represent and finally adding the semicolon character ";".</p>
 <p>Representation of the Euro character (€) in XML</p>
 <p>Given the XML document "products.xml":</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="nt">&lt;products&gt;</span>
-   <span class="nt">&lt;name</span> <span class="na">price =</span> <span class="s">"12.56&amp;#8364;"</span><span class="nt">&gt;</span> Wool hat <span class="nt">&lt;/name&gt;</span>
-   <span class="nt">&lt;name</span> <span class="na">price =</span> <span class="s">"16.99&amp;#x20AC;"</span><span class="nt">&gt;</span> Fleece cap <span class="nt">&lt;/name&gt;</span>
-<span class="nt">&lt;/products&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;products&gt;</span>
+<span class="linenos" data-linenos="3 "></span>   <span class="nt">&lt;name</span> <span class="na">price =</span> <span class="s">"12.56&amp;#8364;"</span><span class="nt">&gt;</span> Wool hat <span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="4 "></span>   <span class="nt">&lt;name</span> <span class="na">price =</span> <span class="s">"16.99&amp;#x20AC;"</span><span class="nt">&gt;</span> Fleece cap <span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;/products&gt;</span>
 </code></pre></div>
 <p>When viewing in a web browser, you can see the following:</p>
 <p><img alt="View products.xml file in Google Chrome - Example of {Abrirllave.comXML tutorial" src="../assets/productos-xml-chrome.gif"/></p>
@@ -931,31 +936,31 @@ Instead, write the following:
 decimal (<code>&amp;#8364;</code>) in Unicode and, the second time, its hexadecimal value (<code>&amp;#x20AC;</code>).</p>
 <h2 id="comments-in-xml">Comments in XML<a class="headerlink" href="#comments-in-xml" title="Permanent link">¶</a></h2>
 <p>To write comments to an XML document, they must be written between the characters <code>&lt;!--</code> and <code>--&gt;</code>. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="c">&lt;!-- This is a comment written in an XML document --&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c">&lt;!-- This is a comment written in an XML document --&gt;</span>
 </code></pre></div>
 <p>Given the XML file "letras.xml":
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="c">&lt;!-- Example use of comments .--&gt;</span>
-<span class="nt">&lt;a&gt;</span>
-   <span class="nt">&lt;b&gt;</span>
-      <span class="nt">&lt;c</span> <span class="na">quantity=</span><span class="s">"4"</span><span class="nt">&gt;</span>cccc<span class="nt">&lt;/c&gt;</span>
-      <span class="nt">&lt;d</span> <span class="na">quantity=</span><span class="s">"2"</span><span class="nt">&gt;</span>dd<span class="nt">&lt;/d&gt;</span>
-   <span class="nt">&lt;/b&gt;</span>
-   <span class="nt">&lt;e&gt;</span>
-      <span class="nt">&lt;f</span> <span class="na">quantity=</span><span class="s">"8"</span><span class="nt">&gt;</span>ffffffff<span class="nt">&lt;/f&gt;</span>
-      <span class="c">&lt;!-- g may appear several times --&gt;</span>
-      <span class="nt">&lt;g</span> <span class="na">quantity=</span><span class="s">"5"</span><span class="nt">&gt;</span>ggggg <span class="nt">&lt;/g&gt;</span>
-      <span class="nt">&lt;g</span> <span class="na">quantity=</span><span class="s">"2"</span><span class="nt">&gt;</span>gg <span class="nt">&lt;/g&gt;</span>
-   <span class="nt">&lt;/e&gt;</span>
-<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c">&lt;!-- Example use of comments .--&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nt">&lt;a&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="nt">&lt;b&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;c</span> <span class="na">quantity=</span><span class="s">"4"</span><span class="nt">&gt;</span>cccc<span class="nt">&lt;/c&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>      <span class="nt">&lt;d</span> <span class="na">quantity=</span><span class="s">"2"</span><span class="nt">&gt;</span>dd<span class="nt">&lt;/d&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>   <span class="nt">&lt;/b&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>   <span class="nt">&lt;e&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;f</span> <span class="na">quantity=</span><span class="s">"8"</span><span class="nt">&gt;</span>ffffffff<span class="nt">&lt;/f&gt;</span>
+<span class="linenos" data-linenos="10 "></span>      <span class="c">&lt;!-- g may appear several times --&gt;</span>
+<span class="linenos" data-linenos="11 "></span>      <span class="nt">&lt;g</span> <span class="na">quantity=</span><span class="s">"5"</span><span class="nt">&gt;</span>ggggg <span class="nt">&lt;/g&gt;</span>
+<span class="linenos" data-linenos="12 "></span>      <span class="nt">&lt;g</span> <span class="na">quantity=</span><span class="s">"2"</span><span class="nt">&gt;</span>gg <span class="nt">&lt;/g&gt;</span>
+<span class="linenos" data-linenos="13 "></span>   <span class="nt">&lt;/e&gt;</span>
+<span class="linenos" data-linenos="14 "></span><span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
 In a browser you will see:</p>
 <p><img alt="Displaying the letras.xml file in Google Chrome - Example of the {Abrirllave.com XML tutorial" src="../assets/letras-xml-chrome.gif"/></p>
 <p>In an XML document, comments cannot be written within tags. For example, it is incorrect to write:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;element</span> <span class="err">&lt;!--</span> <span class="err">empty</span> <span class="err">element</span> <span class="err">--</span><span class="nt">&gt;</span> /&gt;
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;element</span> <span class="err">&lt;!--</span> <span class="err">empty</span> <span class="err">element</span> <span class="err">--</span><span class="nt">&gt;</span> /&gt;
 </code></pre></div>
 On the other hand, it should be noted that in the comments of an XML document it is not allowed to use two consecutive hyphens:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c">&lt;!-- two hyphens in a row - in a comment gives error --&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c">&lt;!-- two hyphens in a row - in a comment gives error --&gt;</span>
 </code></pre></div>
 So, it is not possible to nest comments in an XML document.</p>
 <h2 id="cdata-sections-in-xml">CDATA sections in XML<a class="headerlink" href="#cdata-sections-in-xml" title="Permanent link">¶</a></h2>
@@ -963,27 +968,27 @@ So, it is not possible to nest comments in an XML document.</p>
 For example, this can be useful when you want to type text that contains any of the problematic characters: less than <code>&lt;</code>
 o ampersand <code>&amp;</code>.</p>
 <p>In an XML document, to include a CDATA section, we must start with the character string
-<div class="highlight"><pre><span></span><code><span class="err">&lt;</span>![CDATA [
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="err">&lt;</span>![CDATA [
 </code></pre></div>
 and ending with the characters 
-<div class="highlight"><pre><span></span><code>]]&gt;.
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>]]&gt;.
 </code></pre></div></p>
 <p>A CDATA section may contain, for example, the source code of a program written in the C language:</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="nt">&lt;CDATA_example&gt;</span>
-<span class="cp">&lt;![CDATA [</span>
-<span class="cp">#include &lt;stdio.h&gt;</span>
-int main ()
-{
-   float note;
-   printf ("\n Enter note (real):");
-   scanf ("%f", <span class="ni">&amp;note);</span>
-   if (5 <span class="err">&lt;</span>= note)
-      printf ("\n APPROVED");
-   return 0;
-}
-]]&gt;
-<span class="nt">&lt;/CDATA_example&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;? xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;CDATA_example&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cp">&lt;![CDATA [</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>int main ()
+<span class="linenos" data-linenos=" 6 "></span>{
+<span class="linenos" data-linenos=" 7 "></span>   float note;
+<span class="linenos" data-linenos=" 8 "></span>   printf ("\n Enter note (real):");
+<span class="linenos" data-linenos=" 9 "></span>   scanf ("%f", <span class="ni">&amp;note);</span>
+<span class="linenos" data-linenos="10 "></span>   if (5 <span class="err">&lt;</span>= note)
+<span class="linenos" data-linenos="11 "></span>      printf ("\n APPROVED");
+<span class="linenos" data-linenos="12 "></span>   return 0;
+<span class="linenos" data-linenos="13 "></span>}
+<span class="linenos" data-linenos="14 "></span>]]&gt;
+<span class="linenos" data-linenos="15 "></span><span class="nt">&lt;/CDATA_example&gt;</span>
 </code></pre></div>
 A web browser will display something like:</p>
 <p><img alt="View example_cdata.xml file in Google Chrome - Example of the {Abrirllave.com XML tutorial" src="../assets/ejemplo_cdata_chrome.gif"/></p>
@@ -1014,48 +1019,48 @@ some specific editors like <em>XML Copy Editor</em> or an IDE with some plugin l
   XML contains names of elements or attributes from various vocabularies and results in various elements or attributes
    homonyms (with the same name): if each vocabulary is given a different namespace, the ambiguity is resolved.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code> <span class="nt">&lt;menu&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
- <span class="nt">&lt;/menu&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> <span class="nt">&lt;menu&gt;</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
+<span class="linenos" data-linenos="4 "></span> <span class="nt">&lt;/menu&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code> <span class="nt">&lt;menu&gt;</span>
-    <span class="nt">&lt;meats&gt;</span>
-       <span class="nt">&lt;veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/meats&gt;</span>
-    <span class="nt">&lt;fishes&gt;</span>
-       <span class="nt">&lt;baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/fishes&gt;</span>
- <span class="nt">&lt;/menu&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span> <span class="nt">&lt;menu&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&lt;meats&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>       <span class="nt">&lt;veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>       <span class="nt">&lt;sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;/meats&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;fishes&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>       <span class="nt">&lt;baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>       <span class="nt">&lt;hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;/fishes&gt;</span>
+<span class="linenos" data-linenos="10 "></span> <span class="nt">&lt;/menu&gt;</span>
 </code></pre></div>
 <p>So, if the <code>&lt;menu&gt;</code> elements are included in an XML document, a name conflict arises. To solve it,
  namespaces can be used. For example, typing:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="hll"><span class="nt">&lt;e1:example</span> <span class="na">xmlns:e1=</span><span class="s">"http://www.abrirllave.com/example1"</span>
-</span><span class="hll">   <span class="na">xmlns:e2=</span><span class="s">"http://www.abrirllave.com/ejemplo2"</span><span class="nt">&gt;</span>
-</span>
-
- <span class="nt">&lt;e1:menu&gt;</span>
-    <span class="nt">&lt;e1:option&gt;</span>Save<span class="nt">&lt;/e1:option&gt;</span>
-    <span class="nt">&lt;e1:description&gt;</span>Save the current document<span class="nt">&lt;/e1:description&gt;</span>
- <span class="nt">&lt;/e1:menu&gt;</span>
-
- <span class="nt">&lt;e2:menu&gt;</span>
-    <span class="nt">&lt;e2:meats&gt;</span>
-       <span class="nt">&lt;e2:veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;e2:sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/e2:meats&gt;</span>
-    <span class="nt">&lt;e2:fishes&gt;</span>
-       <span class="nt">&lt;e2:baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;e2:hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/e2:fishes&gt;</span>
- <span class="nt">&lt;/e2:menu&gt;</span>
-<span class="nt">&lt;/e1:example&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="hll"><span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;e1:example</span> <span class="na">xmlns:e1=</span><span class="s">"http://www.abrirllave.com/example1"</span>
+</span><span class="hll"><span class="linenos" data-linenos=" 3 "></span>   <span class="na">xmlns:e2=</span><span class="s">"http://www.abrirllave.com/ejemplo2"</span><span class="nt">&gt;</span>
+</span><span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span> <span class="nt">&lt;e1:menu&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;e1:option&gt;</span>Save<span class="nt">&lt;/e1:option&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;e1:description&gt;</span>Save the current document<span class="nt">&lt;/e1:description&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span> <span class="nt">&lt;/e1:menu&gt;</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span> <span class="nt">&lt;e2:menu&gt;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nt">&lt;e2:meats&gt;</span>
+<span class="linenos" data-linenos="13 "></span>       <span class="nt">&lt;e2:veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="14 "></span>       <span class="nt">&lt;e2:sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;/e2:meats&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;e2:fishes&gt;</span>
+<span class="linenos" data-linenos="17 "></span>       <span class="nt">&lt;e2:baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="18 "></span>       <span class="nt">&lt;e2:hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="nt">&lt;/e2:fishes&gt;</span>
+<span class="linenos" data-linenos="20 "></span> <span class="nt">&lt;/e2:menu&gt;</span>
+<span class="linenos" data-linenos="21 "></span><span class="nt">&lt;/e1:example&gt;</span>
 </code></pre></div>
 <p>The following syntax is used to define a namespace:</p>
-<div class="highlight"><pre><span></span><code>xmlns: prefix = "URI"
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>xmlns: prefix = "URI"
 </code></pre></div>
 <p>In the example, notice that, <code>xmlns</code> is an attribute that was used in the start tag of the element<code>&lt;example&gt;</code>and,
 in this case, two namespaces have been defined that refer to the following URIs (<em>Uniform Resource Identifier</em>,
@@ -1068,78 +1073,78 @@ Uniform Resource Identifier):</p>
 document: <code>&lt;e1: menu&gt;</code>, <code>&lt;e2: menu&gt;</code>, <code>&lt;e1: option&gt;</code>, etc.</p>
 <h3 id="defining-a-default-namespace">Defining a default namespace<a class="headerlink" href="#defining-a-default-namespace" title="Permanent link">¶</a></h3>
 <p>Alternatively, a default namespace can be defined using the following syntax:</p>
-<div class="highlight"><pre><span></span><code>xmlns="URI"
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>xmlns="URI"
 </code></pre></div>
 <p>In this way, both the element where the namespace has been defined, and all its successors (children, children of children,
 etc.), must belong to this namespace. For example:</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="nt">&lt;example</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example1"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;menu&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
- <span class="nt">&lt;/menu&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;example</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example1"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;menu&gt;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
+<span class="linenos" data-linenos="6 "></span> <span class="nt">&lt;/menu&gt;</span>
 </code></pre></div>
 In the following example, a default namespace is initially defined for the <code>&lt;example&gt;</code> element and its contents.
  in it. However, a second namespace is then defined, which by default affects the second <code>&lt;menu&gt; element
  that appears in the document and its successors:</code><meats><code>,</code><fishes><code>,</code><veal_steak>` ...</veal_steak></fishes></meats></p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="hll"><span class="nt">&lt;example</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example1"</span><span class="nt">&gt;</span>  
-</span>
- <span class="nt">&lt;menu&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
- <span class="nt">&lt;/menu&gt;</span>
-
-<span class="hll"> <span class="nt">&lt;menu</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example2"</span><span class="nt">&gt;</span>
-</span>    <span class="nt">&lt;meats&gt;</span>
-       <span class="nt">&lt;veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/meats&gt;</span>
-    <span class="nt">&lt;fishes&gt;</span>
-       <span class="nt">&lt;baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/fishes&gt;</span>
- <span class="nt">&lt;/menu&gt;</span>
-<span class="nt">&lt;/example&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="hll"><span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;example</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example1"</span><span class="nt">&gt;</span>  
+</span><span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span> <span class="nt">&lt;menu&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span> <span class="nt">&lt;/menu&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="hll"><span class="linenos" data-linenos=" 9 "></span> <span class="nt">&lt;menu</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example2"</span><span class="nt">&gt;</span>
+</span><span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;meats&gt;</span>
+<span class="linenos" data-linenos="11 "></span>       <span class="nt">&lt;veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="12 "></span>       <span class="nt">&lt;sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nt">&lt;/meats&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;fishes&gt;</span>
+<span class="linenos" data-linenos="15 "></span>       <span class="nt">&lt;baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="16 "></span>       <span class="nt">&lt;hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="nt">&lt;/fishes&gt;</span>
+<span class="linenos" data-linenos="18 "></span> <span class="nt">&lt;/menu&gt;</span>
+<span class="linenos" data-linenos="19 "></span><span class="nt">&lt;/example&gt;</span>
 </code></pre></div>
 <p>In an XML document, to indicate that certain elements -or all- do not belong to any namespace, the attribute is written
 <code>xmlns</code> empty, that is,<code>xmlns=""</code>.</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
-<span class="nt">&lt;example</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example1"</span><span class="nt">&gt;</span>  
-
- <span class="nt">&lt;menu&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
- <span class="nt">&lt;/menu&gt;</span>
-
- <span class="nt">&lt;menu</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meats&gt;</span>
-       <span class="nt">&lt;veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/meats&gt;</span>
-<span class="hll">    <span class="nt">&lt;fishes</span> <span class="na">xmlns=</span><span class="s">""</span><span class="nt">&gt;</span>
-</span>       <span class="nt">&lt;baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/fishes&gt;</span>
- <span class="nt">&lt;/menu&gt;</span>
-<span class="nt">&lt;/example&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;example</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example1"</span><span class="nt">&gt;</span>  
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span> <span class="nt">&lt;menu&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;option&gt;</span>Save<span class="nt">&lt;/option&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;description&gt;</span>Save the current document<span class="nt">&lt;/description&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span> <span class="nt">&lt;/menu&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span> <span class="nt">&lt;menu</span> <span class="na">xmlns=</span><span class="s">"http://www.abrirllave.com/example2"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;meats&gt;</span>
+<span class="linenos" data-linenos="11 "></span>       <span class="nt">&lt;veal_steak</span> <span class="na">price =</span> <span class="s">"12.95"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="12 "></span>       <span class="nt">&lt;sirloin_staeck</span> <span class="na">price =</span> <span class="s">"13.60"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nt">&lt;/meats&gt;</span>
+<span class="hll"><span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;fishes</span> <span class="na">xmlns=</span><span class="s">""</span><span class="nt">&gt;</span>
+</span><span class="linenos" data-linenos="15 "></span>       <span class="nt">&lt;baked_salmon</span>  <span class="na">price =</span> <span class="s">"16.20"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="16 "></span>       <span class="nt">&lt;hake_in_green_sauce</span> <span class="na">price =</span> <span class="s">"15.85"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="nt">&lt;/fishes&gt;</span>
+<span class="linenos" data-linenos="18 "></span> <span class="nt">&lt;/menu&gt;</span>
+<span class="linenos" data-linenos="19 "></span><span class="nt">&lt;/example&gt;</span>
 </code></pre></div>
 In this case, the element <fishes> and its children do not belong in any namespace.</fishes></p>
 <h2 id="activities">Activities<a class="headerlink" href="#activities" title="Permanent link">¶</a></h2>
 <div class="admonition todo">
 <p class="admonition-title">Task 121. XML syntax errors</p>
 <p>Review the following XML document, detect errors, and rewrite it correctly </p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;frutas&gt;</span>  
-<span class="nt">&lt;/frutas&gt;</span>
-<span class="nt">&lt; frutas</span> <span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
-      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>cereza<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
-      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>naranja<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
-   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
-<span class="nt">&lt; frutas</span> <span class="err">\</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;frutas&gt;</span>  
+<span class="linenos" data-linenos=" 3 "></span><span class="nt">&lt;/frutas&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nt">&lt; frutas</span> <span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>cereza<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>   <span class="nt">&lt; fruta</span> <span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt; nombre</span> <span class="nt">&gt;</span>naranja<span class="nt">&lt; nombre</span> <span class="err">\</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="10 "></span>   <span class="nt">&lt; fruta</span> <span class="err">\</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="11 "></span><span class="nt">&lt; frutas</span> <span class="err">\</span><span class="nt">&gt;</span>
 </code></pre></div>
 </div>
 <div class="admonition todo">
@@ -1240,6 +1245,11 @@ In this case, the element <fishes> and its children do not belong in any namespa
 </tbody>
 </table>
 </div>
+<div class="admonition todo">
+<p class="admonition-title">Task 127. Form a sentence to a XML document</p>
+<p>Create an XML document so that the markup makes it possible to search for information according to the following fields: recipient of the order, item ordered, delivery address, delivery date.</p>
+<p>Order for Mr. Juan Delgado Martínez. The order consists of an A2023 bicycle. To be delivered at Calle Barco 4, third floor, letter A, on 05-19-2021.</p>
+</div>
 <h2 id="bibliography-webography-and-credits">Bibliography, webography and credits<a class="headerlink" href="#bibliography-webography-and-credits" title="Permanent link">¶</a></h2>
 <ul>
 <li>Wikipedia contributors. (2020, September 13). Markup language. <em>In Wikipedia, The Free Encyclopedia.</em> 
@@ -1269,6 +1279,19 @@ en <a href="https://www.mclibre.org/consultar/xml/">https://www.mclibre.org/cons
               </span>
               Markup languages
             </div>
+</div>
+</a>
+<a aria-label="Next: 2. XML scheme and vocabularies" class="md-footer__link md-footer__link--next" href="../../02-xml-scheme/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              2. XML scheme and vocabularies
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
 </div>
 </a>
 </nav>

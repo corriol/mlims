@@ -191,6 +191,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-xml-scheme/">
+        2. XML scheme and vocabularies
+      </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -278,20 +283,20 @@ where proofs were marked up with instructions about their visual appearance, but
 <p>The most widely used markup language is HTML (HyperText Markup Language), the foundation of the World Wide Web.</p>
 <p>Some examples are: </p>
 <p>HTML 4.0</p>
-<div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Anatidae<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
- <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-   The family <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Anatidae<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> includes ducks, geese, and swans,
-   but <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>not<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> the closely related screamers.
- <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Anatidae<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="2 "></span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="3 "></span>   The family <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Anatidae<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> includes ducks, geese, and swans,
+<span class="linenos" data-linenos="4 "></span>   but <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>not<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> the closely related screamers.
+<span class="linenos" data-linenos="5 "></span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>XML</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;note&gt;</span>
-  <span class="nt">&lt;to&gt;</span>Tove<span class="nt">&lt;/to&gt;</span>
-  <span class="nt">&lt;from&gt;</span>Jani<span class="nt">&lt;/from&gt;</span>
-  <span class="nt">&lt;heading&gt;</span>Reminder<span class="nt">&lt;/heading&gt;</span>
-  <span class="nt">&lt;body&gt;</span>Don't forget me this weekend!<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/note&gt;</span> 
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;note&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;to&gt;</span>Tove<span class="nt">&lt;/to&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;from&gt;</span>Jani<span class="nt">&lt;/from&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;heading&gt;</span>Reminder<span class="nt">&lt;/heading&gt;</span>
+<span class="linenos" data-linenos="6 "></span>  <span class="nt">&lt;body&gt;</span>Don't forget me this weekend!<span class="nt">&lt;/body&gt;</span>
+<span class="linenos" data-linenos="7 "></span><span class="nt">&lt;/note&gt;</span> 
 </code></pre></div>
 <h2 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">¶</a></h2>
 <p>Initially, markup languages ​​focused on document generation but thanks to its advantages
@@ -361,42 +366,42 @@ there are many more: TeX, Wikitext ...</p>
 the document will be shown to whoever reads it.</p>
 <h4 id="latex-a-procedural-markup-language">Latex: a procedural markup language<a class="headerlink" href="#latex-a-procedural-markup-language" title="Permanent link">¶</a></h4>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
-<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
-
-<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-
-<span class="k">\title</span><span class="nb">{</span>Introduction to LaTeX <span class="nb">{}}</span>
-<span class="k">\author</span><span class="nb">{</span>Author's Name<span class="nb">}</span>
-
-<span class="k">\maketitle</span>
-
-<span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
-The abstract text goes here.
-<span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
-
-<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
-Here is the text of your introduction.
-
-<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
-    <span class="k">\label</span><span class="nb">{</span>simple<span class="nb">_</span>equation<span class="nb">}</span>
-    <span class="k">\alpha</span>=<span class="k">\sqrt</span><span class="nb">{</span><span class="k">\beta</span><span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
-
-<span class="k">\subsection</span><span class="nb">{</span>Subsection Heading Here<span class="nb">}</span>
-Write your subsection text here.
-
-<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
-    <span class="k">\centering</span>
-    <span class="k">\includegraphics</span><span class="na">[width = 3.0in]</span><span class="nb">{</span>myfigure<span class="nb">}</span>
-    <span class="k">\caption</span><span class="nb">{</span>Simulation Results<span class="nb">}</span>
-    <span class="k">\label</span><span class="nb">{</span>simulationfigure<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
-
-<span class="k">\section</span><span class="nb">{</span>Conclusion<span class="nb">}</span>
-Write your conclusion here.
-
-<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="k">\title</span><span class="nb">{</span>Introduction to LaTeX <span class="nb">{}}</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="k">\author</span><span class="nb">{</span>Author's Name<span class="nb">}</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="k">\maketitle</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
+<span class="linenos" data-linenos="12 "></span>The abstract text goes here.
+<span class="linenos" data-linenos="13 "></span><span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span><span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+<span class="linenos" data-linenos="16 "></span>Here is the text of your introduction.
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="k">\label</span><span class="nb">{</span>simple<span class="nb">_</span>equation<span class="nb">}</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="k">\alpha</span>=<span class="k">\sqrt</span><span class="nb">{</span><span class="k">\beta</span><span class="nb">}</span>
+<span class="linenos" data-linenos="21 "></span><span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span><span class="k">\subsection</span><span class="nb">{</span>Subsection Heading Here<span class="nb">}</span>
+<span class="linenos" data-linenos="24 "></span>Write your subsection text here.
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+<span class="linenos" data-linenos="27 "></span>    <span class="k">\centering</span>
+<span class="linenos" data-linenos="28 "></span>    <span class="k">\includegraphics</span><span class="na">[width = 3.0in]</span><span class="nb">{</span>myfigure<span class="nb">}</span>
+<span class="linenos" data-linenos="29 "></span>    <span class="k">\caption</span><span class="nb">{</span>Simulation Results<span class="nb">}</span>
+<span class="linenos" data-linenos="30 "></span>    <span class="k">\label</span><span class="nb">{</span>simulationfigure<span class="nb">}</span>
+<span class="linenos" data-linenos="31 "></span><span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+<span class="linenos" data-linenos="32 "></span>
+<span class="linenos" data-linenos="33 "></span><span class="k">\section</span><span class="nb">{</span>Conclusion<span class="nb">}</span>
+<span class="linenos" data-linenos="34 "></span>Write your conclusion here.
+<span class="linenos" data-linenos="35 "></span>
+<span class="linenos" data-linenos="36 "></span><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </code></pre></div>
 <h3 id="descriptive-or-semantic">Descriptive or semantic<a class="headerlink" href="#descriptive-or-semantic" title="Permanent link">¶</a></h3>
 <p>These languages ​​describe the logical structure of the document
@@ -405,16 +410,16 @@ with the aim of defining the parts that give structure to the document. The exam
 more important is XML but there are others that are having a lot of support, such as
 for example JSON.</p>
 <p>In the following document we have an example of a file of marks that represents information about people:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;students&gt;</span>
-    <span class="nt">&lt;person&gt;</span>
-        <span class="nt">&lt;name&gt;</span>Pere<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;lastname&gt;</span>Puig<span class="nt">&lt;/lastname&gt;</span>
-    <span class="nt">&lt;/person&gt;</span>
-    <span class="nt">&lt;person&gt;</span>
-        <span class="nt">&lt;name&gt;</span>Manel<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;lastname&gt;</span>Garcia<span class="nt">&lt;/lastname&gt;</span>
-    <span class="nt">&lt;/person&gt;</span>
-<span class="nt">&lt;/students&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;students&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&lt;person&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="nt">&lt;name&gt;</span>Pere<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="nt">&lt;lastname&gt;</span>Puig<span class="nt">&lt;/lastname&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;/person&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;person&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nt">&lt;name&gt;</span>Manel<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nt">&lt;lastname&gt;</span>Garcia<span class="nt">&lt;/lastname&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;/person&gt;</span>
+<span class="linenos" data-linenos="10 "></span><span class="nt">&lt;/students&gt;</span>
 </code></pre></div>
 We can clearly notice what this data is about: a list of students. At a glance,
 it is easy to determine that Pere and Manel are names and that Puig and Garcia are
@@ -431,8 +436,8 @@ name of a person who is a student.</p>
 <li>Compare the export options when saving a document in LibreOffice Writer.</li>
 <li>
 <p>Type the following text in a plain text file, <code>myfile.txt</code>:</p>
-<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> level 1 header <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span> level 3 header <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> level 1 header <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span> level 3 header <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 </code></pre></div>
 Open this file with your browser. How does it look?
 Change the file extension to html. Does it show the same information? Why?</p>
