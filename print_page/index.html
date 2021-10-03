@@ -1328,44 +1328,21 @@ The note element is a complex type because it contains other elements. The other
 <li>It has its own data type system, so you can check the contents of the items.</li>
 <li>Supports namespaces to allow mixing different vocabularies.</li>
 </ol>
-<h3 id="02-xml-scheme-associate-a-schema-to-an-xml-document">Associate a schema to an XML document<a class="headerlink" href="#02-xml-scheme-associate-a-schema-to-an-xml-document" title="Permanent link">&para;</a></h3>
-<p>Unlike other definition languages ​​-such as DTDs, in which the association must be specified in the XML document- you do not need to modify the XML file to validate an XML with an XSD. However, it is also possible to do this by defining the namespace.</p>
-<p>To associate an XML document with a schema document, you need to define the namespace with the <code>xmlns</code> attribute, and use one of the language attributes to define the schema file:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;urlset</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<span class="linenos" data-linenos="2 "></span>        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;urlset.xsd&quot;</span><span class="nt">&gt;</span>
-</code></pre></div>
-<p>References to the schema file can be defined in two ways, which can be seen in the table.</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>noNamespaceSchemaLocation</code></td>
-<td>Used when no namespaces will be used in the document.</td>
-</tr>
-<tr>
-<td><code>schemaLocation</code></td>
-<td>Used when explicitly using namespace names in tags.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="02-xml-scheme-schema-definition">Schema definition<a class="headerlink" href="#02-xml-scheme-schema-definition" title="Permanent link">&para;</a></h2>
+<h3 id="02-xml-scheme-schema-definition"><code>&lt;schema&gt;</code> definition<a class="headerlink" href="#02-xml-scheme-schema-definition" title="Permanent link">&para;</a></h3>
 <p>XSD is based on XML and must therefore comply with XML rules:</p>
 <ul>
 <li>Although not required, the file is usually started with the XML declaration.</li>
 <li>There is only one root element, which in this case is <code>&lt;schema&gt;</code>.</li>
 </ul>
 <p>Due to the fact that an specific and well-known vocabulary is being used to be able to use the XML elements, the XSD namespace must always be specified: <code>http://www.w3.org/2001/XMLSchema</code>.</p>
-<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
-<span class="linenos" data-linenos="3 "></span>    ...
-<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;/xs:schema&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="na">elementFormDefault=</span><span class="s">&quot;qualified&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="4 "></span>    ...
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;/xs:schema&gt;</span>
 </code></pre></div>
-The declaration of this namespace is defining that <code>xs</code> is the alias to refer to all tags in this namespace. Aliases for XSD are usually <code>xs</code> or <code>xsd</code>, but it doesn't really matter which one is used as long as it is used throughout the document.</p>
+<p><code>xmlns:xs="http://www.w3.org/2001/XMLSchema"</code> indicates that the elements and data types used in the schema come from the "http://www.w3.org/2001/XMLSchema" namespace. It also specifies that the elements and data types that come from the "http://www.w3.org/2001/XMLSchema" namespace should be prefixed with <code>xs:</code>.</p>
+<p><code>elementFormDefault="qualified"</code> indicates that any elements used by the XML instance document which were declared in this schema must be namespace qualified.</p>
 <div class="admonition info">
 <p class="admonition-title">XSD tags</p>
 <p>XSD defines many tags and not all of them can be seen here. You can find all possible tags in the specification <a href="https://www.w3.org/TR/xmlschema11-1">www.w3.org/TR/xmlschema11-1</a>.</p>
@@ -1394,9 +1371,34 @@ The declaration of this namespace is defining that <code>xs</code> is the alias 
 </tbody>
 </table>
 <p>From the root element you can start defining the tags of the vocabulary you want to create.</p>
+<h3 id="02-xml-scheme-associate-a-schema-to-an-xml-document">Associate a schema to an XML document<a class="headerlink" href="#02-xml-scheme-associate-a-schema-to-an-xml-document" title="Permanent link">&para;</a></h3>
+<p>Unlike other definition languages ​​-such as DTDs, in which the association must be specified in the XML document- you do not need to modify the XML file to validate an XML with an XSD. However, it is also possible to do this by defining the namespace.</p>
+<p>To associate an XML document with a schema document, you need to define the namespace with the <code>xmlns</code> attribute, and use one of the language attributes to define the schema file:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;urlset</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="linenos" data-linenos="2 "></span>        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;urlset.xsd&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+References to the schema file can be defined in two ways, which can be seen in the table.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>noNamespaceSchemaLocation</code></td>
+<td>No namespaces will be used in the document.</td>
+</tr>
+<tr>
+<td><code>schemaLocation</code></td>
+<td>Used when explicitly using namespace names in tags.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="02-xml-scheme-elements-definition">Elements definition<a class="headerlink" href="#02-xml-scheme-elements-definition" title="Permanent link">&para;</a></h2>
 <p>Elements are defined using the <code>&lt;element&gt;</code> tag and the <code>name</code> attribute. Optionally, it can include the data type of its containing element. In the following example we define an element named <code>firstname</code> of type <code>string</code>.</p>
-<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;firstname&quot;</span> <span class="na">type=</span><span class="s">&quot;xsi:string&quot;</span> <span class="nt">/&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;firstname&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 This element complies the definition:</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;firstname&gt;</span>Homer<span class="nt">&lt;/firstname&gt;</span>
@@ -1407,7 +1409,7 @@ The XSD divides the elements into two large groups based on the data they contai
 <li><strong>Elements with complex type content</strong>: Elements that may have attributes, no content, or contain elements.</li>
 </ul>
 <p>From the definition, it can be seen that there will almost always be some complex type, as the root will usually contain other elements.</p>
-<h3 id="02-xml-scheme-elements-with-simple-type-content">Elements with simple type content<a class="headerlink" href="#02-xml-scheme-elements-with-simple-type-content" title="Permanent link">&para;</a></h3>
+<h2 id="02-xml-scheme-elements-with-simple-type-content">Elements with simple type content<a class="headerlink" href="#02-xml-scheme-elements-with-simple-type-content" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Elements with simple type content are those that do not contain other elements or have attributes.</p>
@@ -1422,31 +1424,31 @@ The XSD divides the elements into two large groups based on the data they contai
 </thead>
 <tbody>
 <tr>
-<td>string</td>
+<td><code>string</code></td>
 <td>Character strings</td>
 </tr>
 <tr>
-<td>decimal</td>
+<td><code>decimal</code></td>
 <td>Numeric values</td>
 </tr>
 <tr>
-<td>boolean</td>
+<td><code>boolean</code></td>
 <td>Can only contain ‘true’ or ‘false’ or (1 or 0)</td>
 </tr>
 <tr>
-<td>date</td>
+<td><code>date</code></td>
 <td>Dates in form (YYYY-MM-DD)</td>
 </tr>
 <tr>
-<td>anyURI</td>
+<td><code>anyURI</code></td>
 <td>Site references (URLs, disk paths…)</td>
 </tr>
 <tr>
-<td>base64binary</td>
+<td><code>base64binary</code></td>
 <td>Binary data encoded in base64</td>
 </tr>
 <tr>
-<td>integer</td>
+<td><code>integer</code></td>
 <td>Integers</td>
 </tr>
 </tbody>
@@ -1491,6 +1493,7 @@ An item can only be validated if its contents are an integer. For example, the f
 </tr>
 </tbody>
 </table>
+<h3 id="02-xml-scheme-cardinality">Cardinality<a class="headerlink" href="#02-xml-scheme-cardinality" title="Permanent link">&para;</a></h3>
 <p>When an element is defined in XSD, it is in such a way that the tag must appear once. It is quite common for tags to be repeated certain times. In XSD this has been simplified by attributes of the <code>&lt;element&gt;</code> tag that determine the cardinality of the elements:</p>
 <ul>
 <li><code>minOccurs</code>: allows you to define how many times an element must come out at least. A value of ‘0’ indicates that the item may not come out.</li>
@@ -1544,7 +1547,7 @@ Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets
 <p>The element would validate with something like:</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;matches&gt;</span>2011-01-07 2011-01-15 2011-01-21 <span class="nt">&lt;/matches&gt;</span>
 </code></pre></div>
-<code>SimpleType</code> elements can also be defined with a name outside the elements and then used as a custom data type.</p>
+<code>simpleType</code> elements can also be defined with a name outside the elements and then used as a custom data type.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:simpleType</span> <span class="na">name=</span><span class="s">&quot;days&quot;</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:list</span> <span class="na">itemType=</span><span class="s">&quot;xs:date&quot;</span> <span class="nt">/&gt;</span>
 <span class="linenos" data-linenos="3 "></span><span class="nt">&lt;/xs:simpleType&gt;</span>
@@ -1564,7 +1567,7 @@ Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;price&gt;</span>25 €<span class="nt">&lt;/price&gt;</span>
 </code></pre></div>
 <h4 id="02-xml-scheme-restrictions">Restrictions<a class="headerlink" href="#02-xml-scheme-restrictions" title="Permanent link">&para;</a></h4>
-<p>But without a doubt the most interesting modifier is the one that allows to define restrictions to the base types. With the restriction modifier you can create data types in which only certain values ​​are accepted, the data meets a certain condition, and so on.</p>
+<p>Without a doubt the most interesting modifier is the one that allows to define restrictions to the base types. With the restriction modifier you can create data types in which only certain values ​​are accepted, the data meets a certain condition, and so on.</p>
 <p>The <code>&lt;birth&gt;</code> element can only have integer values ​​between 1850 and 2011 if defined as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:simpleType</span> <span class="na">name=</span><span class="s">&quot;year_birth&quot;</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:integer&quot;</span><span class="nt">&gt;</span>
@@ -1585,36 +1588,36 @@ Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets
 </thead>
 <tbody>
 <tr>
-<td>maxInclusive/maxExclusive</td>
+<td><code>maxInclusive</code>/<code>maxExclusive</code></td>
 <td>Used to define the maximum numeric value that an item can take.</td>
 </tr>
 <tr>
-<td>minInclusive/minExclusive</td>
+<td><code>minInclusive</code>/<code>minExclusive</code></td>
 <td>Set the minimum value for the value of an item.</td>
 </tr>
 <tr>
-<td>length</td>
+<td><code>length</code></td>
 <td>With lenght we restrict the length that a text element can have. We can use <code>&lt;xs:minLength&gt;</code> and <code>&lt;xs:maxLenght&gt;</code> to be more accurate.</td>
 </tr>
 <tr>
-<td>enumeration</td>
+<td><code>enumeration</code></td>
 <td>Only allows the element to have one of the values ​​specified in the different <enumeration> lines.</td>
 </tr>
 <tr>
-<td>totalDigits</td>
+<td><code>totalDigits</code></td>
 <td>Defines the number of digits of a numeric value.</td>
 </tr>
 <tr>
-<td>fractionDigits</td>
+<td><code>fractionDigits</code></td>
 <td>Used to specify the number of decimals that a numeric value can have.</td>
 </tr>
 <tr>
-<td>pattern</td>
+<td><code>pattern</code></td>
 <td>Defines a regular expression to which the value of the element must fit in order to be valid.</td>
 </tr>
 </tbody>
 </table>
-<p>For example, the value of the <code>&lt;answer&gt;</code> element can only have one of the three values ​​"A", "B" or "C" if it is defined in this way:</p>
+<p>For example, the value of the <code>&lt;answer&gt;</code> element can only have one of the three values ​​<code>"A"</code>, <code>"B"</code> or <code>"C"</code> if it is defined in this way:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;answer&quot;</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:simpleType&gt;</span>
 <span class="linenos" data-linenos="3 "></span>        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;A&quot;</span> <span class="nt">/&gt;</span>
@@ -1623,7 +1626,7 @@ Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets
 <span class="linenos" data-linenos="6 "></span>    <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="linenos" data-linenos="7 "></span><span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
-<p>One of the most interesting constraints is those defined by the pattern attribute, which allows you to define constraints from regular expressions. As a general rule we have that if a character is specified in the pattern it must appear in the content; the other possibilities can be seen in the table:</p>
+<p>One of the most interesting constraints is those defined by the pattern attribute, which allows you to define constraints from regular expressions. As a general rule, we have that if a character is specified in the pattern it must appear in the content; the other possibilities can be seen in the table:</p>
 <table>
 <thead>
 <tr>
@@ -1633,56 +1636,56 @@ Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets
 </thead>
 <tbody>
 <tr>
-<td>.</td>
+<td><code>.</code></td>
 <td>Any character</td>
 </tr>
 <tr>
-<td>\d</td>
+<td><code>\d</code></td>
 <td>Any digit</td>
 </tr>
 <tr>
-<td>\D</td>
+<td><code>\D</code></td>
 <td>Any non-digit character</td>
 </tr>
 <tr>
-<td>\s</td>
+<td><code>\s</code></td>
 <td>Non-printable characters: spaces, tabs, line breaks…</td>
 </tr>
 <tr>
-<td>\S</td>
+<td><code>\S</code></td>
 <td>Any printable character</td>
 </tr>
 <tr>
-<td>x*</td>
+<td><code>x*</code></td>
 <td>The previous character must appear 0 or more times</td>
 </tr>
 <tr>
-<td>x+</td>
-<td>The previous character must appar 1 or more times</td>
+<td><code>x+</code></td>
+<td>The previous character must appaer 1 or more times</td>
 </tr>
 <tr>
-<td>x?</td>
+<td><code>x?</code></td>
 <td>The previous character must appear or not</td>
 </tr>
 <tr>
-<td>[abc]</td>
+<td><code>[abc]</code></td>
 <td>There must be some character inside</td>
 </tr>
 <tr>
-<td>[0-9]</td>
+<td><code>[0-9]</code></td>
 <td>There must be a value between the two specified, inclusive</td>
 </tr>
 <tr>
-<td>x{5}</td>
-<td>There must be 5 times what is in front of the square brackets</td>
+<td><code>x{5}</code></td>
+<td>The <code>x</code> expression must appear 5 times.</td>
 </tr>
 <tr>
-<td>x{5,}</td>
-<td>There must be 5 or more times the one in front</td>
+<td><code>x{5,}</code></td>
+<td>The <code>x</code> expression must appear 5 or more times.</td>
 </tr>
 <tr>
-<td>x{5,8}</td>
-<td>There must be 5 to 8 times the front</td>
+<td><code>x{5,8}</code></td>
+<td>The <code>x</code> expression must appear from 5 to 8 times.</td>
 </tr>
 </tbody>
 </table>
@@ -1693,7 +1696,12 @@ Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets
 <span class="linenos" data-linenos="4 "></span>    <span class="nt">&lt;/xs:restriction&gt;</span>
 <span class="linenos" data-linenos="5 "></span><span class="nt">&lt;/xs:simpleType&gt;</span>
 </code></pre></div>
-<h3 id="02-xml-scheme-elements-with-complex-type-content">Elements with complex type content<a class="headerlink" href="#02-xml-scheme-elements-with-complex-type-content" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">More information</p>
+<p>In <a href="https://www.rexegg.com/regex-quickstart.html">Quick-Start: Regex Cheat Sheet</a> you will find
+a quick guide to Regular Expressions and a lot of related resources.</p>
+</div>
+<h2 id="02-xml-scheme-elements-with-complex-type-content">Elements with complex type content<a class="headerlink" href="#02-xml-scheme-elements-with-complex-type-content" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Elements with complex type content are those that have attributes, contain other elements, or have no content.</p>
@@ -1720,7 +1728,7 @@ Unlike <code>fixed</code>, <code>default</code> assigns a default value but lets
 <span class="linenos" data-linenos="4 "></span>
 <span class="linenos" data-linenos="5 "></span><span class="nt">&lt;xs:element</span> <span class="na">classType=</span><span class="s">&quot;course&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
-<h4 id="02-xml-scheme-attributes">Attributes<a class="headerlink" href="#02-xml-scheme-attributes" title="Permanent link">&para;</a></h4>
+<h3 id="02-xml-scheme-attributes">Attributes<a class="headerlink" href="#02-xml-scheme-attributes" title="Permanent link">&para;</a></h3>
 <p>A basic feature of XSD is that only complex type elements can have attributes. In essence, there is not much difference between defining an element or an attribute, as it is done in the same way but using the attribute tag.</p>
 <p>The data types are the same and therefore can have basic types as in the following example:</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:attribute</span> <span class="na">name=</span> <span class="s">&quot;number&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span> <span class="nt">/&gt;</span>
@@ -1729,19 +1737,39 @@ Restrictions can be placed in the same way as in the elements. In this example, 
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:attribute</span> <span class="na">name=</span><span class="s">&quot;year&quot;</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:simpleType&gt;</span>
 <span class="linenos" data-linenos="3 "></span>        <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:integer&quot;</span><span class="nt">&gt;</span>
-<span class="linenos" data-linenos="4 "></span>            <span class="nt">&lt;xs:maxInclusive</span> <span class="na">value=</span><span class="s">&quot;2011&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="4 "></span>            <span class="nt">&lt;xs:maxInclusive</span> <span class="na">value=</span><span class="s">&quot;2021&quot;</span> <span class="nt">/&gt;</span>
 <span class="linenos" data-linenos="5 "></span>        <span class="nt">&lt;/xs:restriction&gt;</span>
 <span class="linenos" data-linenos="6 "></span>    <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="linenos" data-linenos="7 "></span><span class="nt">&lt;/xs:attribute&gt;</span>
 </code></pre></div>
 Unless otherwise specified, attributes are always optional.</p>
-<p>The <code>&lt;attribute&gt;</code> tag has a series of attributes that allow you to define extra features about the attributes (Table.13).
-Table: Most important attributes of xs:attribute
-Attribute Use
-use Specifies whether the attribute is required, optional, or prohibited.
-default Sets a default value.
-fixed Used to define required values ​​for attributes.
-form Defines whether the attribute should go with the namespace alias (qualified) or not (unqualified).</p>
+<p>The <code>&lt;attribute&gt;</code> tag has a series of attributes that allow you to define extra features about the attributes.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use</td>
+<td>Specifies whether the attribute is required, optional, or prohibited.</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Sets a default value.</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>Used to define required values ​​for attributes.</td>
+</tr>
+<tr>
+<td>form</td>
+<td>Defines whether the attribute should go with the namespace alias (qualified) or not (unqualified).</td>
+</tr>
+</tbody>
+</table>
 <p>For example, the year attribute must be specified if it is defined as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:attribute</span> <span class="na">name=</span><span class="s">&quot;year&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span> <span class="na">use=</span><span class="s">&quot;required&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
@@ -1979,9 +2007,9 @@ The most important difference between the <all> and <sequence> element is the or
 <span class="linenos" data-linenos="4 "></span>meet us on &lt;day&gt; 12 &lt;/day&gt;
 <span class="linenos" data-linenos="5 "></span>&lt;/carta&gt;
 </code></pre></div>
-<h3 id="02-xml-scheme-example-of-creating-an-xsd">Example of creating an XSD<a class="headerlink" href="#02-xml-scheme-example-of-creating-an-xsd" title="Permanent link">&para;</a></h3>
+<h2 id="02-xml-scheme-example-of-creating-an-xsd">Example of creating an XSD<a class="headerlink" href="#02-xml-scheme-example-of-creating-an-xsd" title="Permanent link">&para;</a></h2>
 <p>XSD vocabulary definitions can be created from the idea of ​​what we want the data to contain or from a sample XML file.</p>
-<h4 id="02-xml-scheme-practical-case">Practical case<a class="headerlink" href="#02-xml-scheme-practical-case" title="Permanent link">&para;</a></h4>
+<h3 id="02-xml-scheme-practical-case">Practical case<a class="headerlink" href="#02-xml-scheme-practical-case" title="Permanent link">&para;</a></h3>
 <p>We want to store in an XML document some website bookmarks:</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;bookmarks&gt;</span>
@@ -2056,6 +2084,23 @@ element always contains elements we have to define it as a complex type.</p>
 Create an XSD document to validate it. After that add some fruits and validate
 again. </p>
 <p>After that, modify the XSD file taking into account that the price must be greater than 0 and quantity musn't be negative.   </p>
+</li>
+<li>
+<p><code>202Card.xml</code>: Given the following XML document</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;cards</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;202Cards.xsd&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;card</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nt">&lt;name&gt;</span>Ana Sanz Tin<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nt">&lt;age&gt;</span>22<span class="nt">&lt;/age&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;/card&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;card</span> <span class="na">number=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nt">&lt;name&gt;</span>Iker Rubio Mol<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nt">&lt;age&gt;</span>23<span class="nt">&lt;/age&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;/card&gt;</span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;/cards&gt;</span>
+</code></pre></div>
+Create the <code>202Cards.xsd</code> file in order to validate it. </p>
 </li>
 </ol>
 <h2 id="02-xml-scheme-credits-and-bibliography">Credits and bibliography<a class="headerlink" href="#02-xml-scheme-credits-and-bibliography" title="Permanent link">&para;</a></h2>
