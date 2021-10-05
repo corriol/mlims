@@ -1018,7 +1018,7 @@ Unless otherwise specified, attributes are always optional.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:attribute</span> <span class="na">name=</span><span class="s">"year"</span> <span class="na">type=</span><span class="s">"xs:integer"</span> <span class="na">use=</span><span class="s">"required"</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 <h4 id="text-only-elements">Text-only elements<a class="headerlink" href="#text-only-elements" title="Permanent link">¶</a></h4>
-<p>**A complex text-only element can contain text and **attributes. In this case, the content of <code>complexType</code> will be a <code>simpleContent</code>. <code>simpleContent</code> allows you to define restrictions or extensions to elements that only have data as content.</p>
+<p><strong>A complex text-only element can contain text and attributes</strong>. In this case, the content of <code>complexType</code> will be a <code>simpleContent</code>. <code>simpleContent</code> allows you to define restrictions or extensions to elements that only have data as content.</p>
 <p>The most important difference is that in this case you can define attributes in the element. Attributes are added by defining an extension to the type used in the element.</p>
 <p>In this example, the <code>&lt;shoesize&gt;</code> element has integer content and defines one attributes, country, that are an string.</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"shoesize"</span><span class="nt">&gt;</span>
