@@ -2086,7 +2086,7 @@ again. </p>
 <p>After that, modify the XSD file taking into account that the price must be greater than 0 and quantity musn't be negative.   </p>
 </li>
 <li>
-<p><code>202Card.xml</code>: Given the following XML document</p>
+<p><code>202Card.xsd</code>: Given the following XML document</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;cards</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
 <span class="linenos" data-linenos=" 3 "></span>    <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;202Cards.xsd&quot;</span><span class="nt">&gt;</span>
@@ -2103,12 +2103,55 @@ again. </p>
 Create the <code>202Cards.xsd</code> file in order to validate it. </p>
 </li>
 <li>
-<p><code>203Card.xml</code>: Modify the previous task by adding 3 restrictions:</p>
+<p><code>203Card.xsd</code>: Modify the previous task by adding 3 restrictions:</p>
 <ol>
 <li><code>age</code> element must be greather than or equal to 18 amb less than 100.</li>
 <li><code>name</code> element can only contain alphabetic characters.    </li>
 <li><code>number</code> attribute must only contain positive integers.</li>
 </ol>
+</li>
+<li>
+<p><code>204Recipes.xml</code>: Given the following XSD file, create a valid XML document with at least two recipes.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>  <span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;recipes&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>          <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;recipe&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>            <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>              <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>                <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>                <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;photo&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="11 "></span>                <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ingredients&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="12 "></span>                  <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos" data-linenos="13 "></span>                    <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos="14 "></span>                      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ingredient&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="15 "></span>                    <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="16 "></span>                  <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos" data-linenos="17 "></span>                <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos" data-linenos="18 "></span>                <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;method&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="19 "></span>                  <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos" data-linenos="20 "></span>                    <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="hll"><span class="linenos" data-linenos="21 "></span>                      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;step&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="22 "></span>                        <span class="nt">&lt;xs:complexType&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="23 "></span>                          <span class="nt">&lt;xs:simpleContent&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="24 "></span>                            <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;xs:string&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="25 "></span>                              <span class="nt">&lt;xs:attribute</span> <span class="na">name=</span><span class="s">&quot;number&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span> <span class="na">use=</span><span class="s">&quot;required&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="26 "></span>                            <span class="nt">&lt;/xs:extension&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="27 "></span>                          <span class="nt">&lt;/xs:simpleContent&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="28 "></span>                        <span class="nt">&lt;/xs:complexType&gt;</span>
+</span><span class="hll"><span class="linenos" data-linenos="29 "></span>                      <span class="nt">&lt;/xs:element&gt;</span>
+</span><span class="linenos" data-linenos="30 "></span>                    <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="31 "></span>                  <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos" data-linenos="32 "></span>                <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos" data-linenos="33 "></span>              <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="34 "></span>            <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos" data-linenos="35 "></span>          <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos" data-linenos="36 "></span>        <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="37 "></span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos" data-linenos="38 "></span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos" data-linenos="39 "></span>  <span class="nt">&lt;/xs:schema&gt;</span>
+</code></pre></div>
 </li>
 </ol>
 <h2 id="02-xml-scheme-credits-and-bibliography">Credits and bibliography<a class="headerlink" href="#02-xml-scheme-credits-and-bibliography" title="Permanent link">&para;</a></h2>
