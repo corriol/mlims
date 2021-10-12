@@ -246,30 +246,50 @@
 <a class="md-nav__link" href="#attributes">
     Attributes
   </a>
-<nav aria-label="Attributes" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#text-only-elements">
-    Text-only elements
+<a class="md-nav__link" href="#text-only-elements-with-attributes">
+    Text-only elements with attributes
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#content-made-up-of-elements">
     Content made up of elements
   </a>
+<nav aria-label="Content made up of elements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence">
+    Sequence
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#choice">
+    Choice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all">
+    All
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#complexcontent">
-    'complexContent'
+    complexContent
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#empty-elements">
+    Empty elements
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#mixed-content">
     Mixed content
   </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -416,30 +436,50 @@
 <a class="md-nav__link" href="#attributes">
     Attributes
   </a>
-<nav aria-label="Attributes" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#text-only-elements">
-    Text-only elements
+<a class="md-nav__link" href="#text-only-elements-with-attributes">
+    Text-only elements with attributes
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#content-made-up-of-elements">
     Content made up of elements
   </a>
+<nav aria-label="Content made up of elements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence">
+    Sequence
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#choice">
+    Choice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all">
+    All
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#complexcontent">
-    'complexContent'
+    complexContent
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#empty-elements">
+    Empty elements
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#mixed-content">
     Mixed content
   </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1017,9 +1057,10 @@ Unless otherwise specified, attributes are always optional.</p>
 <p>For example, the year attribute must be specified if it is defined as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:attribute</span> <span class="na">name=</span><span class="s">"year"</span> <span class="na">type=</span><span class="s">"xs:integer"</span> <span class="na">use=</span><span class="s">"required"</span> <span class="nt">/&gt;</span>
 </code></pre></div>
-<h4 id="text-only-elements">Text-only elements<a class="headerlink" href="#text-only-elements" title="Permanent link">¶</a></h4>
+<h3 id="text-only-elements-with-attributes">Text-only elements with attributes<a class="headerlink" href="#text-only-elements-with-attributes" title="Permanent link">¶</a></h3>
 <p><strong>A complex text-only element can contain text and attributes</strong>. In this case, the content of <code>complexType</code> will be a <code>simpleContent</code>. <code>simpleContent</code> allows you to define restrictions or extensions to elements that only have data as content.</p>
 <p>The most important difference is that in this case you can define attributes in the element. Attributes are added by defining an extension to the type used in the element.</p>
+<p><code>xs:extension</code> is used to extent a simpleType or a complexType element.</p>
 <p>In this example, the <code>&lt;shoesize&gt;</code> element has integer content and defines one attributes, country, that are an string.</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"shoesize"</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>  <span class="nt">&lt;xs:complexType&gt;</span>
@@ -1034,7 +1075,7 @@ Unless otherwise specified, attributes are always optional.</p>
 For instance:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;shoesize</span> <span class="na">country=</span><span class="s">"france"</span><span class="nt">&gt;</span>35<span class="nt">&lt;/shoesize&gt;</span>
 </code></pre></div>
-<h4 id="content-made-up-of-elements">Content made up of elements<a class="headerlink" href="#content-made-up-of-elements" title="Permanent link">¶</a></h4>
+<h3 id="content-made-up-of-elements">Content made up of elements<a class="headerlink" href="#content-made-up-of-elements" title="Permanent link">¶</a></h3>
 <p>Elements that contain other elements can also be defined in XSD within a <code>&lt;complexType&gt;</code> and can be some of the elements in the following table:</p>
 <table>
 <thead>
@@ -1060,12 +1101,9 @@ For instance:</p>
 <td>complexContent</td>
 <td>Extend or restrict complex content.</td>
 </tr>
-<tr>
-<td>Table: Elements to define complex content</td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<h4 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link">¶</a></h4>
 <p>The <code>&lt;sequence&gt;</code> element is one of the ways that XSD language allows you to specify the elements that should be part of an element's content. Even in the case where there is only a single tag it can be defined as a sequence.</p>
 <p>The most important condition they have is that the elements of the XML document to be validated must appear in the same order in which they are defined in the sequence.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"person"</span><span class="nt">&gt;</span>
@@ -1112,7 +1150,8 @@ For instance:</p>
 <span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;/xs:element&gt;</span>
 <span class="linenos" data-linenos="17 "></span><span class="nt">&lt;/xs:schema&gt;</span>
 </code></pre></div>
-<p>The <choice> element is used to choose one of the alternatives presented.</choice></p>
+<h4 id="choice">Choice<a class="headerlink" href="#choice" title="Permanent link">¶</a></h4>
+<p>The <code>&lt;choice&gt;</code> element is used to choose one of the alternatives presented.</p>
 <p>In this example, the person element may contain either the <namename> or <dni> tag, but not both.
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">"person"</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:choice&gt;</span>
@@ -1121,8 +1160,8 @@ For instance:</p>
 <span class="linenos" data-linenos="5 "></span>    <span class="nt">&lt;/xs:choice&gt;</span>
 <span class="linenos" data-linenos="6 "></span>    ...
 </code></pre></div></dni></namename></p>
-<p>Alternatives may include sequences or other <choice> elements. The following definition is a more elaborate example than the previous one and allows you to choose between the elements <name> and <surname> or <dni>.</dni></surname></name></choice></p>
-<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:choice&gt;</span>
+<p>Alternatives may include sequences or other <code>&lt;choice&gt;</code> elements. The following definition is a more elaborate example than the previous one and allows you to choose between the elements <code>&lt;name&gt;</code> and <code>&lt;surname&gt;</code> or <code>&lt;dni&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:choice&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:sequence&gt;</span>
 <span class="linenos" data-linenos="3 "></span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
 <span class="linenos" data-linenos="4 "></span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"surname"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="na">maxOccurs=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
@@ -1130,7 +1169,8 @@ For instance:</p>
 <span class="linenos" data-linenos="6 "></span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"dni"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
 <span class="linenos" data-linenos="7 "></span><span class="nt">&lt;/xs:choice&gt;</span>
 </code></pre></div>
-The most important difference between the <all> and <sequence> element is the order. The <all> element allows you to specify a sequence of elements but allows them to be specified in any order.</all></sequence></all></p>
+<h4 id="all">All<a class="headerlink" href="#all" title="Permanent link">¶</a></h4>
+<p>The most important difference between the <code>&lt;all&gt;</code> and <code>&lt;sequence&gt;</code> element is the order. The <code>&lt;all&gt;</code> element allows you to specify a sequence of elements but allows them to be specified in any order.</p>
 <p>Therefore, if we define the <person> element as follows:</person></p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"person"</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:complexType&gt;</span>
@@ -1142,48 +1182,51 @@ The most important difference between the <all> and <sequence> element is the or
 <span class="linenos" data-linenos="8 "></span><span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
 <p>It will help us to validate both this document:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;person&gt;
-<span class="linenos" data-linenos="2 "></span>    &lt;name&gt; Pere &lt;/name&gt;
-<span class="linenos" data-linenos="3 "></span>    &lt;cognom&gt; Garcia &lt;/nom&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;person&gt;</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;name&gt;</span>Pere<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nt">&lt;cognom&gt;</span>Garcia<span class="nt">&lt;/nom&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;/person&gt;</span>
 </code></pre></div>
 <p>like this:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;person&gt;
-<span class="linenos" data-linenos=" 2 "></span>    &lt;cognom&gt; Garcia &lt;/nom&gt;
-<span class="linenos" data-linenos=" 3 "></span>    &lt;name&gt; Pere &lt;/name&gt;
-<span class="linenos" data-linenos=" 4 "></span> ```
-<span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span>But the limitations of this element that were not present in the ordered sequences must always be taken into account:
-<span class="linenos" data-linenos=" 7 "></span>
-<span class="linenos" data-linenos=" 8 "></span>* There can only be elements within it. There can be no sequences or alternatives.
-<span class="linenos" data-linenos=" 9 "></span>* Cardinality cannot be used in the elements it contains, as it would cause a problem of non-determinism.
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>Therefore, the following example is incorrect, as it is requested that &lt;surname&gt; be able to exit twice.
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>```xml
-<span class="linenos" data-linenos="14 "></span>&lt;xs:all&gt;
-<span class="linenos" data-linenos="15 "></span>    &lt;xs:element name="name" type="xs:string" /&gt;
-<span class="linenos" data-linenos="16 "></span>    &lt;xs:element name="surname" maxOccurs="2" type="xs:string" /&gt;
-<span class="linenos" data-linenos="17 "></span>&lt;/xs:all&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;person&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&lt;cognom&gt;</span>Garcia<span class="nt">&lt;/nom&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nt">&lt;name&gt;</span>Pere<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nt">&lt;/person&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span> ```
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>But the limitations of this element that were not present in the ordered sequences must always be taken into account:
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>* There can only be elements within it. There can be no sequences or alternatives.
+<span class="linenos" data-linenos="10 "></span>* Cardinality cannot be used in the elements it contains, as it would cause a problem of non-determinism.
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>Therefore, the following example is incorrect, as it is requested so that `<span class="nt">&lt;surname&gt;</span>` is able to appear twice.
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>```xml
+<span class="linenos" data-linenos="15 "></span><span class="nt">&lt;xs:all&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"surname"</span> <span class="na">maxOccurs=</span><span class="s">"2"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/xs:all&gt;</span>
 </code></pre></div>
 <p>One possible way to allow the first and last names to be specified in any order would be to do the following:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;xs:complexType&gt;
-<span class="linenos" data-linenos=" 2 "></span>    &lt;xs:choice&gt;
-<span class="linenos" data-linenos=" 3 "></span>        &lt;xs:sequence&gt;
-<span class="linenos" data-linenos=" 4 "></span>            &lt;xs:element name="name" type="xs:string" /&gt;
-<span class="linenos" data-linenos=" 5 "></span>            &lt;xs:element name="surname" type="xs:string" maxOccurs="2" /&gt;
-<span class="linenos" data-linenos=" 6 "></span>        &lt;/xs:sequence&gt;
-<span class="linenos" data-linenos=" 7 "></span>        &lt;xs:sequence&gt;
-<span class="linenos" data-linenos=" 8 "></span>            &lt;xs:element name="surname" type="xs:string" maxOccurs="2" /&gt;
-<span class="linenos" data-linenos=" 9 "></span>            &lt;xs:element name="name" type="xs:string" /&gt;
-<span class="linenos" data-linenos="10 "></span>        &lt;/xs:sequence&gt;
-<span class="linenos" data-linenos="11 "></span>    &lt;/xs:choice&gt;
-<span class="linenos" data-linenos="12 "></span>&lt;/xs:complexType&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&lt;xs:choice&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"surname"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="na">maxOccurs=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"surname"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="na">maxOccurs=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;/xs:choice&gt;</span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;/xs:complexType&gt;</span>
 </code></pre></div>
-<h4 id="complexcontent">'complexContent'<a class="headerlink" href="#complexcontent" title="Permanent link">¶</a></h4>
-<p>The complexContent tag allows you to define extensions or restrictions to a complex type that contains mixed content or just elements.</p>
+<h4 id="complexcontent"><code>complexContent</code><a class="headerlink" href="#complexcontent" title="Permanent link">¶</a></h4>
+<p>The <code>complexContent</code> tag allows you to define extensions or restrictions to a complex 
+type that contains mixed content or just elements.</p>
 <p>This makes it possible to extend an existing complex content with an extension or to restrict its contents.</p>
-<p>For example, if you have already defined a fullname data type in which the <name> and <surname> elements are, you can reuse the definition to define a new data type, address book, in which the e-mail.</surname></name></p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">"complexName"</span><span class="nt">&gt;</span>
+<p>For example, if you have already defined a full name data type in which the <code>&lt;name&gt;</code> and <code>&lt;surname&gt;</code> elements exist, you can reuse the definition to define a new data type, address book, in which the e-mail.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">"fullname"</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&lt;xs:sequence&gt;</span>
 <span class="linenos" data-linenos=" 3 "></span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
 <span class="linenos" data-linenos=" 4 "></span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"surname"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="na">maxOccurs=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
@@ -1192,7 +1235,7 @@ The most important difference between the <all> and <sequence> element is the or
 <span class="linenos" data-linenos=" 7 "></span>
 <span class="linenos" data-linenos=" 8 "></span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">"agenda"</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos" data-linenos="10 "></span>        <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">"fullName"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">"fullname"</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="11 "></span>            <span class="nt">&lt;xs:sequence&gt;</span>
 <span class="linenos" data-linenos="12 "></span>                <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
 <span class="linenos" data-linenos="13 "></span>            <span class="nt">&lt;/xs:sequence&gt;</span>
@@ -1200,29 +1243,26 @@ The most important difference between the <all> and <sequence> element is the or
 <span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;/xs:complexContent&gt;</span>
 <span class="linenos" data-linenos="16 "></span><span class="nt">&lt;/xs:complexType&gt;</span>
 </code></pre></div>
-<p>In this way, an agenda item can be defined:</p>
+<p>In this way, an agenda element can be defined:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"persona"</span> <span class="na">type=</span><span class="s">"agenda"</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 <p>which must have the three elements <code>&lt;name&gt;</code>, <code>&lt;surname&gt;</code>, and <code>&lt;email&gt;</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;person&gt;</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&lt;name&gt;</span> Pere <span class="nt">&lt;/name&gt;</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="nt">&lt;cognom&gt;</span> Garcia <span class="nt">&lt;/cognom&gt;</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;email&gt;</span> pgarcia@ioc.cat <span class="nt">&lt;/email&gt;</span>
-<span class="linenos" data-linenos=" 5 "></span><span class="nt">&lt;/person&gt;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>#### Items without content
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>For XSD elements without content are always of complex type. The definition simply does not specify any content and we will have an empty element.
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>```xml
-<span class="linenos" data-linenos="12 "></span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"delegate"</span><span class="nt">&gt;</span>
-<span class="linenos" data-linenos="13 "></span>        <span class="nt">&lt;xs:complexType</span> <span class="nt">/&gt;</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;/xs:element&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;person&gt;</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;name&gt;</span>Pere<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nt">&lt;cognom&gt;</span>Garcia<span class="nt">&lt;/cognom&gt;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nt">&lt;email&gt;</span>pgarcia@ioc.cat<span class="nt">&lt;/email&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;/person&gt;</span>
+</code></pre></div>
+<h3 id="empty-elements">Empty elements<a class="headerlink" href="#empty-elements" title="Permanent link">¶</a></h3>
+<p>For XSD elements without content are always of complex type. The definition simply does not specify any content and we will have an empty element.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"delegate"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:complexType</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
 <p>The definition allows you to define the item as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> <span class="nt">&lt;delegate</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;delegate</span> <span class="nt">/&gt;</span>
 </code></pre></div>
-<p>If the element needs attributes they are simply specified within the complexType.</p>
+<p>If the element needs attributes they are simply specified within the <code>complexType</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"delegate"</span><span class="nt">&gt;</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:complexType&gt;</span>
 <span class="linenos" data-linenos="3 "></span>        <span class="nt">&lt;xs:attribute</span> <span class="na">name=</span><span class="s">"year"</span> <span class="na">use=</span><span class="s">"required"</span> <span class="na">type=</span><span class="s">"xs:gYear"</span> <span class="nt">/&gt;</span>
@@ -1232,24 +1272,23 @@ The most important difference between the <all> and <sequence> element is the or
 <p>And you can now define the attribute in the empty element:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;delegate</span> <span class="na">year=</span><span class="s">"2012"</span> <span class="nt">/&gt;</span>
 </code></pre></div>
-<h4 id="mixed-content">Mixed content<a class="headerlink" href="#mixed-content" title="Permanent link">¶</a></h4>
-<p>Mixed content items are items that have both content and text content. It was designed to include elements in the middle of a narrative text.</p>
+<h3 id="mixed-content">Mixed content<a class="headerlink" href="#mixed-content" title="Permanent link">¶</a></h3>
+<p>Mixed content elements are elements that have both elements and text. It was designed to include elements in the middle of a narrative text.</p>
 <p>In XSD the mixed content is defined by putting the mixed="true" attribute in the definition of the <complextype> element.</complextype></p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;xs:element name="letter"&gt;
-<span class="linenos" data-linenos="2 "></span>    &lt;xs:complexType mixed="true"&gt;
-<span class="linenos" data-linenos="3 "></span>        &lt;xs:sequence&gt;
-<span class="linenos" data-linenos="4 "></span>            &lt;xs:element name="name" type="xs:string" /&gt;
-<span class="linenos" data-linenos="5 "></span>            &lt;xs:element name="dia" type="xs:gDay" /&gt;
-<span class="linenos" data-linenos="6 "></span>        &lt;/xs:sequence&gt;
-<span class="linenos" data-linenos="7 "></span>    &lt;/xs:complexType&gt;
-<span class="linenos" data-linenos="8 "></span>&lt;/xs:element&gt;
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"letter"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="nt">&lt;xs:complexType</span> <span class="na">mixed=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="3 "></span>        <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos="4 "></span>            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="5 "></span>            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"dia"</span> <span class="na">type=</span><span class="s">"xs:gDay"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="6 "></span>        <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
-<p>This would allow us to validate content like this:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;card&gt; Dear Sir &lt;name&gt; Peter &lt;name&gt;:
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span>I am sending you this letter to remind you that we have stayed for
-<span class="linenos" data-linenos="4 "></span>meet us on &lt;day&gt; 12 &lt;/day&gt;
-<span class="linenos" data-linenos="5 "></span>&lt;/carta&gt;
+This would allow us to validate content like this:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;card&gt;</span>Dear Sir <span class="nt">&lt;name&gt;</span>Peter<span class="nt">&lt;/name&gt;</span>:
+<span class="linenos" data-linenos="2 "></span>    I am sending you this letter to remind you that we have stayed for
+<span class="linenos" data-linenos="3 "></span>    meet us on <span class="nt">&lt;day&gt;</span>12<span class="nt">&lt;/day&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;/card&gt;</span>
 </code></pre></div>
 <h2 id="example-of-creating-an-xsd">Example of creating an XSD<a class="headerlink" href="#example-of-creating-an-xsd" title="Permanent link">¶</a></h2>
 <p>XSD vocabulary definitions can be created from the idea of ​​what we want the data to contain or from a sample XML file.</p>
@@ -1396,6 +1435,56 @@ Create the <code>202Cards.xsd</code> file in order to validate it. </p>
 <span class="linenos" data-linenos="38 "></span>    <span class="nt">&lt;/xs:element&gt;</span>
 <span class="linenos" data-linenos="39 "></span>  <span class="nt">&lt;/xs:schema&gt;</span>
 </code></pre></div>
+</li>
+<li>
+<p><code>205Prices.xsd</code>: Triple-digit prices</p>
+<p>Given the following XML document:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;prices</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> 
+<span class="linenos" data-linenos="3 "></span>    <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"prices.xsd"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nt">&lt;price&gt;</span>8<span class="nt">&lt;/price&gt;</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="nt">&lt;price&gt;</span>2.6<span class="nt">&lt;/price&gt;</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="nt">&lt;price&gt;</span>4.95<span class="nt">&lt;/price&gt;</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="nt">&lt;price&gt;</span>187<span class="nt">&lt;/price&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nt">&lt;/prices&gt;</span>
+</code></pre></div>
+ Write the content of the "prices.xsd" file to validate it, bearing in mind that the "price" element can take as a value a number that contains a maximum of three digits and, of these, only two can be decimals. To do this, write a restriction that cannot be used by other elements and, on the other hand, make use of:</p>
+<ul>
+<li><code>xs:totalDigits</code> used to specify the maximum number of digits that a number can have, including decimals.</li>
+<li><code>xs:fractionDigits</code> used to specify the maximum number of decimal places that a number can have.</li>
+</ul>
+</li>
+<li>
+<p><code>206Players.xsd</code>. Given the following XML document:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding = "UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;players</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> 
+<span class="linenos" data-linenos=" 3 "></span>    <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"206Players.xsd"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;player</span> <span class="na">preferred_number=</span><span class="s">"7"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nt">&lt;name</span> <span class="na">nickname=</span><span class="s">"the bug"</span><span class="nt">&gt;</span>Cristiano Ronaldo<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nt">&lt;postion&gt;</span>Left wing<span class="nt">&lt;/postion&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nt">&lt;community</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;/player&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;player</span> <span class="na">preferred_number=</span><span class="s">"9"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nt">&lt;name</span> <span class="na">nickname=</span><span class="s">"the bull"</span><span class="nt">&gt;</span>Maxi Gómez<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="nt">&lt;postion&gt;</span>Striker<span class="nt">&lt;/postion&gt;</span>  
+<span class="linenos" data-linenos="13 "></span>    <span class="nt">&lt;/player&gt;</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;player</span> <span class="na">preferred_number=</span><span class="s">"10"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="nt">&lt;name</span> <span class="na">nickname=</span><span class="s">"the flea"</span><span class="nt">&gt;</span>Lionel Messi<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="nt">&lt;postion&gt;</span>Right wing<span class="nt">&lt;/postion&gt;</span>
+<span class="linenos" data-linenos="18 "></span>        <span class="nt">&lt;community</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="nt">&lt;/player&gt;</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="nt">&lt;player</span> <span class="na">preferred_number=</span><span class="s">"8"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="nt">&lt;name&gt;</span>Carlos Soler<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="nt">&lt;postion&gt;</span>Right midfielder<span class="nt">&lt;/postion&gt;</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="nt">&lt;community</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="nt">&lt;/player&gt;</span>
+<span class="linenos" data-linenos="25 "></span><span class="nt">&lt;/players&gt;</span>    
+</code></pre></div>
+<p>Write an XSD file to validate it. After that, add 2 new records.</p>
+<p>In addition, you can define the position element as a <code>choice</code> element 
+ in order to control the correctness of positions. You can find the name of positions in English at <a href="https://protips.dickssportinggoods.com/sports-and-activities/soccer/soccer-positions-the-numbers-player-roles-basic-formations">Soccer Positions: The Numbers, Player Roles &amp; Basic Formations</a></p>
 </li>
 </ol>
 <h2 id="credits-and-bibliography">Credits and bibliography<a class="headerlink" href="#credits-and-bibliography" title="Permanent link">¶</a></h2>
