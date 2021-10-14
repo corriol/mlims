@@ -1486,6 +1486,33 @@ Create the <code>202Cards.xsd</code> file in order to validate it. </p>
 <p>In addition, you can define the position element as a <code>choice</code> element 
  in order to control the correctness of positions. You can find the name of positions in English at <a href="https://protips.dickssportinggoods.com/sports-and-activities/soccer/soccer-positions-the-numbers-player-roles-basic-formations">Soccer Positions: The Numbers, Player Roles &amp; Basic Formations</a></p>
 </li>
+<li>
+<p><code>207people.xsd</code>: Given the following XSD file "people.xsd":</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"people"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>                <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"person"</span> <span class="na">maxOccurs=</span><span class="s">"unbounded"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>                    <span class="nt">&lt;xs:complexType</span> <span class="na">mixed=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>                        <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>                            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"xs:string"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>                            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"city"</span> <span class="na">type=</span><span class="s">"xs:string"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="11 "></span>                            <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"age"</span> <span class="na">type=</span><span class="s">"xs:positiveInteger"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="12 "></span>                        <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="13 "></span>                    <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos" data-linenos="14 "></span>                <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos" data-linenos="15 "></span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/xs:schema&gt;</span>
+</code></pre></div>
+Using the elements "name", "city" and "age", write a XML document that can be validate by "people.xsd" and that storages the following information:</p>
+<ul>
+<li>"Eva lives in Paris and she is 25 years old."</li>
+<li>"Giovanni lives in Florence and he is 26 years old."</li>
+</ul>
+</li>
 </ol>
 <h2 id="credits-and-bibliography">Credits and bibliography<a class="headerlink" href="#credits-and-bibliography" title="Permanent link">¶</a></h2>
 <ul>
