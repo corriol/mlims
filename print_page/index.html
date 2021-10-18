@@ -262,6 +262,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-content-syndication/" class="md-nav__link">
+        3. Content syndication
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -322,6 +337,13 @@
         <li class="md-nav__item">
   <a href="#02-xml-scheme" class="md-nav__link">
     2. XML schemas and vocabularies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-content-syndication" class="md-nav__link">
+    3. Content syndication
   </a>
   
 </li>
@@ -2237,6 +2259,282 @@ Using the elements "name", "city" and "age", write a XML document that can be va
 <a href="http://www.abrirllave.com/lmsgi/">Tutorial de LMSGI</a> .</li>
 <li>Carlos Pes. <em>Apuntes de XSD (XML Schema)</em> available at <a href="https://www.abrirllave.com/xsd/apuntes-de-xsd.php">https://www.abrirllave.com/xsd/apuntes-de-xsd.php</a>.</li>
 <li>Xavier Sala. <em>Definició d'esquemes i vocabulari</em> available at <a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u2/a2/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u2/a2/continguts.html</a>.</li>
+</ul></section><section class="print-page" id="03-content-syndication"><h1 id="03-content-syndication-3-content-syndication">3. Content syndication<a class="headerlink" href="#03-content-syndication-3-content-syndication" title="Permanent link">&para;</a></h1>
+<details class="info"><summary>Objectives</summary><ul>
+<li>Analyse a specific example of the use of markup language for the transmission of information.</li>
+<li>Define an XML document based on its syntax and structure.</li>
+<li></li>
+</ul>
+</details>
+<details class="info"><summary>Assessment criteria</summary><ul>
+<li>The advantages that content syndication brings to the management and transmission of information have been identified.</li>
+<li>Its areas of application have been defined.</li>
+<li>Technologies based on content syndication have been analysed.</li>
+<li>The structure and syntax of a content channel has been identified.</li>
+<li>Content channels have been created and validated.</li>
+<li>Functionality and access to channels are checked.</li>
+<li>Specific tools are used such as aggregators and channel directories.</li>
+</ul>
+</details>
+<h2 id="03-content-syndication-introduction">Introduction<a class="headerlink" href="#03-content-syndication-introduction" title="Permanent link">&para;</a></h2>
+<p>The syndication (or broadcasting) of web content is that a part of the content
+of a web page is made available to other sites or individual subscribers
+through a <strong>web channel</strong>, the most common used format is RSS, followed
+by the Atom. Computer programs that comply with any of these standards
+they periodically consult a file with several entries linking to the 
+full or partial articles on the original website. Unlike other media,
+web content broadcast rights are usually free, and do not usually intervene
+a contract between the parties but a licence rules.</p>
+<p><img alt="Basic content syndication scheme" src="../assets/03/rss-basic-scheme.png" /></p>
+<h2 id="03-content-syndication-a-little-history">A little history<a class="headerlink" href="#03-content-syndication-a-little-history" title="Permanent link">&para;</a></h2>
+<p>As a web user, it is very important to get links from websites that interest you and store them.
+In such a way that you are able to get back to them quickly. If you wanted to follow the changes
+on the web pages the only way to do that it was to visit the website to check for news.</p>
+<p>The advent of what became known as <em>Web 2.0</em> complicated things. The Web
+was filled with a large number of blogs and pages that published information,
+and visiting them all to see if there were any changes took a long time,
+and, in addition, it is very likely that pages have not changed. </p>
+<p>The advent of standard syndication systems made possible to obtain information
+ updates a website in a stable way through an specific address. Content syndication changed 
+ the way the content is retrieved. You no longer had to look for information: it was the information that
+went to the user.</p>
+<p>By using syndication, user no longer needs to visit the pages that interest him to see 
+if there are any changes, because if there are any you will already receive them. This leads to savings
+of time, as you will not have to visit pages to discover that there are no changes.</p>
+<p>Another advantage that syndication brings is inherent in XML. Unlike
+of what happens with HTML, it is easy to interpret the content of the information that is
+received and therefore it will also be easy to be able to reuse the content to make others
+tasks.</p>
+<p>Although syndication is often seen as a system focused on detecting updates
+on the Web, it is also being used to keep updates in other fields.
+For example, some computer programs use RSS to find out if there are new versions or
+updates and thus keep the programs up to date.</p>
+<h2 id="03-content-syndication-content-syndication-today">Content syndication today<a class="headerlink" href="#03-content-syndication-content-syndication-today" title="Permanent link">&para;</a></h2>
+<p>At present, with the emergence of social networks and other technologies,
+the use of content syndication with standard formats has decreased and the
+content broadcasting has focused on posting on social media and
+the use of other sharing systems such as APIs.</p>
+<p>However, in the world of <em>podcast</em>, it continues to be used as an automatic way to share content.</p>
+<div class="admonition info">
+<p class="admonition-title">podcast</p>
+<p>A <strong>podcast</strong> is a radio, audio, or video file intended for podcasting.</p>
+<p><strong>Podcasting</strong> refers to the technique for creating and broadcasting audio and video files over the Internet that allows the user to download them to their computer and listen to them  or see them whenever you want.</p>
+</div>
+<h2 id="03-content-syndication-example-of-use">Example of use<a class="headerlink" href="#03-content-syndication-example-of-use" title="Permanent link">&para;</a></h2>
+<p><img alt="Event 24h24l.org" src="../assets/03/rss-example.png" /></p>
+<p>Using a <em>podcatcher</em> we can download the new <em>podcasts</em> published.</p>
+<p>Adding the <strong>feed</strong> (name given to the list of items) shows us what's new
+that there is.</p>
+<p><img alt="gPodder usage example" src="../assets/03/podcacher-exemple-1.png" /></p>
+<p>Once added, we are subscribed and the <em>podcatcher</em> will notify us of news.</p>
+<p><img alt="gPodder usage example 2" src="../assets/03/podcacher-exemple-2.png" />        </p>
+<h2 id="03-content-syndication-structure-of-content-channels">Structure of content channels<a class="headerlink" href="#03-content-syndication-structure-of-content-channels" title="Permanent link">&para;</a></h2>
+<p><strong>Web feeds</strong> allow programs to check if there are updates posted on a website. 
+To provide a web channel, the site owner may use specialized software (such as a
+ content management system) that publishes a list (or "feed") of articles or
+ recent content in a standardized automatic reading format.</p>
+<p>The channel can be downloaded through programs that use it, such as
+websites that distribute feed content, or through feed readers
+called <em>aggregators</em> that allow Internet users to subscribe to
+channels and view their content.</p>
+<p>A channel (<em>feed</em>) contains entries, which can be headlines, full-text articles,
+extracts, summaries, or links to content from a website along with various metadata.</p>
+<p>Next we will analyse the characteristics of the two standards, based on XML,
+ for creating content channels: RSS 2.0 and Atom 1.0.</p>
+<h3 id="03-content-syndication-rss-20">RSS 2.0<a class="headerlink" href="#03-content-syndication-rss-20" title="Permanent link">&para;</a></h3>
+<p>RSS (<em>RDF Site Summary</em> or <em>Really Simple Syndication</em>) is a web feed (or <em>feed</em>) that allows
+users and applications access website updates in a format standardized and computer readable.</p>
+<p>It was developed by the <em>RSS Advisory Board</em> and its first version, RSS 0.90, appeared in March 1999.
+The latest version, 2.0, was released in March 2009.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A standard XML file format ensures compatibility with many different machines / programs. RSS feeds also benefit users who want to receive timely updates  from favorite websites or add data from many sites.</p>
+</div>
+<p>RSS is an XML dialect. The RSS format itself is relatively easy to read
+for both automated and human processes. An example <em>feed</em> can have
+content as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;rss</span> <span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nt">&lt;channel&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span> <span class="nt">&lt;title&gt;</span>RSS Title<span class="nt">&lt;/title&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span> <span class="nt">&lt;description&gt;</span> This is an example of an RSS feed<span class="nt">&lt;/description&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span> <span class="nt">&lt;link&gt;</span>http://www.example.com/main.html<span class="nt">&lt;/link&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span> <span class="nt">&lt;copyright&gt;</span>2020 Example.com All rights reserved<span class="nt">&lt;/copyright&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span> <span class="nt">&lt;lastBuildDate&gt;</span>Mon, 06 Sep 2010 00:01:00 +0000<span class="nt">&lt;/lastBuildDate&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span> <span class="nt">&lt;pubDate&gt;</span>Sun, 06 Sep 2009 16:20:00 +0000<span class="nt">&lt;/pubDate&gt;</span>
+<span class="linenos" data-linenos="10 "></span> <span class="nt">&lt;ttl&gt;</span>1800<span class="nt">&lt;/ttl&gt;</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span> <span class="nt">&lt;item&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;title&gt;</span>Example entry<span class="nt">&lt;/title&gt;</span>
+<span class="linenos" data-linenos="14 "></span>  <span class="nt">&lt;description&gt;</span>Here is some text containing an interesting 
+<span class="linenos" data-linenos="15 "></span>    description.<span class="nt">&lt;/description&gt;</span>
+<span class="linenos" data-linenos="16 "></span>  <span class="nt">&lt;link&gt;</span> http://www.example.com/blog/post/1<span class="nt">&lt;/link&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;guid</span> <span class="na">isPermaLink =</span> <span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>7bd204c6-1655-4c27-aeee-53f933c5395f<span class="nt">&lt;/guid&gt;</span>
+<span class="linenos" data-linenos="18 "></span>  <span class="nt">&lt;pubDate&gt;</span>Sun, 06 Sep 2009 16:20:00 +0000<span class="nt">&lt;/pubDate&gt;</span>
+<span class="linenos" data-linenos="19 "></span> <span class="nt">&lt;/item&gt;</span>
+<span class="linenos" data-linenos="20 "></span><span class="nt">&lt;/channel&gt;</span>
+<span class="linenos" data-linenos="21 "></span><span class="nt">&lt;/rss&gt;</span>
+</code></pre></div>
+<p><strong>RSS feed tree diagram</strong>
+<img alt="RSS feed tree diagram" src="../assets/asxm04u3_03.png" /></p>
+<p>At the top level, an RSS document is a <code>&lt;rss&gt;</code> element, with an attribute
+ required called <code>version</code>, which specifies the RSS version it meets
+ the document.</p>
+<p>Subordinate to the <code>&lt;rss&gt;</code> element is a <code>&lt;channel&gt;</code> element that contains information
+about the channel (metadata) and its content in <code>&lt;item&gt;</code> elements.</p>
+<div class="admonition important">
+<p class="admonition-title">RSS 2.0 Specification</p>
+<p>For more details you can access the specification:
+<a href="https://www.rssboard.org/rss-specification">RSS 2.0 Specification</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can analise the RSS schema in this website: <a href="https://schemas.liquid-technologies.com/w3c/rss/2.0.1.9/?page=rss-2_0_1-rev9_xsd.html">https://schemas.liquid-technologies.com/w3c/rss/2.0.1.9/?page=rss-2_0_1-rev9_xsd.html</a></p>
+</div>
+<p>Despite the fact that there is not an official RSS schema, we can find some implementations like this: <a href="../assets/03/rss-2_0.xsd">RSS 2.0</a>.</p>
+<h3 id="03-content-syndication-atom">Atom<a class="headerlink" href="#03-content-syndication-atom" title="Permanent link">&para;</a></h3>
+<p>The atom syndication format is an XML dialect used for web feeds.</p>
+<p>The Atom format was developed as an alternative to RSS. Ben Trott, defender
+of the new format that became Atom, believed that RSS had limitations and flaws,
+such as the lack of continuous innovation and its need to remain compatible,
+and that there were advantages in a new design.</p>
+<p>A document based on the Atom format has the following structure:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding = &quot;utf-8&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nt">&lt;feed</span> <span class="na">xmlns =</span> <span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="nt">&lt;title&gt;</span> Example Feed <span class="nt">&lt;/title&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;subtitle&gt;</span> A subtitle. <span class="nt">&lt;/subtitle&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;link</span> <span class="na">href =</span> <span class="s">&quot;http://example.org/feed/&quot;</span> <span class="na">rel =</span> <span class="s">&quot;self&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;link</span> <span class="na">href =</span> <span class="s">&quot;http://example.org/&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;id&gt;</span> urn: uuid: 60a76c80-d399-11d9-b91C-0003939e0af6 <span class="nt">&lt;/id&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="nt">&lt;updated&gt;</span> 2003-12-13T18: 30: 02Z <span class="nt">&lt;/updated&gt;</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;entry&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;title&gt;</span> Atom-Powered Robots Run Amok <span class="nt">&lt;/title&gt;</span>
+<span class="linenos" data-linenos="14 "></span>  <span class="nt">&lt;link</span> <span class="na">href =</span> <span class="s">&quot;http://example.org/2003/12/13/atom03&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="15 "></span>  <span class="nt">&lt;link</span> <span class="na">rel =</span> <span class="s">&quot;alternate&quot;</span> <span class="na">type =</span> <span class="s">&quot;text / html&quot;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="na">href =</span> <span class="s">&quot;http://example.org/2003/12/13/atom03.html&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;link</span> <span class="na">rel =</span> <span class="s">&quot;edit&quot;</span> <span class="na">href =</span> <span class="s">&quot;http://example.org/2003/12/13/atom03/edit&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="18 "></span>  <span class="nt">&lt;id&gt;</span> urn: uuid: 1225c695-cfb8-4ebb-aaaa-80da344efa6a <span class="nt">&lt;/id&gt;</span>
+<span class="linenos" data-linenos="19 "></span>  <span class="nt">&lt;updated&gt;</span> 2003-12-13T18: 30: 02Z <span class="nt">&lt;/updated&gt;</span>
+<span class="linenos" data-linenos="20 "></span>  <span class="nt">&lt;summary&gt;</span> Some text. <span class="nt">&lt;/summary&gt;</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="nt">&lt;content</span> <span class="na">type =</span> <span class="s">&quot;xhtml&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="22 "></span>      <span class="nt">&lt;div</span> <span class="na">xmlns =</span> <span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="nt">&lt;p&gt;</span> This is the entry content. <span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="24 "></span>      <span class="nt">&lt;/div&gt;</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="nt">&lt;/content&gt;</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="nt">&lt;author&gt;</span>
+<span class="linenos" data-linenos="27 "></span>      <span class="nt">&lt;name&gt;</span> John Doe <span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="28 "></span>      <span class="nt">&lt;email&gt;</span> johndoe@example.com <span class="nt">&lt;/email&gt;</span>
+<span class="linenos" data-linenos="29 "></span>    <span class="nt">&lt;/author&gt;</span>
+<span class="linenos" data-linenos="30 "></span><span class="nt">&lt;/entry&gt;</span>
+<span class="linenos" data-linenos="31 "></span>
+<span class="linenos" data-linenos="32 "></span><span class="nt">&lt;/feed&gt;</span>
+</code></pre></div>
+<p>For more details: <a href="https://tools.ietf.org/html/rfc4287">RFC 4287 - The Atom Syndication Format</a></p>
+<div class="admonition info">
+<p class="admonition-title">Validation</p>
+<p>Since both RSS and Atom are XML documents, you will be able to check that they are correct using the same verification tools that are used in XML.</p>
+</div>
+<p>Although it is possible to use XML validators, the most common is to do so
+serve specific programs to validate RSS and Atom such as the W3C <em>Feed Validation Service</em>
+ (<a href="https://validator.w3.org/feed">validator.w3.org/feed</a>)</p>
+<h2 id="03-content-syndication-tasks">Tasks<a class="headerlink" href="#03-content-syndication-tasks" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Using a RSS aggregator</p>
+<p>In the next task we will install an RSS aggregator and subscribe to some channels.</p>
+<ol>
+<li>Install the Firefox add-on: <em>Feedbro</em>.</li>
+<li>Access the add-on.</li>
+<li>Subscribe to the following channels:<ol>
+<li>The podcasts of the 24h24l.org event.</li>
+<li>The latest news from El País</li>
+<li>The front page news of El Mundo.</li>
+<li>Check if any of the pages you consult regularly redistribute their contents. If so, subscribe to their channel.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><code>302rssfeed.xml</code>. Creating an RSS feed </p>
+<p>You were the creator of the web <code>recipe-example.org</code> and you currently have in the main page the following content.</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang </span><span class="o">=</span> <span class="s">&quot;ca&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset </span><span class="o">=</span> <span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name </span><span class="o">=</span> <span class="s">&quot;viewport&quot;</span> <span class="na">content </span><span class="o">=</span> <span class="s">&quot;width = device-width, initial-scale = 1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Recipes<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sample recipes <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="14 "></span><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="15 "></span>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Baked rice<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="16 "></span>  <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime </span><span class="o">=</span> <span class="s">&quot;2020-12-13 08:00:00&quot;</span><span class="p">&gt;</span> Sunday, December 13
+<span class="linenos" data-linenos="17 "></span>    2020 <span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="18 "></span>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> The peculiarity of this rice, as the name suggests, is
+<span class="linenos" data-linenos="19 "></span>    which is baked. I,
+<span class="linenos" data-linenos="20 "></span>    like paella and other Valencian rice dishes, it is also a
+<span class="linenos" data-linenos="21 "></span>    dish of popular origin, which in this case was made from
+<span class="linenos" data-linenos="22 "></span>    of the remains of the putxero. That&#39;s why among his
+<span class="linenos" data-linenos="23 "></span>    Ingredients are not missing chickpeas, pork chops and
+<span class="linenos" data-linenos="24 "></span>    sausage. This dish is especially typical in counties such as
+<span class="linenos" data-linenos="25 "></span>    la Costera, where it has been celebrated in Xàtiva for a long time
+<span class="linenos" data-linenos="26 "></span>    a few years the National Baked Rice Contest. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="27 "></span>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/2020/12/arros-al-forn.html&quot;</span><span class="p">&gt;</span> Continue reading <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="28 "></span><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="29 "></span><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="30 "></span>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Paella valenciana<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="31 "></span>  <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&quot;2020-04-06 13:20:00&quot;</span><span class="p">&gt;</span> Monday, April 6,
+<span class="linenos" data-linenos="32 "></span>   2020 <span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="33 "></span>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> The paella is the highest standard of Valencian cuisine and
+<span class="linenos" data-linenos="34 "></span>  probably also of the Spanish, due to its recognition
+<span class="linenos" data-linenos="35 "></span>  gastronomy worldwide. Its origin, like that of all
+<span class="linenos" data-linenos="36 "></span>  dishes of popular cuisine, derived from the conjunction of foods that
+<span class="linenos" data-linenos="37 "></span>  each family had at their disposal, especially in the area of
+<span class="linenos" data-linenos="38 "></span>  the orchard of Valencia, which was supplied with fresh vegetables.
+<span class="linenos" data-linenos="39 "></span>  In addition, it was formerly customary to raise chickens and rabbits for
+<span class="linenos" data-linenos="40 "></span>  to family use, therefore, if we add abundance to all this
+<span class="linenos" data-linenos="41 "></span>  of the rice cultivated in the Albufera, the result is this
+<span class="linenos" data-linenos="42 "></span>  genuinely Valencian dish that receives the name of the container in the
+<span class="linenos" data-linenos="43 "></span>  which is cooked. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="44 "></span>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/2020/04/paella-valenciana.html&quot;</span><span class="p">&gt;</span> Continue reading <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="45 "></span><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="46 "></span><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="47 "></span>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Olleta<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="48 "></span>  <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime </span><span class="o">=</span> <span class="s">&quot;2019-12-28 18:20:00&quot;</span><span class="p">&gt;</span> Friday, December 28
+<span class="linenos" data-linenos="49 "></span>  2019 <span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="50 "></span>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> L&#39;olleta is the most representative dish in the mountain area
+<span class="linenos" data-linenos="51 "></span>  of Alicante and in the interior of Valencia. This is a succulent putxero,
+<span class="linenos" data-linenos="52 "></span>  similar to a broth stew but one of the most refined in all of Spain,
+<span class="linenos" data-linenos="53 "></span>  and for this reason it is recognized nationally. Its intense flavor
+<span class="linenos" data-linenos="54 "></span>  and fragrant derives from the aromatic fragrance of the sausages and,
+<span class="linenos" data-linenos="55 "></span>  once degreased, it reaches a sublime point. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="56 "></span>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/2019/12/olleta.html&quot;</span><span class="p">&gt;</span> Continue reading <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="57 "></span><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="58 "></span><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="59 "></span>  <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="60 "></span>  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="61 "></span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="62 "></span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+Create the RSS feed in version 2.0 so that users know when you post new recipes.</p>
+<p>Validate the file.</p>
+</li>
+</ol>
+<h2 id="03-content-syndication-credits-bibliography-and-webography">Credits, bibliography and webography<a class="headerlink" href="#03-content-syndication-credits-bibliography-and-webography" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Col·laboradors de la Viquipèdia. Redifusió de continguts web [en línia]. Viquipèdia, l'Enciclopèdia Lliure, 2019 [data de consulta: 15 de novembre del 2019]. Disponible en <!--/ca.wikipedia.org/w/index.php?title=Redifusi%C3%B3_de_continguts_web&oldid=22351183-->. </p>
+</li>
+<li>
+<p>Xavier Sala. <em>Sindicació de continguts</em> available at <a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u3/a1/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u3/a1/continguts.html</a>.</p>
+</li>
 </ul></section></div>
                 
               
