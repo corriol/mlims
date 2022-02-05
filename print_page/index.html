@@ -2999,7 +2999,290 @@ to make best sites and more high quality products.</li>
                         <h1 class='nav-section-title' id='section-6-xml-transformation'>
                             6. XML Transformation <a class='headerlink' href='#section-6-xml-transformation' title='Permanent link'>↵</a>
                         </h1>
-                        <section class="print-page" id="06-xml-transformation-99-tasks"><h1 id="06-xml-transformation-99-tasks-tasks">Tasks<a class="headerlink" href="#06-xml-transformation-99-tasks-tasks" title="Permanent link">&para;</a></h1>
+                        <section class="print-page" id="06-xml-transformation-01-xpath"><h1 id="06-xml-transformation-01-xpath-xml-transformation-technologies">XML transformation technologies<a class="headerlink" href="#06-xml-transformation-01-xpath-xml-transformation-technologies" title="Permanent link">&para;</a></h1>
+<details class="info"><summary>Goals</summary><ol>
+<li>Identify the need for XML document conversion.</li>
+<li>Establish the areas of application.</li>
+<li>Analyze the technologies involved and how they work.</li>
+<li>Describe the specific syntax used in the conversion and adaptation of XML documents.</li>
+<li>Create conversion specifications.</li>
+<li>Identify and characterize specific tools related to XML document conversion.</li>
+<li>Make conversions in different output formats.</li>
+<li>Document and refine conversion specifications.</li>
+</ol>
+</details>
+<details class="info"><summary>Assessment Criteria</summary><ul>
+<li>The need for XML document conversion has been identified.</li>
+<li>Scopes of application have been established.</li>
+<li>The technologies involved and their mode of operation have been analyzed.</li>
+<li>The specific syntax used in document conversion and adaptation has been described XML.</li>
+<li>Conversion specifications created.</li>
+<li>Specific tools related to conversion have been identified and characterized XML documents.</li>
+<li>Conversions have been made to different output formats.</li>
+<li>Conversion specifications have been documented and refined.</li>
+</ul>
+</details>
+<h2 id="06-xml-transformation-01-xpath-introduction">Introduction<a class="headerlink" href="#06-xml-transformation-01-xpath-introduction" title="Permanent link">&para;</a></h2>
+<p>Although XML is a relatively readable format, this is not one of its main goals, especially considering that humans like to read data in certain formats that make them more pleasantly readable - while the XML specification states that in no case should information about how information should be displayed must be included in the documents.</p>
+<p>In some cases, XML documents may need to be transformed to make them easier to view, or adapted so that they can be read by specific programs.</p>
+<p>XML is primarily intended for storing and exchanging information, so if the data needs to be represented differently to optimize a process or to improve its visualization, there are several possibilities:</p>
+<ol>
+<li>
+<p><strong>Develop a program</strong>: Since it is relatively easy to work with XML, you could develop a program that takes the XML data and generates the output as you want. This has the disadvantage that you will need to have programming knowledge and it can be a lot of work even if what you need to do is trivial.</p>
+</li>
+<li>
+<p><strong>Use CSS</strong>: In many cases a simple solution would be to use CSS to render information more user-friendly using a browser. But it only serves to change the way the document is displayed, not to change the type of document.</p>
+</li>
+<li><strong>Transform the document</strong>: An alternative solution is to transform the document into one that is intended to be viewed. There are many formats that are mainly designed to be viewed: PDF, HTML, XHTML, etc.</li>
+</ol>
+<h2 id="06-xml-transformation-01-xpath-css">CSS<a class="headerlink" href="#06-xml-transformation-01-xpath-css" title="Permanent link">&para;</a></h2>
+<p>Given the following XML file:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">&lt;?xml-stylesheet href=&quot;sample.css&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nt">&lt;professor&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="nt">&lt;nom&gt;</span>Marcel<span class="nt">&lt;/nom&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;cognom&gt;</span>Garcia<span class="nt">&lt;/cognom&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;departament&gt;</span>Departament d&#39;Informàtica<span class="nt">&lt;/departament&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;carrecs&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;carrec&gt;</span>Cap de Departament<span class="nt">&lt;/carrec&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;carrec&gt;</span>Tutor<span class="nt">&lt;/carrec&gt;</span>
+<span class="linenos" data-linenos="10 "></span>  <span class="nt">&lt;/carrecs&gt;</span>
+<span class="linenos" data-linenos="11 "></span><span class="nt">&lt;/professor&gt;</span>
+</code></pre></div>
+<p>Applying this as CSS</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">professor</span> <span class="p">{</span> <span class="k">padding</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 2 "></span>            <span class="k">margin</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>            <span class="k">border</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">black</span> <span class="kc">solid</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>            <span class="k">width</span><span class="p">:</span> <span class="mi">40</span><span class="kt">%</span><span class="p">;</span> <span class="p">}</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="nt">nom</span><span class="o">,</span><span class="nt">cognom</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nt">departament</span> <span class="p">{</span> <span class="k">padding-top</span><span class="p">:</span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span> 
+<span class="linenos" data-linenos=" 9 "></span>              <span class="k">display</span><span class="p">:</span><span class="kc">block</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span>              <span class="k">font-weight</span><span class="p">:</span><span class="kc">bold</span><span class="p">;}</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">carrec</span><span class="p">{</span> <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="k">padding-left</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span><span class="nt">carrec</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span> <span class="k">content</span><span class="p">:</span><span class="s2">&quot;,&quot;</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>
+<p>The resulting page will be similar to:</p>
+<p><img alt="" src="../06-xml-transformation/assets/css.png" /></p>
+<p>However, CSS has many limitations when it comes to presenting information:</p>
+<ul>
+<li>The information cannot be rearranged as we wish.</li>
+<li>Attributes can be displayed, but there are many limitations to doing so.</li>
+<li>No new product calculation or data processing structures can be added to the document.</li>
+<li>There are no easy ways to format data for printing.</li>
+</ul>
+<p>If the ultimate goal is not simply to decorate the document but to transform it into a completely different document, CSS is useless. CSS does not transform the document but simply changes the way it is displayed.</p>
+<h2 id="06-xml-transformation-01-xpath-conversion-and-adaptation-of-xml-documents">Conversion and adaptation of XML documents<a class="headerlink" href="#06-xml-transformation-01-xpath-conversion-and-adaptation-of-xml-documents" title="Permanent link">&para;</a></h2>
+<p>The W3C created a generalization of CSS style sheets called XSL
+(<em>eXtensible Stylesheet Language</em>).</p>
+<p>The W3C has developed three languages:
+* <strong>XPath</strong>: A language for referring to parts of an XML document.
+* <strong>XSLT</strong> (<em>XSL Transformation</em>, ie XSL Transformations): a language for transforming XML documents.
+* <strong>XSL-FO</strong> (<em>XSL Formatting Objects</em>): a language for specifying the format of an XML document and converting it to PDF or PostScript.</p>
+<p><img alt="bg 90%" src="../06-xml-transformation/assets/beautiful-output.jpg" /></p>
+<h2 id="06-xml-transformation-01-xpath-xpath">XPath<a class="headerlink" href="#06-xml-transformation-01-xpath-xpath" title="Permanent link">&para;</a></h2>
+<p>XPath is a simple language for identifying parts of an XML document that are of interest. It is used by XSLT, and also by XLink; it is extended considerably by XQuery.</p>
+<p>XPath cannot be used stand-alone: it is always used in the context of a host language, whether that language is XSLT, Python, PHP, C#, JavaScript... .</p>
+<p>XPath can be very powerful: for example, to find all div elements that have a class attribute of sock with a span child whose class attribute is equal to colour, one might write,</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>div[@class=&quot;sock&quot;]/span[@class=&quot;colour&quot;]
+</code></pre></div>
+<p>XPath uses a path notation (as in URLs) for navigating through the hierarchical structure of an XML document. It uses a <strong>non-XML syntax</strong> so that it can be used in URIs and XML attribute values.</p>
+<p>XPath 3.1 became a Recommendation on 21 March 2017.</p>
+<h3 id="06-xml-transformation-01-xpath-document-tree">Document tree<a class="headerlink" href="#06-xml-transformation-01-xpath-document-tree" title="Permanent link">&para;</a></h3>
+<p>XPath treat XML documents as trees of nodes. The topmost element of the tree is called the root element:</p>
+<p><img alt="bg right 90%" src="../06-xml-transformation/assets/grafos-arbol-dirigido.svg" />
+<img alt="bg 100%" src="../06-xml-transformation/assets/grafos-raiz-hermanos.svg" />
+<img alt="bg 100%" src="../06-xml-transformation/assets/grafos-descendientes.svg" />
+<img alt="bg 100%" src="../06-xml-transformation/assets/grafos-ascendientes.svg" /></p>
+<h3 id="06-xml-transformation-01-xpath-node-types">Node types<a class="headerlink" href="#06-xml-transformation-01-xpath-node-types" title="Permanent link">&para;</a></h3>
+<p>In XPath not only elements are nodes but also other type of things. There are seven kinds of nodes: </p>
+<ol>
+<li>root element</li>
+<li>elements</li>
+<li>attributes</li>
+<li>text nodes</li>
+<li>namespaces</li>
+<li>processing instructions</li>
+<li>comments</li>
+</ol>
+<h3 id="06-xml-transformation-01-xpath-xpath-expression-syntax">XPath expression syntax<a class="headerlink" href="#06-xml-transformation-01-xpath-xpath-expression-syntax" title="Permanent link">&para;</a></h3>
+<p>An XPath expression is a <strong>text string representing a path through the document tree</strong>. The simplest expressions resemble file paths in Windows Explorer or the GNU/Linux shell.</p>
+<p><strong>Evaluating an XPath expression</strong> is looking to see if there are nodes in the document that fit the path defined in the expression. The result of the evaluation is all the nodes that fit the expression. In order to evaluate an XPath expression, the document must be well-formed.</p>
+<p>XPath expressions can be written in two different ways:</p>
+<ul>
+<li><strong>shorthand syntax</strong>: more compact and easier to read, which is explained in this lesson</li>
+<li><strong>full syntax</strong>: longer but with more options available</li>
+</ul>
+<p>XPath expressions can be broken down into search steps. Each search step can in turn be divided into three parts:</p>
+<ul>
+<li><strong>axis</strong>: select element or attribute nodes based on their names.</li>
+<li><strong>predicate</strong>: restricts axis selection to nodes meeting certain conditions.</li>
+<li><strong>node selection</strong>: Of the nodes selected by the y-axis predicate, select the elements, the text they contain, or both.</li>
+</ul>
+<h4 id="06-xml-transformation-01-xpath-xml-sample">XML sample<a class="headerlink" href="#06-xml-transformation-01-xpath-xml-sample" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;biblioteca&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;titulo&gt;</span>La vida está en otra parte<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;autor&gt;</span>Milan Kundera<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">&quot;1973&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;/libro&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;titulo&gt;</span>Pantaleón y las visitadoras<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">&quot;1973&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;/libro&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;titulo&gt;</span>Conversación en la catedral<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">&quot;1969&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;/libro&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/biblioteca&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="bg 89%" src="../06-xml-transformation/assets/grafos-documento.svg" /></p>
+<figcaption>Node tree representation of the above XML document</figcaption>
+</figure>
+<h3 id="06-xml-transformation-01-xpath-axis">Axis<a class="headerlink" href="#06-xml-transformation-01-xpath-axis" title="Permanent link">&para;</a></h3>
+<p>The axis allows us to select a subset of nodes. Element nodes are indicated by the element name. Attribute nodes are indicated by <code>@</code> and the name.</p>
+<p><code>/</code>: at the beginning of the expression, indicates the root node, otherwise indicates "child". It must be followed by the name of an element or attribute.</p>
+<p><code>/biblioteca/libro/autor</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;autor&gt;</span>Milan Kundera<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+</code></pre></div>
+<p><code>/autor</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Returns nothing because <span class="nt">&lt;author&gt;</span> is not a child of the root node.
+</code></pre></div>
+<p><code>/biblioteca/autor</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Returns nothing because <span class="nt">&lt;author&gt;</span> is not a child of <span class="nt">&lt;biblioteca&gt;</span>.
+</code></pre></div>
+<p><code>/biblioteca/libro/autor/@fechaNacimiento</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> fechaNacimiento=&quot;28/03/1936&quot;
+<span class="linenos" data-linenos="2 "></span> fechaNacimiento=&quot;28/03/1936&quot;
+</code></pre></div>
+<p><code>/biblioteca/libro/@fechaNacimiento</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Returns nothing because fechaNacimiento is an attribute 
+<span class="linenos" data-linenos="2 "></span>of <span class="nt">&lt;author&gt;</span> not of <span class="nt">&lt;libro&gt;</span>.
+</code></pre></div>
+<p><code>//</code>: indicates "descendant" (children, children of children, etc.).</p>
+<p><code>/biblioteca//autor</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;autor&gt;</span>Milan Kundera<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+</code></pre></div>
+<p><code>//autor</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;autor&gt;</span>Milan Kundera<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+</code></pre></div>
+<p><code>//autor//libro</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Returns nothing because <span class="nt">&lt;libro&gt;</span> is not a child of <span class="nt">&lt;autor&gt;</span>.
+</code></pre></div>
+<ul>
+<li><code>/..</code>: indicates the parent element.</li>
+</ul>
+<p><code>//@año</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> año=&quot;1973&quot;
+<span class="linenos" data-linenos="2 "></span> año=&quot;1973&quot;
+<span class="linenos" data-linenos="3 "></span> año=&quot;1969&quot;
+</code></pre></div>
+<p><code>/biblioteca/libro/autor/@fechaNacimiento/..</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+</code></pre></div>
+<p><code>//@fechaNacimiento/../..</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&lt;titulo&gt;</span>Pantaleón y las visitadoras<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">&quot;1973&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;/libro&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;titulo&gt;</span>Conversación en la catedral<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">&quot;1969&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nt">&lt;/libro&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>|</code>: allows to indicate several routes.</li>
+</ul>
+<p><code>//autor|//titulo</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;titulo&gt;</span>La vida está en otra parte<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;autor&gt;</span>Milan Kundera<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nt">&lt;titulo&gt;</span>Pantaleón y las visitadoras<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;titulo&gt;</span>Conversación en la catedral<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+</code></pre></div>
+<p><code>//autor|//titulo|//@año</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">&lt;titulo&gt;</span>La vida está en otra parte<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;autor&gt;</span>Milan Kundera<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="3 "></span> año=&quot;1973&quot;
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;titulo&gt;</span>Pantaleón y las visitadoras<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="6 "></span> año=&quot;1973&quot;
+<span class="linenos" data-linenos="7 "></span><span class="nt">&lt;titulo&gt;</span>Conversación en la catedral<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">&quot;28/03/1936&quot;</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="9 "></span> año=&quot;1969&quot;
+</code></pre></div>
+<h3 id="06-xml-transformation-01-xpath-predicate">Predicate<a class="headerlink" href="#06-xml-transformation-01-xpath-predicate" title="Permanent link">&para;</a></h3>
+<p>The predicate is written in square brackets, following the axis.</p>
+<p>If the axis has selected some nodes, the predicate allows you to restrict that selection to those that meet certain conditions.</p>
+<ul>
+<li><code>[@attribute]</code>: select the elements that have the attribute.</li>
+<li><code>[number]</code>: if there are several results, select one of them by order number; <code>last()</code> selects the last one.</li>
+<li><code>[condition]</code>: select the nodes that meet the condition.</li>
+</ul>
+<h4 id="06-xml-transformation-01-xpath-conditions">Conditions<a class="headerlink" href="#06-xml-transformation-01-xpath-conditions" title="Permanent link">&para;</a></h4>
+<p>Predicates allow you to define conditions on attribute values. The following operators can be used in the conditions:</p>
+<ul>
+<li>logical operators: and, or, not()</li>
+<li>arithmetic operators: +, -, *, div, mod</li>
+<li>comparison operators: =, !=, &lt;, &gt;, &lt;=, &gt;= </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>//fechaPublicacion[@año&gt;1970]
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>//libro[autor=&quot;Mario Vargas Llosa&quot;]
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>//@año[.&gt;1970]
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>//autor[.=&quot;Mario Vargas Llosa&quot;]
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>//libro[autor=&quot;Mario Vargas Llosa&quot; and fechaPublicacion/@año=&quot;1973&quot;]
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>//libro[autor=&quot;Mario Vargas Llosa&quot; and fechaPublicacion/@año=&quot;1973&quot;]
+</code></pre></div>
+<h3 id="06-xml-transformation-01-xpath-node-selection">Node selection<a class="headerlink" href="#06-xml-transformation-01-xpath-node-selection" title="Permanent link">&para;</a></h3>
+<p>The node selection is written after the axis and the predicate. If the axis and the predicate have selected some nodes, the selection of nodes indicates what part of those nodes we keep.</p>
+<ul>
+<li><code>/node()</code>: Select all children (elements or text) of the node.</li>
+<li>
+<p><code>//node()</code>: Select all descendants (elements or text) of the node.</p>
+</li>
+<li>
+<p><code>/text()</code>: Select only the text contained in the node.</p>
+</li>
+<li><code>//text()</code>: Select only the text contained in the node and all its descendants.</li>
+<li><code>/*</code>: Select all children (elements only) of the node.</li>
+<li><code>//*</code>: Select all descendants (elements only) of the node.</li>
+<li><code>/@*</code>: Select all attributes of the node.</li>
+<li><code>//@*</code>: Select all attributes of the node's descendants.</li>
+</ul>
+<figure>
+<p><img alt="bg 75%" src="../06-xml-transformation/assets/XPATH-Flow.png" /></p>
+<figcaption>
+  A node tree sample
+</figcaption>
+</figure>
+<h2 id="06-xml-transformation-01-xpath-bibliography-webography-and-credits">Bibliography, webography and credits<a class="headerlink" href="#06-xml-transformation-01-xpath-bibliography-webography-and-credits" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Bartolomé Sintés Marco. (2022, January 30). <em>XPath: XML Path language</em>, available at  <a href="https://www.mclibre.org/consultar/xml/lecciones/xml-xpath.html">https://www.mclibre.org/consultar/xml/lecciones/xml-xpath.html</a></li>
+</ul></section><section class="print-page" id="06-xml-transformation-99-tasks"><h1 id="06-xml-transformation-99-tasks-tasks">Tasks<a class="headerlink" href="#06-xml-transformation-99-tasks-tasks" title="Permanent link">&para;</a></h1>
 <ol start="601">
 <li><code>601-simple-expressions.txt</code> XPath - Exercise 1 - Simple expressions</li>
 </ol>
@@ -3138,8 +3421,7 @@ to make best sites and more high quality products.</li>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>4
 <span class="linenos" data-linenos="2 "></span>5
 <span class="linenos" data-linenos="3 "></span>5
-</code></pre></div>
-<p><a href="https://validator.w3.org/nu/?doc=referer">Validate this</a></p></section><h1 class='nav-section-title-end'>Ended: 6. XML Transformation</h1></div>
+</code></pre></div></section><h1 class='nav-section-title-end'>Ended: 6. XML Transformation</h1></div>
                 
               
               
