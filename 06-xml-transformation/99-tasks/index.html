@@ -192,6 +192,11 @@
         Introduction. XPath
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-xslt/">
+        XSLT
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <a class="md-nav__link md-nav__link--active" href="./">
@@ -356,13 +361,84 @@
 <span class="linenos" data-linenos="2 "></span>5
 <span class="linenos" data-linenos="3 "></span>5
 </code></pre></div>
+<ol start="603">
+<li>XSLT Transformations</li>
+</ol>
+<p>Given the following XML document, write the XPath expressions that return the desired response (shown in the boxes).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;secondary-school&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;name&gt;</span>IES Abastos<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="nt">&lt;web&gt;</span>http://www.iesabastos.org<span class="nt">&lt;/web&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;cycles&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;cycle</span> <span class="na">id=</span><span class="s">"NISA"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="nt">&lt;name&gt;</span>Network Information Systems Administration<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;grade&gt;</span>Higher<span class="nt">&lt;/grade&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;decreeTitle</span> <span class="na">year=</span><span class="s">"2009"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;/cycle&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;cycle</span> <span class="na">id=</span><span class="s">"DAW"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="12 "></span>      <span class="nt">&lt;name&gt;</span>Web Application Development<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="13 "></span>      <span class="nt">&lt;grade&gt;</span>Higher<span class="nt">&lt;/grade&gt;</span>
+<span class="linenos" data-linenos="14 "></span>      <span class="nt">&lt;decreeTitle</span> <span class="na">year=</span><span class="s">"2010"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;/cycle&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;cycle</span> <span class="na">id=</span><span class="s">"MSN"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="17 "></span>      <span class="nt">&lt;name&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="18 "></span>      <span class="nt">&lt;grade&gt;</span>Intermediate<span class="nt">&lt;/grade&gt;</span>
+<span class="linenos" data-linenos="19 "></span>      <span class="nt">&lt;decreeTitle</span> <span class="na">year=</span><span class="s">"2008"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="nt">&lt;/cycle&gt;</span>
+<span class="linenos" data-linenos="21 "></span>  <span class="nt">&lt;/cycles&gt;</span>
+<span class="linenos" data-linenos="22 "></span><span class="nt">&lt;/secondary-school&gt;</span>
+</code></pre></div>
+<p>XSLT (1) - Exercise 1</p>
+<p>Without tags:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<span class="linenos" data-linenos="2 "></span>    Network Information Systems Administration    
+<span class="linenos" data-linenos="3 "></span>    Web Application Development
+<span class="linenos" data-linenos="4 "></span>    Sistemas Microinformáticos y Redes
+</code></pre></div>
+XSLT (1) - Exercise 2</p>
+<p>Párrafos:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;p&gt;</span>Network Information Systems Administration<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;p&gt;</span>Web Application Development<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;p&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+XSLT (1) - Exercise 3</p>
+<p>List:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;ul&gt;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nt">&lt;li&gt;</span>Network Information Systems Administration<span class="nt">&lt;/li&gt;</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="nt">&lt;li&gt;</span>Web Application Development<span class="nt">&lt;/li&gt;</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="nt">&lt;li&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/li&gt;</span>
+<span class="linenos" data-linenos="7 "></span>  <span class="nt">&lt;/ul&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p>XSLT (1) - Exercise 4</p>
+<p>Table:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;tr&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;td&gt;</span>Network Information Systems Administration<span class="nt">&lt;/td&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;/tr&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;tr&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;td&gt;</span>Web Application Development<span class="nt">&lt;/td&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;/tr&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;tr&gt;</span>
+<span class="linenos" data-linenos="11 "></span>      <span class="nt">&lt;td&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/td&gt;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nt">&lt;/tr&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;/table&gt;</span>
+<span class="linenos" data-linenos="14 "></span><span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Introduction. XPath" class="md-footer__link md-footer__link--prev" href="../01-xpath/" rel="prev">
+<a aria-label="Previous: XSLT" class="md-footer__link md-footer__link--prev" href="../02-xslt/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -371,7 +447,7 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Introduction. XPath
+              XSLT
             </div>
 </div>
 </a>

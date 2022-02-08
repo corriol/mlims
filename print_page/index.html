@@ -399,6 +399,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../06-xml-transformation/02-xslt/" class="md-nav__link">
+        XSLT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../06-xml-transformation/99-tasks/" class="md-nav__link">
         Tasks
       </a>
@@ -535,6 +547,13 @@
           <li class="md-nav__item">
   <a href="#06-xml-transformation-01-xpath" class="md-nav__link">
     Introduction. XPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-xml-transformation-02-xslt" class="md-nav__link">
+    XSLT
   </a>
   
 </li>
@@ -3282,7 +3301,37 @@ to make best sites and more high quality products.</li>
 <h2 id="06-xml-transformation-01-xpath-bibliography-webography-and-credits">Bibliography, webography and credits<a class="headerlink" href="#06-xml-transformation-01-xpath-bibliography-webography-and-credits" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Bartolomé Sintés Marco. (2022, January 30). <em>XPath: XML Path language</em>, available at  <a href="https://www.mclibre.org/consultar/xml/lecciones/xml-xpath.html">https://www.mclibre.org/consultar/xml/lecciones/xml-xpath.html</a></li>
-</ul></section><section class="print-page" id="06-xml-transformation-99-tasks"><h1 id="06-xml-transformation-99-tasks-tasks">Tasks<a class="headerlink" href="#06-xml-transformation-99-tasks-tasks" title="Permanent link">&para;</a></h1>
+</ul></section><section class="print-page" id="06-xml-transformation-02-xslt"><h1 id="06-xml-transformation-02-xslt-xslt">XSLT<a class="headerlink" href="#06-xml-transformation-02-xslt-xslt" title="Permanent link">&para;</a></h1>
+<p>XSLT (extensible stylesheet language for transformations) is an XML-based template language that converts the structure of XML elements into other documents.</p>
+<p>This is a recommendation of the W3C (World Wide Web Consortium), as is CSS, but XSLT goes much further, as it overcomes many of the limitations of CSS.</p>
+<p>With XSLT you can make transformations that completely change the structure of the document, you can rearrange the information in the XML document, add new information wherever you are, make decisions based on the information in it, make calculations, and so on.</p>
+<p>XSLT relies on other XML technologies to work:</p>
+<p>It uses XPath to determine which templates to apply at any given time (and is therefore integrated into XQuery).
+  Supports XML Schemas to define data types.</p>
+<p>Although XSLT version 2.0 is the most used, it is 1.0.</p>
+<p>XSLT version 2.0 adds a number of features that make XSLT even more powerful:</p>
+<ul>
+<li>Supports XML Schemas data types</li>
+<li>Includes new items to group results, etc.</li>
+<li>It can generate multiple outputs in a single transformation</li>
+<li>Adds a new feature set in addition to XPath 2.0</li>
+<li>You can process non-XML files</li>
+</ul>
+<p>XSLT templates are increasingly being used to generate custom views of an XML document for viewing in different destinations (printer, computer screen, mobile phone…). All you have to do is get the original XML document, and the others will be created on demand.</p>
+<p>One of the limitations of XSL is that the input document must always be XML, even though the output does not have this limitation and can end up in any format: text, HTML, XML, etc.</p>
+<h2 id="06-xml-transformation-02-xslt-xslt-transformation">XSLT - Transformation<a class="headerlink" href="#06-xml-transformation-02-xslt-xslt-transformation" title="Permanent link">&para;</a></h2>
+<p>XSLT is a declarative language. Therefore, XSLT stylesheets are not written as a sequence of instructions, but as a collection of template rules. Each template sets how a particular element is transformed (defined by XPath expressions). The document is transformed as follows:</p>
+<ol>
+<li>The processor scans the document and builds the document tree.</li>
+<li>The processor traverses the document tree from the root node.</li>
+<li>On each node traversed, the processor may or may not apply a template:<ul>
+<li>If no template can be applied to a node, its contents are included in the final document (the text of the node, not the text of the descending nodes). The processor then traverses its child nodes.</li>
+<li>If a template can be applied to a node, the template is applied. The template can generate text that is included in the final document. In principle, the processor does not traverse its child nodes, unless the template tells the processor that the child nodes should be traversed.</li>
+</ul>
+</li>
+<li>When the processor has traversed the tree, the transformation is complete.</li>
+</ol>
+<p><a href="https://www.w3schools.com/xml/xsl_intro.asp">XSLT Tutorial at W3Schools</a></p></section><section class="print-page" id="06-xml-transformation-99-tasks"><h1 id="06-xml-transformation-99-tasks-tasks">Tasks<a class="headerlink" href="#06-xml-transformation-99-tasks-tasks" title="Permanent link">&para;</a></h1>
 <ol start="601">
 <li><code>601-simple-expressions.txt</code> XPath - Exercise 1 - Simple expressions</li>
 </ol>
@@ -3421,6 +3470,77 @@ to make best sites and more high quality products.</li>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>4
 <span class="linenos" data-linenos="2 "></span>5
 <span class="linenos" data-linenos="3 "></span>5
+</code></pre></div>
+<ol start="603">
+<li>XSLT Transformations</li>
+</ol>
+<p>Given the following XML document, write the XPath expressions that return the desired response (shown in the boxes).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;secondary-school&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;name&gt;</span>IES Abastos<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="nt">&lt;web&gt;</span>http://www.iesabastos.org<span class="nt">&lt;/web&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;cycles&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;cycle</span> <span class="na">id=</span><span class="s">&quot;NISA&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="nt">&lt;name&gt;</span>Network Information Systems Administration<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;grade&gt;</span>Higher<span class="nt">&lt;/grade&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;decreeTitle</span> <span class="na">year=</span><span class="s">&quot;2009&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;/cycle&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;cycle</span> <span class="na">id=</span><span class="s">&quot;DAW&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="12 "></span>      <span class="nt">&lt;name&gt;</span>Web Application Development<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="13 "></span>      <span class="nt">&lt;grade&gt;</span>Higher<span class="nt">&lt;/grade&gt;</span>
+<span class="linenos" data-linenos="14 "></span>      <span class="nt">&lt;decreeTitle</span> <span class="na">year=</span><span class="s">&quot;2010&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;/cycle&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;cycle</span> <span class="na">id=</span><span class="s">&quot;MSN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="17 "></span>      <span class="nt">&lt;name&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="18 "></span>      <span class="nt">&lt;grade&gt;</span>Intermediate<span class="nt">&lt;/grade&gt;</span>
+<span class="linenos" data-linenos="19 "></span>      <span class="nt">&lt;decreeTitle</span> <span class="na">year=</span><span class="s">&quot;2008&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="nt">&lt;/cycle&gt;</span>
+<span class="linenos" data-linenos="21 "></span>  <span class="nt">&lt;/cycles&gt;</span>
+<span class="linenos" data-linenos="22 "></span><span class="nt">&lt;/secondary-school&gt;</span>
+</code></pre></div>
+<p>XSLT (1) - Exercise 1</p>
+<p>Without tags:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<span class="linenos" data-linenos="2 "></span>    Network Information Systems Administration    
+<span class="linenos" data-linenos="3 "></span>    Web Application Development
+<span class="linenos" data-linenos="4 "></span>    Sistemas Microinformáticos y Redes
+</code></pre></div>
+XSLT (1) - Exercise 2</p>
+<p>Párrafos:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;p&gt;</span>Network Information Systems Administration<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;p&gt;</span>Web Application Development<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;p&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+XSLT (1) - Exercise 3</p>
+<p>List:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;ul&gt;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nt">&lt;li&gt;</span>Network Information Systems Administration<span class="nt">&lt;/li&gt;</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="nt">&lt;li&gt;</span>Web Application Development<span class="nt">&lt;/li&gt;</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="nt">&lt;li&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/li&gt;</span>
+<span class="linenos" data-linenos="7 "></span>  <span class="nt">&lt;/ul&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p>XSLT (1) - Exercise 4</p>
+<p>Table:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;tr&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;td&gt;</span>Network Information Systems Administration<span class="nt">&lt;/td&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;/tr&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;tr&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;td&gt;</span>Web Application Development<span class="nt">&lt;/td&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;/tr&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;tr&gt;</span>
+<span class="linenos" data-linenos="11 "></span>      <span class="nt">&lt;td&gt;</span>Microcomputer Systems and Networks<span class="nt">&lt;/td&gt;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nt">&lt;/tr&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;/table&gt;</span>
+<span class="linenos" data-linenos="14 "></span><span class="nt">&lt;/html&gt;</span>
 </code></pre></div></section><h1 class='nav-section-title-end'>Ended: 6. XML Transformation</h1></div>
                 
               

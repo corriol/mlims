@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Tasks - MLIMS</title>
+<title>XSLT - MLIMS</title>
 <link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <meta content="#8bc34b" name="theme-color"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#activities">
+<a class="md-skip" href="#xslt">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Tasks
+              XSLT
             
           </span>
 </div>
@@ -145,8 +145,8 @@
         4. HTML
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_5">
         5. CSS
         <span class="md-nav__icon md-icon"></span>
@@ -158,26 +158,25 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05-01-css/">
+<a class="md-nav__link" href="../../05-css/05-01-css/">
         Introduction
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05-02-css-layout/">
+<a class="md-nav__link" href="../../05-css/05-02-css-layout/">
         Introduction to CSS layout
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../05-css/05-99-tasks/">
         Tasks
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6">
         6. XML Transformation
         <span class="md-nav__icon md-icon"></span>
@@ -189,17 +188,35 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../06-xml-transformation/01-xpath/">
+<a class="md-nav__link" href="../01-xpath/">
         Introduction. XPath
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../06-xml-transformation/02-xslt/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          XSLT
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         XSLT
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xslt-transformation">
+    XSLT - Transformation
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../06-xml-transformation/99-tasks/">
+<a class="md-nav__link" href="../99-tasks/">
         Tasks
       </a>
 </li>
@@ -215,64 +232,61 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xslt-transformation">
+    XSLT - Transformation
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="activities">Activities<a class="headerlink" href="#activities" title="Permanent link">¶</a></h1>
-<ol start="501">
-<li>
-<p><code>501-html-css</code>. Given the following html file <a href="../assets/html5_and_css3.zip">HTML 5 and CSS 3</a> create an stylesheet in order to make the html file looks like the screenshot taking into account that the body width is 700px.</p>
-<p>After that, choose from Google Fonts:</p>
+<h1 id="xslt">XSLT<a class="headerlink" href="#xslt" title="Permanent link">¶</a></h1>
+<p>XSLT (extensible stylesheet language for transformations) is an XML-based template language that converts the structure of XML elements into other documents.</p>
+<p>This is a recommendation of the W3C (World Wide Web Consortium), as is CSS, but XSLT goes much further, as it overcomes many of the limitations of CSS.</p>
+<p>With XSLT you can make transformations that completely change the structure of the document, you can rearrange the information in the XML document, add new information wherever you are, make decisions based on the information in it, make calculations, and so on.</p>
+<p>XSLT relies on other XML technologies to work:</p>
+<p>It uses XPath to determine which templates to apply at any given time (and is therefore integrated into XQuery).
+  Supports XML Schemas to define data types.</p>
+<p>Although XSLT version 2.0 is the most used, it is 1.0.</p>
+<p>XSLT version 2.0 adds a number of features that make XSLT even more powerful:</p>
 <ul>
-<li>a <strong>sans serif</strong> font for the headings</li>
-<li>a <strong>serif</strong> font for the body.</li>
+<li>Supports XML Schemas data types</li>
+<li>Includes new items to group results, etc.</li>
+<li>It can generate multiple outputs in a single transformation</li>
+<li>Adds a new feature set in addition to XPath 2.0</li>
+<li>You can process non-XML files</li>
+</ul>
+<p>XSLT templates are increasingly being used to generate custom views of an XML document for viewing in different destinations (printer, computer screen, mobile phone…). All you have to do is get the original XML document, and the others will be created on demand.</p>
+<p>One of the limitations of XSL is that the input document must always be XML, even though the output does not have this limitation and can end up in any format: text, HTML, XML, etc.</p>
+<h2 id="xslt-transformation">XSLT - Transformation<a class="headerlink" href="#xslt-transformation" title="Permanent link">¶</a></h2>
+<p>XSLT is a declarative language. Therefore, XSLT stylesheets are not written as a sequence of instructions, but as a collection of template rules. Each template sets how a particular element is transformed (defined by XPath expressions). The document is transformed as follows:</p>
+<ol>
+<li>The processor scans the document and builds the document tree.</li>
+<li>The processor traverses the document tree from the root node.</li>
+<li>On each node traversed, the processor may or may not apply a template:<ul>
+<li>If no template can be applied to a node, its contents are included in the final document (the text of the node, not the text of the descending nodes). The processor then traverses its child nodes.</li>
+<li>If a template can be applied to a node, the template is applied. The template can generate text that is included in the final document. In principle, the processor does not traverse its child nodes, unless the template tells the processor that the child nodes should be traversed.</li>
 </ul>
 </li>
-<li>
-<p><code>502-html-css</code>. Given the following html file <a href="../assets/502_HTML_and_CSS.zip">HTML 5 and CSS 3 vs. 2</a> create an stylesheet in order to create a perfect match with the provided screenshot. Use the Firefox extension <strong>Pixel Perfect Pro</strong>.</p>
-<p>The required fonts are included in the HTML file and they are:</p>
-<ul>
-<li><code>Noto Sans</code></li>
-<li><code>Noto Serif</code></li>
-<li><code>Noto Sans Mono</code>.</li>
-</ul>
-</li>
-<li>
-<p><code>503-playing-with-boxes</code>. Given the following html file <a href="../assets/503_playing_with_boxes.zip">Playing with boxes</a> create an stylesheet in order to create a match as similar as possible with the provided screenshot. Use the Firefox extension <strong>Pixel Perfect Pro</strong> to compare.</p>
-<p>These are the basic requirements:</p>
-<ul>
-<li>HTML file cannot be modified.</li>
-<li>The <code>body</code> element will have a width of 700px.</li>
-<li>The four <code>div</code> elements will have a width of 250px.</li>
-<li>In the CSS file, add a comment, at the begining with your full name.</li>
-<li>You have to deliver two files: an screenshot of the pixel perfect comparison and the css file.            </li>
-</ul>
-</li>
-<li>
-<p><code>504-landing-page</code>. Given the following html file <a href="../assets/504_landing_page.zip">Landing page</a> create an stylesheet in order to create a match as similar as possible with the provided screenshot. Use the Firefox extension <strong>Pixel Perfect Pro</strong> to compare.</p>
-<p>These are the basic requirements:     </p>
-<ul>
-<li>The HTML file can be modified to add images or class selectors.</li>
-<li>You have to deliver a zip file with the entire website.</li>
-</ul>
-</li>
-<li>
-<p><code>505-landing-page-columns</code>. Modify the previous task in order to display the services in columns. Use <strong>Pixel Perfect Pro</strong> to compare the <a href="../assets/505-landing-page-columns1000px.png">resulting page</a>.</p>
-</li>
-<li>
-<p><code>506-fundamental-layout-comprehension</code>. Do the following task <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension</a> resolving it using the <strong>Float</strong> and <strong>Flexbox</strong>.</p>
-</li>
+<li>When the processor has traversed the tree, the transformation is complete.</li>
 </ol>
+<p><a href="https://www.w3schools.com/xml/xsl_intro.asp">XSLT Tutorial at W3Schools</a></p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Introduction to CSS layout" class="md-footer__link md-footer__link--prev" href="../05-02-css-layout/" rel="prev">
+<a aria-label="Previous: Introduction. XPath" class="md-footer__link md-footer__link--prev" href="../01-xpath/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -281,17 +295,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Introduction to CSS layout
+              Introduction. XPath
             </div>
 </div>
 </a>
-<a aria-label="Next: Introduction. XPath" class="md-footer__link md-footer__link--next" href="../../06-xml-transformation/01-xpath/" rel="next">
+<a aria-label="Next: Tasks" class="md-footer__link md-footer__link--next" href="../99-tasks/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Introduction. XPath
+              Tasks
             </div>
 </div>
 <div class="md-footer__button md-icon">
