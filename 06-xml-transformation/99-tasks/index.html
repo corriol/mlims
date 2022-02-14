@@ -437,7 +437,7 @@
 <hr/>
 <ol start="604">
 <li>
-<p>XSLT Transformation</p>
+<p>XSLT Transformation. XML to HTML</p>
 <p>Given the following xml document</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>  <span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="linenos" data-linenos=" 2 "></span>  <span class="nt">&lt;secondary-school&gt;</span>
@@ -514,6 +514,202 @@
 <span class="linenos" data-linenos="26 "></span>    <span class="nt">&lt;/tr&gt;</span>
 <span class="linenos" data-linenos="27 "></span>  <span class="nt">&lt;/table&gt;</span>
 <span class="linenos" data-linenos="28 "></span>  <span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<hr/>
+</li>
+<li>
+<p>XML Transformation. XML to XML</p>
+<p>Given the following XML document, write XSLT stylesheets that return the desired response.</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;museums&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;name&gt;</span>Prado Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;city&gt;</span>Madrid<span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;country&gt;</span>Spain<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;name&gt;</span>British Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;city&gt;</span>London<span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;name&gt;</span>National Gallery<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;city&gt;</span>London<span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/museums&gt;</span>
+</code></pre></div>
+Exercise 1. Convert tags to attributes:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;museums&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"Museo del Prado"</span> <span class="na">city=</span><span class="s">"Madrid"</span> <span class="na">country=</span><span class="s">"Spain"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"British Museum"</span> <span class="na">city=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"National Gallery"</span> <span class="na">city=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nt">&lt;/museums&gt;</span>
+</code></pre></div>
+<p>Exercise 2. Convert some tags to attributes:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;museums&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;name&gt;</span>Prado Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;location</span> <span class="na">city=</span><span class="s">"Madrid"</span> <span class="na">country=</span><span class="s">"Spain"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;name&gt;</span>British Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;location</span> <span class="na">city=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nt">&lt;name&gt;</span>National Gallery<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nt">&lt;location</span> <span class="na">city=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="14 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="15 "></span><span class="nt">&lt;/museums&gt;</span>
+</code></pre></div>
+Exercise 3. Change the document structure:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;cities&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;city&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;name&gt;</span>Madrid<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;country&gt;</span>Spain<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;museum&gt;</span>Prado Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;city&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;name&gt;</span>London<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;museum&gt;</span>British Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;city&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;name&gt;</span>London<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;museum&gt;</span>National Gallery<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/cities&gt;</span>
+</code></pre></div>
+<p>Exercise 4.  Change the structure of the document and some elements in attributes:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;cities&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"Madrid"</span> <span class="na">country=</span><span class="s">"Spain"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;museum&gt;</span>Prado Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;museum&gt;</span>British Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;museum&gt;</span>National Gallery<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;/cities&gt;</span>
+</code></pre></div>
+<p>Exercise 5. Change the structure of the document and some labels in attributes:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;countries&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;country</span> <span class="na">name=</span><span class="s">"Spain"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;museum</span> <span class="na">museum=</span><span class="s">"Museo del Prado"</span> <span class="na">city=</span><span class="s">"Madrid"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;country</span> <span class="na">name=</span><span class="s">"United Kingdom"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;museum</span> <span class="na">museum=</span><span class="s">"British Museum"</span> <span class="na">city=</span><span class="s">"London"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="nt">&lt;country</span> <span class="na">name=</span><span class="s">"United Kingdom"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;museum</span> <span class="na">museum=</span><span class="s">"National Gallery"</span> <span class="na">city=</span><span class="s">"London"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;/countries&gt;</span>
+</code></pre></div>
+</li>
+</ol>
+<hr/>
+<ol start="606">
+<li>
+<p>XML Transformations. XML to XML</p>
+<p>Given the following XML document, write XSLT style sheets that return the desired response.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;museums&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"Museo del Prado"</span> <span class="na">city=</span><span class="s">"Madrid"</span> <span class="na">country=</span><span class="s">"Spain"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"British Museum"</span> <span class="na">city=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"National Gallery"</span> <span class="na">city=</span><span class="s">"London"</span> <span class="na">country=</span><span class="s">"United Kingdom"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nt">&lt;/museums&gt;</span>
+</code></pre></div>
+<p>Exercise 1. Convert attributes to tags:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;museums&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;name&gt;</span>Prado Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;city&gt;</span>Madrid<span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;country&gt;</span>Spain<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;name&gt;</span>British Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;city&gt;</span>London<span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;museum&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;name&gt;</span>National Gallery<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;city&gt;</span>London<span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/museums&gt;</span>
+</code></pre></div>
+Exercise 2. Convert some attributes to tags:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;museums&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;museum</span> <span class="na">location=</span><span class="s">"Madrid (Spain)"</span><span class="nt">&gt;</span>Prado Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;museum</span> <span class="na">location=</span><span class="s">"London (United Kingdom)"</span><span class="nt">&gt;</span>British Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;museum</span> <span class="na">location=</span><span class="s">"London (United Kingdom)"</span><span class="nt">&gt;</span>National Gallery<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nt">&lt;/museums&gt;</span>
+</code></pre></div>
+<p>Exercise 3. Change the document structure and convert some attributes to tags:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;cities&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"Madrid"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;country&gt;</span>Spain<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;museum&gt;</span>Prado Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"London"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;museum&gt;</span>British Museum<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="10 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"London"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nt">&lt;country&gt;</span>United Kingdom<span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nt">&lt;museum&gt;</span>National Gallery<span class="nt">&lt;/museum&gt;</span>
+<span class="linenos" data-linenos="14 "></span>  <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="15 "></span><span class="nt">&lt;/cities&gt;</span>
+</code></pre></div>
+<p>Exercise 4. Change structure:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;countries&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;country</span> <span class="na">name=</span><span class="s">"Spain"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"Madrid"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"Prado Museum"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;country</span> <span class="na">name=</span><span class="s">"United Kingdom"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"London"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="10 "></span>      <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"British Museum"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;country</span> <span class="na">name=</span><span class="s">"United Kingdom"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;city</span> <span class="na">name=</span><span class="s">"London"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="15 "></span>      <span class="nt">&lt;museum</span> <span class="na">name=</span><span class="s">"National Gallery"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;/city&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;/country&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/countries&gt;</span>
+</code></pre></div>
+<p>Exercise 5. Change the document structure:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;places&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;place</span> <span class="na">type=</span><span class="s">"museum"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;location</span> <span class="na">name=</span><span class="s">"city"</span><span class="nt">&gt;</span>Madrid<span class="nt">&lt;/location&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;location</span> <span class="na">name=</span><span class="s">"country"</span><span class="nt">&gt;</span>Spain<span class="nt">&lt;/location&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;name&gt;</span>Prado Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;/place&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;place</span> <span class="na">type=</span><span class="s">"museum"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;location</span> <span class="na">name=</span><span class="s">"city"</span><span class="nt">&gt;</span>London<span class="nt">&lt;/location&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;location</span> <span class="na">name=</span><span class="s">"country"</span><span class="nt">&gt;</span>United Kingdom<span class="nt">&lt;/location&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;name&gt;</span>British Museum<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;/place&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;place</span> <span class="na">type=</span><span class="s">"museum"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;location</span> <span class="na">name=</span><span class="s">"city"</span><span class="nt">&gt;</span>London<span class="nt">&lt;/location&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;location</span> <span class="na">name=</span><span class="s">"country"</span><span class="nt">&gt;</span>United Kingdom<span class="nt">&lt;/location&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;name&gt;</span>National Gallery<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;/place&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/places&gt;</span>
 </code></pre></div>
 </li>
 </ol>

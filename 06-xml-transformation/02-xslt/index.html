@@ -211,6 +211,44 @@
 <a class="md-nav__link" href="#xslt-transformation">
     XSLT - Transformation
   </a>
+<nav aria-label="XSLT - Transformation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-display-transformations">
+    How to display transformations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xslt-elements">
+    XSLT elements
+  </a>
+<nav aria-label="XSLT elements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#line-breaks-and-whitespace-the-xsltext-and-xslstrip-space-commands">
+    Line breaks and whitespace: the &lt;xsl:text&gt; and &lt;xsl:strip-space&gt; commands
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-xslstrip-space-statement">
+    The &lt;xsl:strip-space&gt; statement
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xsltext">
+    &lt;xsl:text&gt;
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-attributes">
+    Creating attributes
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#webography">
@@ -246,6 +284,44 @@
 <a class="md-nav__link" href="#xslt-transformation">
     XSLT - Transformation
   </a>
+<nav aria-label="XSLT - Transformation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-display-transformations">
+    How to display transformations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xslt-elements">
+    XSLT elements
+  </a>
+<nav aria-label="XSLT elements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#line-breaks-and-whitespace-the-xsltext-and-xslstrip-space-commands">
+    Line breaks and whitespace: the &lt;xsl:text&gt; and &lt;xsl:strip-space&gt; commands
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-xslstrip-space-statement">
+    The &lt;xsl:strip-space&gt; statement
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xsltext">
+    &lt;xsl:text&gt;
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-attributes">
+    Creating attributes
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#webography">
@@ -264,16 +340,9 @@
 <p>This is a recommendation of the W3C (World Wide Web Consortium), as is CSS, but XSLT goes much further, as it overcomes many of the limitations of CSS.</p>
 <p>With XSLT you can make transformations that completely change the structure of the document, you can rearrange the information in the XML document, add new information wherever you are, make decisions based on the information in it, make calculations, and so on.</p>
 <p>XSLT relies on other XML technologies to work:</p>
-<p>It uses XPath to determine which templates to apply at any given time (and is therefore integrated into XQuery).
-  Supports XML Schemas to define data types.</p>
-<p>Although XSLT version 2.0 is the most used, it is 1.0.</p>
-<p>XSLT version 2.0 adds a number of features that make XSLT even more powerful:</p>
 <ul>
-<li>Supports XML Schemas data types</li>
-<li>Includes new items to group results, etc.</li>
-<li>It can generate multiple outputs in a single transformation</li>
-<li>Adds a new feature set in addition to XPath 2.0</li>
-<li>You can process non-XML files</li>
+<li>It uses XPath to determine which templates to apply at any given time (and is therefore integrated into XQuery).
+   Supports XML Schemas to define data types.</li>
 </ul>
 <p>XSLT templates are increasingly being used to generate custom views of an XML document for viewing in different destinations (printer, computer screen, mobile phone…). All you have to do is get the original XML document, and the others will be created on demand.</p>
 <p>One of the limitations of XSL is that the input document must always be XML, even though the output does not have this limitation and can end up in any format: text, HTML, XML, etc.</p>
@@ -289,7 +358,166 @@
 </li>
 <li>When the processor has traversed the tree, the transformation is complete.</li>
 </ol>
-<p><a href="https://www.w3schools.com/xml/xsl_intro.asp">XSLT Tutorial at W3Schools</a></p>
+<p>More information at <a href="https://www.w3schools.com/xml/xsl_intro.asp">XSLT Tutorial at W3Schools</a></p>
+<h3 id="how-to-display-transformations">How to display transformations<a class="headerlink" href="#how-to-display-transformations" title="Permanent link">¶</a></h3>
+<p>We have several options:</p>
+<ol>
+<li>By adding a reference to the XSL stylesheet in the XML document and open it from a live server.</li>
+<li>By using a VSCode extension like XML extension by Red Hat.</li>
+<li>By using a CLI command like <code>xsltproc</code>.</li>
+</ol>
+<h2 id="xslt-elements">XSLT elements<a class="headerlink" href="#xslt-elements" title="Permanent link">¶</a></h2>
+<p>Our samples are based on this template:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;biblioteca&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;titulo&gt;</span>La vida está en otra parte<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;autor&gt;</span>Milan Kundera<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">"1973"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;/libro&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">&lt;titulo&gt;</span>Pantaleón y las visitadoras<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">"28/03/1936"</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">"1973"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;/libro&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;libro&gt;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">&lt;titulo&gt;</span>Conversación en la catedral<span class="nt">&lt;/titulo&gt;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">&lt;autor</span> <span class="na">fechaNacimiento=</span><span class="s">"28/03/1936"</span><span class="nt">&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/autor&gt;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nt">&lt;fechaPublicacion</span> <span class="na">año=</span><span class="s">"1969"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="nt">&lt;/libro&gt;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nt">&lt;/biblioteca&gt;</span>
+</code></pre></div>
+<h3 id="line-breaks-and-whitespace-the-xsltext-and-xslstrip-space-commands">Line breaks and whitespace: the <code>&lt;xsl:text&gt;</code> and <code>&lt;xsl:strip-space&gt;</code> commands<a class="headerlink" href="#line-breaks-and-whitespace-the-xsltext-and-xslstrip-space-commands" title="Permanent link">¶</a></h3>
+<p>When transforming a document, XSLT processors embed line breaks and white space in the output, but they do not do so consistently.</p>
+<p>There doesn't seem to be a simple solution that works on all processors, but there are solutions that work on every processor.</p>
+<h3 id="the-xslstrip-space-statement">The <code>&lt;xsl:strip-space&gt;</code> statement<a class="headerlink" href="#the-xslstrip-space-statement" title="Permanent link">¶</a></h3>
+<p>The <code>&lt;xsl:strip-space&gt;</code> command allows you to indicate whether elements containing only 
+whitespace are included in the transformation.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;xsl:stylesheet</span> <span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span> <span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="nt">&lt;xsl:strip-space</span> <span class="na">elements=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"/"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;h1&gt;</span>Autores<span class="nt">&lt;/h1&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>       <span class="nt">&lt;xsl:apply-templates</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nt">&lt;/html&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"libro"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="14 "></span>      <span class="nt">&lt;p&gt;&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"autor"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+<span class="linenos" data-linenos="15 "></span>  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span><span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div>
+<p>The output will be:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;h1&gt;</span>Autores<span class="nt">&lt;/h1&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;p&gt;</span>Milan Kundera<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;p&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="6 "></span>  <span class="nt">&lt;p&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="7 "></span><span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<h3 id="xsltext"><code>&lt;xsl:text&gt;</code><a class="headerlink" href="#xsltext" title="Permanent link">¶</a></h3>
+<p><code>&lt;xsl:text&gt;</code> allow you to generate text you cannot generate simply by adding it (line breaks, and whitespaces, for instance).</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;xsl:stylesheet</span> 
+<span class="linenos" data-linenos=" 3 "></span><span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span> 
+<span class="linenos" data-linenos=" 4 "></span><span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"/"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&lt;xsl:text&gt;</span><span class="ni">&amp;#10;</span> <span class="nt">&lt;/xsl:text&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;h1&gt;</span>Authors<span class="nt">&lt;/h1&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;xsl:apply-templates</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="10 "></span>  <span class="nt">&lt;/html&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos="12 "></span>  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"libro"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nt">&lt;p&gt;&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"autor"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+<span class="linenos" data-linenos="14 "></span>  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos="15 "></span><span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div>
+The output will be:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;h1&gt;</span>Autores<span class="nt">&lt;/h1&gt;</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">&lt;p&gt;</span>Milan Kundera<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">&lt;p&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="6 "></span>  <span class="nt">&lt;p&gt;</span>Mario Vargas Llosa<span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="7 "></span><span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<h3 id="creating-attributes">Creating attributes<a class="headerlink" href="#creating-attributes" title="Permanent link">¶</a></h3>
+<p>The <code>&lt;xsl:attribute&gt;</code> command allows you to generate an attribute and its value.</p>
+<p>From the following XML document, we want to generate the <code>&lt;img&gt;</code> tag. Where the value of the <code>src</code> attribute is the content of the <code>&lt;image&gt;</code> tag. </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;licenses&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;license&gt;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nt">&lt;name&gt;</span>Creative Commons By - Share Alike<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="nt">&lt;image&gt;</span>cc-bysa-88x31.png<span class="nt">&lt;/image&gt;</span>
+<span class="linenos" data-linenos="6 "></span>  <span class="nt">&lt;/license&gt;</span>
+<span class="linenos" data-linenos="7 "></span><span class="nt">&lt;/licenses&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;xsl:stylesheet</span> 
+<span class="linenos" data-linenos=" 3 "></span><span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span> 
+<span class="linenos" data-linenos=" 4 "></span><span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"license"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="nt">&lt;p&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"&lt;xsl:value-of select="</span><span class="err">imagen"</span> <span class="nt">/&gt;</span>" /&gt;
+<span class="linenos" data-linenos=" 9 "></span>  <span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="10 "></span><span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>Error at line 5, column 19: not well-formed (<em>invalid  token</em>)</p>
+</blockquote>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>  <span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>  <span class="nt">&lt;xsl:stylesheet</span> 
+<span class="linenos" data-linenos=" 3 "></span>  <span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span> 
+<span class="linenos" data-linenos=" 4 "></span>  <span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"license"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>      <span class="nt">&lt;p&gt;&lt;img&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="nt">&lt;xsl:attribute</span> <span class="na">name=</span><span class="s">"src"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"image"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;/xsl:attribute&gt;</span>
+<span class="linenos" data-linenos="10 "></span>      <span class="nt">&lt;/img&gt;</span>
+<span class="linenos" data-linenos="11 "></span>      <span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">&lt;p&gt;</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"cc-bysa-88x31.png"</span><span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">&lt;/p&gt;</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span>  <span class="nt">&lt;xsl:stylesheet</span> <span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span> <span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"/"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nt">&lt;xsl:apply-templates</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="nt">&lt;/html&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>      <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"licencia"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nt">&lt;p&gt;&lt;img&gt;</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="nt">&lt;xsl:attribute</span> <span class="na">name=</span><span class="s">"src"</span><span class="nt">&gt;</span>
+<span class="linenos" data-linenos="13 "></span>          <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"imagen"</span> <span class="nt">/&gt;</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="nt">&lt;/xsl:attribute&gt;</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="nt">&lt;/img&gt;</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="nt">&lt;/p&gt;</span>
+<span class="linenos" data-linenos="17 "></span>      <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span>    <span class="nt">&lt;/xsl:stylesheet&gt;</span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span>    <span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="nt">&lt;html&gt;</span>
+<span class="linenos" data-linenos="23 "></span>      <span class="nt">&lt;p&gt;&lt;img</span> <span class="na">src=</span><span class="s">"cc-bysa-88x31.png"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
 <h2 id="webography">Webography<a class="headerlink" href="#webography" title="Permanent link">¶</a></h2>
 <ul>
 <li>Bartolomé Sintés Marco. (2022, January 30). <em>XSLT: XSLT language</em>, available at  <a href="https://www.mclibre.org/consultar/xml/lecciones/xml-xslt.html">https://www.mclibre.org/consultar/xml/lecciones/xml-xslt.html</a></li>
