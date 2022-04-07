@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>4. Definició d'esquemes i vocabularis en XML - MLIMS</title>
+<title>Introduction - MLIMS</title>
 <link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <meta content="#8bc34b" name="theme-color"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#4-definicio-desquemes-i-vocabularis-en-xml">
+<a class="md-skip" href="#introduction-to-javascript">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              4. Definició d'esquemes i vocabularis en XML
+              Introduction
             
           </span>
 </div>
@@ -131,7 +131,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../../02-xml-scheme/">
         2. XML schemas and vocabularies
       </a>
 </li>
@@ -225,8 +225,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8">
         8. An introduction to javascript
         <span class="md-nav__icon md-icon"></span>
@@ -237,10 +237,47 @@
           8. An introduction to javascript
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../08-an-introdution-to-javascript/01-intro/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Introduction
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goals">
+    Goals
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contents">
+    Contents
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+    Resources
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -260,18 +297,27 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#objectius">
-    Objectius:
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goals">
+    Goals
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#continguts">
-    Continguts:
+<a class="md-nav__link" href="#contents">
+    Contents
   </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#criteris-davaluacio">
-    Criteris d'avaluació
+<a class="md-nav__link" href="#resources">
+    Resources
   </a>
 </li>
 </ul>
@@ -281,53 +327,68 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="4-definicio-desquemes-i-vocabularis-en-xml">4. Definició d'esquemes i vocabularis en XML<a class="headerlink" href="#4-definicio-desquemes-i-vocabularis-en-xml" title="Permanent link">¶</a></h1>
-<h2 id="objectius">Objectius:<a class="headerlink" href="#objectius" title="Permanent link">¶</a></h2>
+<h1 id="introduction-to-javascript">Introduction to Javascript<a class="headerlink" href="#introduction-to-javascript" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<h3 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">¶</a></h3>
 <ul>
-<li>Entendre la necessitat de descriure la informació transmesa en els documents XML i les seves regles.</li>
-<li>Identificar les tecnologies relacionades amb la definició de documents XML.</li>
-<li>Analitzar l'estructura i la sintaxis específica utilitzada en la descripció.</li>
-<li>Crear descripcions de documents XML.</li>
-<li>Utilitzar descripcions en l'elaboració i la validació de documents XML.</li>
-<li>Associar les descripcions amb els documents.</li>
-<li>Documentar descripcions.</li>
+<li>Characterize the use of scripting languages on the client.</li>
+<li>Learn the basics of language.</li>
+<li>Manipulate the Document Object Model (DOM) to apply dynamism to documents HTML.</li>
 </ul>
-<h2 id="continguts">Continguts:<a class="headerlink" href="#continguts" title="Permanent link">¶</a></h2>
+<h3 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">¶</a></h3>
 <ol>
-<li><del>Definició de l'estructura i la sintaxi de documents XML.</del></li>
-<li><del>XML: estructura i sintaxi</del>.</li>
-<li><del>Etiquetes</del>.</li>
-<li><del>Ferramentes d'edició</del>.</li>
-<li>Elaboració de documents XML vàlids~~i ben formats~~.</li>
-<li><del>Utilització d'espais de noms en XML</del>.</li>
-<li><del>Definició, referenciació i prefixos</del>.</li>
-<li><del>Avantatges d'utilització d'espais de noms</del>.</li>
-<li><del>Etiquetes, instruccions de processament, referència a entitats, declaració de tipus de document.</del></li>
-<li>Utilització de mètodes de definició de documents XML.</li>
-<li>Creació de descripcions.</li>
-<li>Associació de descriptors amb documents XML.</li>
-<li>Validació.</li>
-<li>Ferramentes de creació i validació.</li>
-<li>Extensibilitat dels esquemes. Tipus derivats. Esquemes múltiples documents.</li>
-<li>Documentació d'especificacions.</li>
+<li>Dynamize to HTML web pages</li>
+<li>JavaScript integration with HTML</li>
+<li>JavaScript fundamentals</li>
+<li>Functions. </li>
+<li>Built-in objects: String, Math, Array.</li>
+<li>Validations.</li>
+<li>DOM manipulation.</li>
+<li>Events.</li>
+<li>Objects.</li>
+<li>localStorage.</li>
+<li>JSON</li>
 </ol>
-<h2 id="criteris-davaluacio">Criteris d'avaluació<a class="headerlink" href="#criteris-davaluacio" title="Permanent link">¶</a></h2>
-<ol>
-<li>S'ha establert la necessitat de descriure la informació transmesa en els documents XML i
-les seves regles.</li>
-<li>S'han identificat les tecnologies relacionades amb la definició de documents XML.</li>
-<li><strong>S'ha analitzat l'estructura i la sintaxis específica utilitzada en la descripció.</strong></li>
-<li><strong>S'han creat descripcions de documents XML.</strong></li>
-<li><strong>S'han utilitzat descripcions en l'elaboració i la validació de documents XML.</strong></li>
-<li>S'han associat les descripcions amb els documents.</li>
-<li>S'utilitzen eines específiques.</li>
-<li>S'han documentat les descripcions.</li>
-</ol>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a> at Mozilla Developer Network</li>
+<li><a href="https://javascript.info/">The Modern JavaScript Tutorial</a></li>
+<li><a href="https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet">Javascript Cheatsheet</a> at Codecademy </li>
+<li><a href="https://javascript.info/first-steps">https://javascript.info/first-steps</a></li>
+<li><a href="https://javascript.info/dom-nodes">https://javascript.info/dom-nodes</a></li>
+<li><a href="https://javascript.info/searching-elements-dom">https://javascript.info/searching-elements-dom</a></li>
+<li><a href="https://javascript.info/introduction-browser-events">https://javascript.info/introduction-browser-events</a></li>
+<li><a href="https://javascript.info/onload-ondomcontentloaded">https://javascript.info/onload-ondomcontentloaded</a></li>
+<li><a href="https://javascript.info/modifying-document">https://javascript.info/modifying-document</a></li>
+<li><a href="https://javascript.info/array">Arrays</a></li>
+<li><a href="https://javascript.info/array-methods">Array Methods</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API">https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API</a> </li>
+<li><a href="https://www.json.org/json-en.html">https://www.json.org/json-en.html</a></li>
+<li><a href="https://javascript.info/object">https://javascript.info/object</a></li>
+<li><a href="https://javascript.info/constructor-new">https://javascript.info/constructor-new</a></li>
+<li><a href="https://javascript.info/localstorage">https://javascript.info/localstorage</a></li>
+<li><a href="https://javascript.info/fetch">Fetch</a> at Javascript.info</li>
+</ul>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Introduction" class="md-footer__link md-footer__link--prev" href="../../07-xml-storage/01-intro/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">

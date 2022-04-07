@@ -424,6 +424,90 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        7. XML Storage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="7. XML Storage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          7. XML Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-xml-storage/01-intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        8. An introduction to javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="8. An introduction to javascript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          8. An introduction to javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-an-introdution-to-javascript/01-intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -561,6 +645,46 @@
           <li class="md-nav__item">
   <a href="#06-xml-transformation-99-tasks" class="md-nav__link">
     Tasks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-xml-storage" class="md-nav__link">
+    7. XML Storage
+  </a>
+  
+    <nav class="md-nav" aria-label="7. XML Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#07-xml-storage-01-intro" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-an-introduction-to-javascript" class="md-nav__link">
+    8. An introduction to javascript
+  </a>
+  
+    <nav class="md-nav" aria-label="8. An introduction to javascript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#08-an-introdution-to-javascript-01-intro" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
@@ -4119,7 +4243,199 @@ Exercise 2. Convert some attributes to tags:</p>
 <span class="linenos" data-linenos="8 "></span>Magdalena Roig: 5
 </code></pre></div>
 </li>
-</ol></section><h1 class='nav-section-title-end'>Ended: 6. XML Transformation</h1></div>
+</ol></section><h1 class='nav-section-title-end'>Ended: 6. XML Transformation</h1>
+                        <h1 class='nav-section-title' id='section-7-xml-storage'>
+                            7. XML Storage <a class='headerlink' href='#section-7-xml-storage' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="07-xml-storage-01-intro"><h1 id="07-xml-storage-01-intro-introduction">Introduction<a class="headerlink" href="#07-xml-storage-01-intro-introduction" title="Permanent link">&para;</a></h1>
+<p>XML files are in a standardized text format used for represent, store and 
+transport structured information. Therefore, <strong>XML can be used as a neutral 
+data storage method</strong>, as the information stored in XML files can be moved 
+from one machine to another without any problems. This makes it an ideal method
+ for storing historical data that ensures that it can be re-read in the future
+  without any problems.</p>
+<p>This has made it increasingly difficult for organizations to have more and more
+ XML documents, and it is becoming increasingly difficult to locate documents at 
+ the right time. So there is a need to organize your XML data in a way that 
+ allows you to locate it quickly.</p>
+<p>But it's not just a matter of locating the documents, as often what you are looking
+ for will be divided into different documents. You also need some way to be able
+  to query and manipulate the data contained in the XML files. This query system
+   should be able to search documents and modify data if necessary, but always with a minimum of efficiency.</p>
+<p>In the face of these needs, the solution is usually given in two ways:</p>
+<ol>
+<li>Since most organizations already have organized data storage systems based on relational data, one possible solution might be to <strong>convert XML files to relational data</strong>:</li>
+</ol>
+<ul>
+<li>Data storage will be fully organized and centralized at one point where the other data in the organization already exists. </li>
+<li>Its query language, SQL, is well known and widely used, so users will not need to learn a new language.</li>
+</ul>
+<ol start="2">
+<li>Another solution is to create a storage system designed for XML files only. These are the systems known as native XML databases. These:<ul>
+<li>Provide a place to neatly store XML files.</li>
+<li>They have their own query language: XQuery.</li>
+</ul>
+</li>
+</ol>
+<p>Although this distinction seems easy to make, in practice organizations often use mixed storage systems, in which they store in relational data those data that need to be stored or queried, and in XML those data that must be represented in web environments or to be exchanged or transported to other systems.</p>
+<h2 id="07-xml-storage-01-intro-relational-databases">Relational databases<a class="headerlink" href="#07-xml-storage-01-intro-relational-databases" title="Permanent link">&para;</a></h2>
+<p>Almost all organizations have their data organized with some relational system, as database management systems have become an indispensable element in the functioning of companies. They are used to control many of the operating data of companies: turnover, accounting, stocks…</p>
+<p>Therefore, in the face of the emergence of a new type of data, one of the easy reasons would be: "If we already have a well-functioning data organization system, why can't we put that data in the same system?" . In this way, the data obtained from XML files would achieve a very efficient storage system and a method of manipulating information that has been widely tested for many years and is well known to many people.</p>
+<p>The inclusion of XML files in relational database management systems can be done in two ways:</p>
+<ol>
+<li>Convert data from XML files to relational data:<ul>
+<li>This system has the advantage that the data, once within the relational system, will be identical to the existing ones.</li>
+<li>The biggest downside is that if you need the original XML document again, it can be very difficult to regenerate it, as there will often be information about the XML structure that will not be stored.</li>
+</ul>
+</li>
+<li>Store entire XML documents in databases:<ul>
+<li>Entire XML files will be placed in a field in a database table, so it will be like the other data.</li>
+<li>In order to work well, the database will need to provide some moderately efficient way to search the contents of XML documents.</li>
+</ul>
+</li>
+</ol>
+<h3 id="07-xml-storage-01-intro-convert-xml-data-to-relational">Convert XML data to relational<a class="headerlink" href="#07-xml-storage-01-intro-convert-xml-data-to-relational" title="Permanent link">&para;</a></h3>
+<p>One solution that may seem simple but not so simple is to take the data from the XML files and turn it into relational data. Once the data has been added to the database, the XML files can be deleted.</p>
+<p>Because the structure of the data is already defined in the XML document, and XML documents are often associated with a vocabulary, we need to:</p>
+<ol>
+<li>Generate the structure of relational tables can be done by analyzing the structure of the XML document.</li>
+<li>Vocabulary definition fields can be obtained by simply looking at the contents of the XML document.</li>
+</ol>
+<p>And besides, there are systems that allow you to transform XML data into other file types (for example, XSLT).</p>
+<h3 id="07-xml-storage-01-intro-convert-an-xml-document-into-relational-data">Convert an XML document into relational data<a class="headerlink" href="#07-xml-storage-01-intro-convert-an-xml-document-into-relational-data" title="Permanent link">&para;</a></h3>
+<p>If you start from the following XML document:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version = &quot;1.0&quot;?&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;students&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>   <span class="nt">&lt;student&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>      <span class="nt">&lt;name&gt;</span> Frederic <span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;cognom&gt;</span> Pi <span class="nt">&lt;/cognom&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>   <span class="nt">&lt;/student&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>   <span class="nt">&lt;student&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;name&gt;</span> Philomeno <span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;cognom&gt;</span> Garcia <span class="nt">&lt;/cognom&gt;</span>
+<span class="linenos" data-linenos="10 "></span>   <span class="nt">&lt;/student&gt;</span>
+<span class="linenos" data-linenos="11 "></span><span class="nt">&lt;/students&gt;</span>
+</code></pre></div>
+<p>It is relatively easy to see that the structure of the document consists of a list of "student" items.
+And that <code>&lt;student&gt;</code> will have two data fields which are <code>&lt;name&gt;</code> and <code>&lt;surname&gt;</code>.</p>
+<p>Therefore, the relational structure of this file will simply be to create a "student" table with a first and last name. This is trivial with the SQL CREATE TABLE command:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="p">(</span><span class="k">first</span> <span class="n">name</span> <span class="nb">VARCHAR</span> <span class="p">(</span><span class="mi">30</span><span class="p">),</span> <span class="k">last</span> <span class="n">name</span> <span class="nb">VARCHAR</span> <span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+</code></pre></div>
+<p>Getting the data to fill the table shouldn't be a big deal either. Simply insert each data field:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">student</span> <span class="k">VALUES</span> <span class="p">(</span><span class="ss">&quot;Frederic&quot;</span><span class="p">,</span> <span class="ss">&quot;Pi&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">student</span> <span class="k">VALUES</span> <span class="p">(</span><span class="ss">&quot;Filomeno&quot;</span><span class="p">,</span> <span class="ss">&quot;Garcia&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>The easiest way to do this is to create an XSLT template that will transform the XML file into SQL rules.</p>
+<p>Despite the apparent simplicity of this system, it is not always easy to do this conversion, as relational and XML systems are based on quite different concepts:</p>
+<ul>
+<li>The relational system is based on two-dimensional data without hierarchy or order, while the XML system is based on hierarchical trees in which order is significant.</li>
+<li>In an XML document there may be repeated data, while relational systems escape repetitions.</li>
+<li>Relationships and structures within XML documents are not always obvious.</li>
+<li>What if we need to have the XML document back? Doing the reverse process is not always trivial. One of the difficult concepts is to determine which data were attributes and which elements.</li>
+</ul>
+<p>Therefore, this is usually not the most advisable system but it is a valid system that can be useful in specific cases.</p>
+<h3 id="07-xml-storage-01-intro-relational-systems-with-xml-extensions">Relational systems with XML extensions<a class="headerlink" href="#07-xml-storage-01-intro-relational-systems-with-xml-extensions" title="Permanent link">&para;</a></h3>
+<p>Until the advent of XML, virtually everyone stored data that needed to be quickly queried or modified by some relational system. Database management systems have been the king of data management in organizations for years.</p>
+<p>But the increase in information in XML that needed to be queried or required to perform tasks that were previously reserved in relational databases has led to some kind of XML support having to be included in the database management systems.</p>
+<p>All major database systems such as Oracle, IBM DB2, or Microsoft SQL Server have some kind of XML support, which is usually specified in the following:</p>
+<ul>
+<li>Allow exporting relational data in some XML format to transport the data.</li>
+<li>Have some way to be able to store XML documents as fields in relational tables.</li>
+<li>Allow searches and changes to stored XML documents.</li>
+<li>Generate XML from relational data in the database.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Although SQL/XML is part of the SQL standard, not all database managers support it.</p>
+</div>
+<p>Because SQL (the quintessential relational data query language) did not support XML in 2003, the SQL language standard was modified to add the <strong>SQL/XML extension</strong>.</p>
+<h4 id="07-xml-storage-01-intro-sqlxml">SQL/XML<a class="headerlink" href="#07-xml-storage-01-intro-sqlxml" title="Permanent link">&para;</a></h4>
+<p>SQL/XML is an extension of the SQL standard that allows you to work with the XML language using SQL statements.</p>
+<p>This extension was developed by a group in which there were large database companies (Microsoft, Oracle, IBM, SyBase, DataDirect Technologies…) and is already implemented in some database system.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Despite participating in the development of the standard, Microsoft announced that it did not intend to incorporate SQL/XML into Microsoft SQL Server. Instead, Microsoft SQL Server uses its own system called Microsoft SQLXML or OPENXML to work with SQL and XML.</p>
+</div>
+<p>SQL/XML defines a series of functions for publishing XML files from relational data, defines a type of XML data and a way to query and manipulate stored XML data.</p>
+<h2 id="07-xml-storage-01-intro-xquery">XQuery<a class="headerlink" href="#07-xml-storage-01-intro-xquery" title="Permanent link">&para;</a></h2>
+<p>One of the most basic requirements for searching for data is to have a query language that is powerful enough to meet the needs of those who need to use it. That's why the XQuery language was developed.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>XQuery is a query language designed to become the standard way to retrieve data from XML document collections.</p>
+</div>
+<p>It's a functional language, so instead of telling you the steps to do a task, all you have to do is evaluate the expressions against the XML file and generate a result. Unlike common programming languages, XQuery specifies what e isl what you want and not the way you have to do it to get it.</p>
+<div class="admonition info">
+<p class="admonition-title">XQuery 3.0</p>
+<p>A new version of XQuery is already under development that will increase the power of queries by adding new clauses such as group by or dynamic error checking. You can check it out at www.w3.org/TR/xquery-30</p>
+</div>
+<p>Among the most interesting features of XQuery, it allows:</p>
+<ul>
+<li>Select the information according to criteria. Sort, group, add data.</li>
+<li>Filter the information you want from the data stream.</li>
+<li>Search for information in a document or group of documents.</li>
+<li>Join data from multiple documents.</li>
+<li>Transform and restructure XML.</li>
+<li>Don't be limited to search, as it can perform numerical and character manipulation operations.</li>
+<li>You can work with namespaces and documents defined by DTD or XSD.</li>
+</ul>
+<p>An important part of XQuery 1.0 is the XPath 2.0 language, which is the part that allows you to make selections of information and browse the document.</p>
+<h2 id="07-xml-storage-01-intro-native-xml-databases">Native XML databases<a class="headerlink" href="#07-xml-storage-01-intro-native-xml-databases" title="Permanent link">&para;</a></h2>
+<p>If we do not go into technical details, the definition of a database is a place where data can be stored. In the case of an XML database, it is simply a matter of storing the XML files at a specific point in the operating system.</p>
+<p>The increase in XML documents to be stored has made it difficult to have some way to automate the process, even though the storage can be done manually. To facilitate this automation, native XML (NXD) databases have appeared.</p>
+<p>When we talk about native XML databases, we are referring to databases designed to contain and store data in XML format.</p>
+<p>Unlike relational databases, which have been in operation for many years and have an important theoretical basis behind them, NXDs do not have definite standards for doing things, and the theory behind them is not very well defined. As a result, each database often does things in a way that may be completely different from another.</p>
+<p>Native XML databases are primarily used to store data that contains:</p>
+<ul>
+<li>Narrative content.</li>
+<li>Which are less predictable than those normally stored in relational databases.</li>
+<li>That should generate outputs for web environments.</li>
+<li>They have to be transported from one system to another.</li>
+</ul></section><h1 class='nav-section-title-end'>Ended: 7. XML Storage</h1>
+                        <h1 class='nav-section-title' id='section-8-an-introduction-to-javascript'>
+                            8. An introduction to javascript <a class='headerlink' href='#section-8-an-introduction-to-javascript' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="08-an-introdution-to-javascript-01-intro"><h1 id="08-an-introdution-to-javascript-01-intro-introduction-to-javascript">Introduction to Javascript<a class="headerlink" href="#08-an-introdution-to-javascript-01-intro-introduction-to-javascript" title="Permanent link">&para;</a></h1>
+<h2 id="08-an-introdution-to-javascript-01-intro-introduction">Introduction<a class="headerlink" href="#08-an-introdution-to-javascript-01-intro-introduction" title="Permanent link">&para;</a></h2>
+<h3 id="08-an-introdution-to-javascript-01-intro-goals">Goals<a class="headerlink" href="#08-an-introdution-to-javascript-01-intro-goals" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Characterize the use of scripting languages on the client.</li>
+<li>Learn the basics of language.</li>
+<li>Manipulate the Document Object Model (DOM) to apply dynamism to documents HTML.</li>
+</ul>
+<h3 id="08-an-introdution-to-javascript-01-intro-contents">Contents<a class="headerlink" href="#08-an-introdution-to-javascript-01-intro-contents" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Dynamize to HTML web pages</li>
+<li>JavaScript integration with HTML</li>
+<li>JavaScript fundamentals</li>
+<li>Functions. </li>
+<li>Built-in objects: String, Math, Array.</li>
+<li>Validations.</li>
+<li>DOM manipulation.</li>
+<li>Events.</li>
+<li>Objects.</li>
+<li>localStorage.</li>
+<li>JSON</li>
+</ol>
+<h2 id="08-an-introdution-to-javascript-01-intro-resources">Resources<a class="headerlink" href="#08-an-introdution-to-javascript-01-intro-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a> at Mozilla Developer Network</li>
+<li><a href="https://javascript.info/">The Modern JavaScript Tutorial</a></li>
+<li><a href="https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet">Javascript Cheatsheet</a> at Codecademy </li>
+<li><a href="https://javascript.info/first-steps">https://javascript.info/first-steps</a></li>
+<li><a href="https://javascript.info/dom-nodes">https://javascript.info/dom-nodes</a></li>
+<li><a href="https://javascript.info/searching-elements-dom">https://javascript.info/searching-elements-dom</a></li>
+<li><a href="https://javascript.info/introduction-browser-events">https://javascript.info/introduction-browser-events</a></li>
+<li><a href="https://javascript.info/onload-ondomcontentloaded">https://javascript.info/onload-ondomcontentloaded</a></li>
+<li><a href="https://javascript.info/modifying-document">https://javascript.info/modifying-document</a></li>
+<li><a href="https://javascript.info/array">Arrays</a></li>
+<li><a href="https://javascript.info/array-methods">Array Methods</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API">https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API</a> </li>
+<li><a href="https://www.json.org/json-en.html">https://www.json.org/json-en.html</a></li>
+<li><a href="https://javascript.info/object">https://javascript.info/object</a></li>
+<li><a href="https://javascript.info/constructor-new">https://javascript.info/constructor-new</a></li>
+<li><a href="https://javascript.info/localstorage">https://javascript.info/localstorage</a></li>
+<li><a href="https://javascript.info/fetch">Fetch</a> at Javascript.info</li>
+</ul></section><h1 class='nav-section-title-end'>Ended: 8. An introduction to javascript</h1></div>
                 
               
               
