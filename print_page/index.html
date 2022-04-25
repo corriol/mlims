@@ -438,13 +438,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
-        7. XML Storage
+        7. Information Storage
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="7. XML Storage" data-md-level="1">
+      <nav class="md-nav" aria-label="7. Information Storage" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          7. XML Storage
+          7. Information Storage
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -454,7 +454,7 @@
   
     <li class="md-nav__item">
       <a href="../07-xml-storage/01-intro/" class="md-nav__link">
-        Introduction
+        Information Storage
       </a>
     </li>
   
@@ -655,16 +655,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-7-xml-storage" class="md-nav__link">
-    7. XML Storage
+  <a href="#section-7-information-storage" class="md-nav__link">
+    7. Information Storage
   </a>
   
-    <nav class="md-nav" aria-label="7. XML Storage">
+    <nav class="md-nav" aria-label="7. Information Storage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#07-xml-storage-01-intro" class="md-nav__link">
-    Introduction
+    Information Storage
   </a>
   
 </li>
@@ -4244,34 +4244,97 @@ Exercise 2. Convert some attributes to tags:</p>
 </code></pre></div>
 </li>
 </ol></section><h1 class='nav-section-title-end'>Ended: 6. XML Transformation</h1>
-                        <h1 class='nav-section-title' id='section-7-xml-storage'>
-                            7. XML Storage <a class='headerlink' href='#section-7-xml-storage' title='Permanent link'>↵</a>
+                        <h1 class='nav-section-title' id='section-7-information-storage'>
+                            7. Information Storage <a class='headerlink' href='#section-7-information-storage' title='Permanent link'>↵</a>
                         </h1>
-                        <section class="print-page" id="07-xml-storage-01-intro"><h1 id="07-xml-storage-01-intro-introduction">Introduction<a class="headerlink" href="#07-xml-storage-01-intro-introduction" title="Permanent link">&para;</a></h1>
-<p>XML files are in a standardized text format used for represent, store and 
-transport structured information. Therefore, <strong>XML can be used as a neutral 
-data storage method</strong>, as the information stored in XML files can be moved 
-from one machine to another without any problems. This makes it an ideal method
- for storing historical data that ensures that it can be re-read in the future
-  without any problems.</p>
-<p>This has made it increasingly difficult for organizations to have more and more
- XML documents, and it is becoming increasingly difficult to locate documents at 
- the right time. So there is a need to organize your XML data in a way that 
- allows you to locate it quickly.</p>
-<p>But it's not just a matter of locating the documents, as often what you are looking
- for will be divided into different documents. You also need some way to be able
-  to query and manipulate the data contained in the XML files. This query system
-   should be able to search documents and modify data if necessary, but always with a minimum of efficiency.</p>
+                        <section class="print-page" id="07-xml-storage-01-intro"><h1 id="07-xml-storage-01-intro-information-storage">Information Storage<a class="headerlink" href="#07-xml-storage-01-intro-information-storage" title="Permanent link">&para;</a></h1>
+<details><summary>Learning outcomes</summary><ol>
+<li>Identify the main methods of storing information used in XML documents.</li>
+<li>Identify the drawbacks of storing information in XML format.</li>
+<li>Use relational database management systems in the storage of information in XML format.</li>
+<li>Use specific techniques to create XML documents from information stored in relational databases.</li>
+<li>Identify the characteristics of native XML database management systems.</li>
+<li>Use techniques to manage information stored in native XML databases.</li>
+<li>Identify languages and tools for processing and storing information and including it in XML documents.</li>
+</ol>
+</details>
+<details><summary>Contents</summary><ol>
+<li>Using XML to store information. <ol>
+<li>Areas of application.      </li>
+</ol>
+</li>
+<li>Information storage systems.      <ol>
+<li>Relational databases.</li>
+<li>NoSQL databases.</li>
+<li>XML databases. </li>
+</ol>
+</li>
+<li>XQuery.</li>
+<li>Programming tools to work with XML.</li>
+</ol>
+</details>
+<details><summary>Assessment criteria</summary><ul>
+<li><strong>The main methods of storing information used in XML documents have been identified.</strong> </li>
+<li>The drawbacks of storing information in XML format have been identified. </li>
+<li>Efficient information storage technologies have been established based on their characteristics. </li>
+<li><strong>Relational database management systems have been used in the storage of information in XML format.</strong> </li>
+<li><strong>Specific techniques are used to create XML documents from information stored in relational databases.</strong> </li>
+<li>The features of native XML database management systems have been identified. </li>
+<li>Native XML database management systems has been installed and analysed.      </li>
+<li>Techniques are used to manage information stored in native XML databases. </li>
+<li>Languages and tools for processing and storing information and including it in XML documents have been identified.</li>
+</ul>
+</details>
+<h2 id="07-xml-storage-01-intro-introduction">Introduction<a class="headerlink" href="#07-xml-storage-01-intro-introduction" title="Permanent link">&para;</a></h2>
+<p>As we have seen, XML is a powerful and widely accepted standard for storing and communicating
+information about objects. Allows the encoding of information separated from the form in which it is
+must present to the user. To find a specific piece of information in the contents of a
+XML node or attribute, the XML file must be fully processed.</p>
+<p>An XML database can be viewed as a collection of XML documents, where each document
+represents a record.</p>
+<p>Each XML document is a file in the file system and contains a valid XML string.
+The structure of an XML document usually follows the same XML schema, although it does not have to be
+so. This is one of the benefits of XML databases, as each file can be configured differently.
+structured form so it is self-contained, yet easily accessible.</p>
+<p>But it’s not just a matter of locating the documents, as often what you are looking
+for will be split into different documents. You also need some way to be able
+to query and manipulate the data contained in the XML files. This query system
+should be able to search documents and modify data if necessary, but always with a minimum of efficiency.</p>
+<p>Having document collections with independent schema provides the database with
+flexibility, and facilitates application development.</p>
+<p>In recent years, the existence of information exchange standards has been necessary, with the
+objective that organizations can share their information in a more comfortable way,
+automatic and efficient.</p>
+<h3 id="07-xml-storage-01-intro-application-areas">Application areas<a class="headerlink" href="#07-xml-storage-01-intro-application-areas" title="Permanent link">&para;</a></h3>
+<p>Documents and XML data storage requirements can be grouped into two general categories:</p>
+<ul>
+<li>
+<p><code>Data-oriented</code>. They tend to include typical billing documents, purchase orders, and less structured documents.
+ It is appropriate for items such as newspaper content, articles, and advertisements. If the XML document has a well-defined structure and contains data that can be updated and used in various ways, the document is usually data-centric.</p>
+</li>
+<li>
+<p><code>Document-oriented</code>. They tend to be more unpredictable in size and content than data-centric ones, which are
+highly structured, with data types of limited size and less flexible rules for fields options and content. Such as web pages, product catalogues. Usually when you need to store the same document-model format you use in your application code.  </p>
+</li>
+</ul>
+<p>XML storage systems must efficiently accommodate both types of data requirements, 
+since XML is being used in systems that manage both types of data. Most products 
+focus on serving one of those data formats better than the other.</p>
+<p>Database systems must be able to expose relational data as XML, and
+store the received XML as relational data to transfer, get, and store the data
+required by the application.</p>
 <p>In the face of these needs, the solution is usually given in two ways:</p>
 <ol>
-<li>Since most organizations already have organized data storage systems based on relational data, one possible solution might be to <strong>convert XML files to relational data</strong>:</li>
-</ol>
+<li>
+<p>Since most organizations already have organized data storage systems based on relational data, one possible solution might be to <strong>convert XML files to relational data</strong>:</p>
 <ul>
-<li>Data storage will be fully organized and centralized at one point where the other data in the organization already exists. </li>
+<li>Data storage will be fully organized and centralized at one point where the other data in the organization already exists.</li>
 <li>Its query language, SQL, is well known and widely used, so users will not need to learn a new language.</li>
 </ul>
-<ol start="2">
-<li>Another solution is to create a storage system designed for XML files only. These are the systems known as native XML databases. These:<ul>
+</li>
+<li>
+<p>Another solution is to create a storage system designed for XML files only. These are the systems known as <strong>native XML databases</strong>. These:</p>
+<ul>
 <li>Provide a place to neatly store XML files.</li>
 <li>They have their own query language: XQuery.</li>
 </ul>
@@ -4280,7 +4343,7 @@ from one machine to another without any problems. This makes it an ideal method
 <p>Although this distinction seems easy to make, in practice organizations often use mixed storage systems, in which they store in relational data those data that need to be stored or queried, and in XML those data that must be represented in web environments or to be exchanged or transported to other systems.</p>
 <h2 id="07-xml-storage-01-intro-relational-databases">Relational databases<a class="headerlink" href="#07-xml-storage-01-intro-relational-databases" title="Permanent link">&para;</a></h2>
 <p>Almost all organizations have their data organized with some relational system, as database management systems have become an indispensable element in the functioning of companies. They are used to control many of the operating data of companies: turnover, accounting, stocks…</p>
-<p>Therefore, in the face of the emergence of a new type of data, one of the easy reasons would be: "If we already have a well-functioning data organization system, why can't we put that data in the same system?" . In this way, the data obtained from XML files would achieve a very efficient storage system and a method of manipulating information that has been widely tested for many years and is well known to many people.</p>
+<p>Therefore, in the face of the emergence of a new type of data, one of the easy reasons would be: “If we already have a well-functioning data organization system, why can’t we put that data in the same system?”. In this way, the data obtained from XML files would achieve a very efficient storage system and a method of manipulating information that has been widely tested for many years and is well known to many people.</p>
 <p>The inclusion of XML files in relational database management systems can be done in two ways:</p>
 <ol>
 <li>Convert data from XML files to relational data:<ul>
@@ -4298,30 +4361,30 @@ from one machine to another without any problems. This makes it an ideal method
 <p>One solution that may seem simple but not so simple is to take the data from the XML files and turn it into relational data. Once the data has been added to the database, the XML files can be deleted.</p>
 <p>Because the structure of the data is already defined in the XML document, and XML documents are often associated with a vocabulary, we need to:</p>
 <ol>
-<li>Generate the structure of relational tables can be done by analyzing the structure of the XML document.</li>
+<li>Generate the structure of relational tables can be done by analysing the structure of the XML document.</li>
 <li>Vocabulary definition fields can be obtained by simply looking at the contents of the XML document.</li>
 </ol>
-<p>And besides, there are systems that allow you to transform XML data into other file types (for example, XSLT).</p>
+<p>And besides, there are <strong>systems that allow you to transform XML data into other file types (for example, XSLT)</strong>.</p>
 <h3 id="07-xml-storage-01-intro-convert-an-xml-document-into-relational-data">Convert an XML document into relational data<a class="headerlink" href="#07-xml-storage-01-intro-convert-an-xml-document-into-relational-data" title="Permanent link">&para;</a></h3>
 <p>If you start from the following XML document:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?xml version = &quot;1.0&quot;?&gt;</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;students&gt;</span>
 <span class="linenos" data-linenos=" 3 "></span>   <span class="nt">&lt;student&gt;</span>
-<span class="linenos" data-linenos=" 4 "></span>      <span class="nt">&lt;name&gt;</span> Frederic <span class="nt">&lt;/name&gt;</span>
-<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;cognom&gt;</span> Pi <span class="nt">&lt;/cognom&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>      <span class="nt">&lt;name&gt;</span>Frederic<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>      <span class="nt">&lt;cognom&gt;</span>Pi<span class="nt">&lt;/cognom&gt;</span>
 <span class="linenos" data-linenos=" 6 "></span>   <span class="nt">&lt;/student&gt;</span>
 <span class="linenos" data-linenos=" 7 "></span>   <span class="nt">&lt;student&gt;</span>
-<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;name&gt;</span> Philomeno <span class="nt">&lt;/name&gt;</span>
-<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;cognom&gt;</span> Garcia <span class="nt">&lt;/cognom&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="nt">&lt;name&gt;</span>Philomeno<span class="nt">&lt;/name&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="nt">&lt;cognom&gt;</span>Garcia<span class="nt">&lt;/cognom&gt;</span>
 <span class="linenos" data-linenos="10 "></span>   <span class="nt">&lt;/student&gt;</span>
 <span class="linenos" data-linenos="11 "></span><span class="nt">&lt;/students&gt;</span>
 </code></pre></div>
-<p>It is relatively easy to see that the structure of the document consists of a list of "student" items.
+<p>It is relatively easy to see that the structure of the document consists of a list of “student” items.
 And that <code>&lt;student&gt;</code> will have two data fields which are <code>&lt;name&gt;</code> and <code>&lt;surname&gt;</code>.</p>
-<p>Therefore, the relational structure of this file will simply be to create a "student" table with a first and last name. This is trivial with the SQL CREATE TABLE command:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="p">(</span><span class="k">first</span> <span class="n">name</span> <span class="nb">VARCHAR</span> <span class="p">(</span><span class="mi">30</span><span class="p">),</span> <span class="k">last</span> <span class="n">name</span> <span class="nb">VARCHAR</span> <span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+<p>Therefore, the relational structure of this file will simply be to create a “student” table with a first and last name. This is trivial with the SQL CREATE TABLE command:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="p">(</span><span class="n">firstname</span> <span class="nb">VARCHAR</span> <span class="p">(</span><span class="mi">30</span><span class="p">),</span> <span class="n">lastname</span> <span class="nb">VARCHAR</span> <span class="p">(</span><span class="mi">30</span><span class="p">))</span>
 </code></pre></div>
-<p>Getting the data to fill the table shouldn't be a big deal either. Simply insert each data field:</p>
+<p>Getting the data to fill the table shouldn’t be a big deal either. Simply insert each data field:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">student</span> <span class="k">VALUES</span> <span class="p">(</span><span class="ss">&quot;Frederic&quot;</span><span class="p">,</span> <span class="ss">&quot;Pi&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos="2 "></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">student</span> <span class="k">VALUES</span> <span class="p">(</span><span class="ss">&quot;Filomeno&quot;</span><span class="p">,</span> <span class="ss">&quot;Garcia&quot;</span><span class="p">);</span>
 </code></pre></div>
@@ -4333,7 +4396,7 @@ And that <code>&lt;student&gt;</code> will have two data fields which are <code>
 <li>Relationships and structures within XML documents are not always obvious.</li>
 <li>What if we need to have the XML document back? Doing the reverse process is not always trivial. One of the difficult concepts is to determine which data were attributes and which elements.</li>
 </ul>
-<p>Therefore, this is usually not the most advisable system but it is a valid system that can be useful in specific cases.</p>
+<p>Therefore, this is usually not the most advisable system, but it is a valid system that can be useful in specific cases.</p>
 <h3 id="07-xml-storage-01-intro-relational-systems-with-xml-extensions">Relational systems with XML extensions<a class="headerlink" href="#07-xml-storage-01-intro-relational-systems-with-xml-extensions" title="Permanent link">&para;</a></h3>
 <p>Until the advent of XML, virtually everyone stored data that needed to be quickly queried or modified by some relational system. Database management systems have been the king of data management in organizations for years.</p>
 <p>But the increase in information in XML that needed to be queried or required to perform tasks that were previously reserved in relational databases has led to some kind of XML support having to be included in the database management systems.</p>
@@ -4357,17 +4420,42 @@ And that <code>&lt;student&gt;</code> will have two data fields which are <code>
 <p>Despite participating in the development of the standard, Microsoft announced that it did not intend to incorporate SQL/XML into Microsoft SQL Server. Instead, Microsoft SQL Server uses its own system called Microsoft SQLXML or OPENXML to work with SQL and XML.</p>
 </div>
 <p>SQL/XML defines a series of functions for publishing XML files from relational data, defines a type of XML data and a way to query and manipulate stored XML data.</p>
+<div class="admonition info">
+<p class="admonition-title">How about MySQL</p>
+<p>MySQL doesn’t support XML data types like Microsoft SQL Server or PostgreSQL. In MySQL, you have to store XML in CLOB (Character Large Object) data type. MYSQL database provides support CLOB datatype TINYTEXT, TEXT, MEDIUMTEXT, LONGTEXT. MySQL provides different types of XML function so using those functions, we can parse the XML data very easily. More info at <a href="https://dev.mysql.com/doc/refman/8.0/en/xml-functions.html">https://dev.mysql.com/doc/refman/8.0/en/xml-functions.html</a></p>
+</div>
+<h2 id="07-xml-storage-01-intro-nosql-databases">NoSQL databases<a class="headerlink" href="#07-xml-storage-01-intro-nosql-databases" title="Permanent link">&para;</a></h2>
+<p>A NoSQL (originally referring to "non-SQL" or "non-relational") database provides a mechanism for storage and retrieval of data that is modelled in means other than the tabular relations used in relational databases. Such databases have existed since the late 1960s, but the name "NoSQL" was only coined in the early 21<sup>st</sup> century, triggered by the needs of Web 2.0 companies. NoSQL databases are increasingly used in big data and real-time web applications. NoSQL systems are also sometimes called <strong>Not only SQL</strong> to emphasize that they may support SQL-like query languages or sit alongside SQL databases in polyglot-persistent architectures.</p>
+<p>Main categories of NoSQL database systems:</p>
+<ul>
+<li>
+<p><strong>Key–value database</strong> is a data storage paradigm designed for storing, retrieving, and managing associative arrays, and a data structure more commonly known today as a dictionary or hash table. Some examples are Redis, Azure Cosmos DB or Amazon Dynamo DB.</p>
+</li>
+<li>
+<p><strong>Document-oriented database</strong> is computer program and data storage system designed for storing, retrieving and managing document-oriented information, also known as semi-structured. The central concept of a document-oriented database is the notion of a document. A document encapsulates and encodes data (or information) in some standard format or encoding. Encodings in use include XML, YAML, JSON, as well as binary forms like BSON. Some examples are baseX (XML) or MongoDB (JSON).</p>
+</li>
+</ul>
+<h2 id="07-xml-storage-01-intro-native-xml-databases">Native XML databases<a class="headerlink" href="#07-xml-storage-01-intro-native-xml-databases" title="Permanent link">&para;</a></h2>
+<p>If we do not go into technical details, the definition of a database is a place where data can be stored. In the case of an XML database, it is simply a matter of storing the XML files at a specific point in the operating system.</p>
+<p>The increase in XML documents to be stored has made it difficult to have some way to automate the process, even though the storage can be done manually. To facilitate this automation, native XML (NXD) databases have appeared.</p>
+<p>When we talk about native XML databases, we are referring to databases designed to contain and store data in XML format.</p>
+<p>Unlike relational databases, which have been in operation for many years and have an important theoretical basis behind them, NXDs do not have definite standards for doing things, and the theory behind them is not very well-defined. As a result, each database often does things in a way that may be completely different from another.</p>
+<p>Native XML databases are primarily used to store data that contains:</p>
+<ul>
+<li>Narrative content.</li>
+<li>Which are less predictable than those normally stored in relational databases.</li>
+<li>That should generate outputs for web environments.</li>
+<li>They have to be transported from one system to another.</li>
+</ul>
 <h2 id="07-xml-storage-01-intro-xquery">XQuery<a class="headerlink" href="#07-xml-storage-01-intro-xquery" title="Permanent link">&para;</a></h2>
-<p>One of the most basic requirements for searching for data is to have a query language that is powerful enough to meet the needs of those who need to use it. That's why the XQuery language was developed.</p>
+<p>One of the most basic requirements for searching for data is to have a query language that is powerful enough to meet the needs of those who need to use it. That’s why the XQuery language was developed.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>XQuery is a query language designed to become the standard way to retrieve data from XML document collections.</p>
 </div>
-<p>It's a functional language, so instead of telling you the steps to do a task, all you have to do is evaluate the expressions against the XML file and generate a result. Unlike common programming languages, XQuery specifies what e isl what you want and not the way you have to do it to get it.</p>
-<div class="admonition info">
-<p class="admonition-title">XQuery 3.0</p>
-<p>A new version of XQuery is already under development that will increase the power of queries by adding new clauses such as group by or dynamic error checking. You can check it out at www.w3.org/TR/xquery-30</p>
-</div>
+<p>It’s a functional language, so instead of telling you the steps to do a task, all you have to do is evaluate the expressions against the XML file and generate a result. Unlike common programming languages, XQuery specifies what e isl what you want and not the way you have to do it to get it.</p>
+<p>!!! info “XQuery 3.0”
+    A new version of XQuery is already under development that will increase the power of queries by adding new clauses such as group by or dynamic error checking. You can check it out at www.w3.org/TR/xquery-30</p>
 <p>Among the most interesting features of XQuery, it allows:</p>
 <ul>
 <li>Select the information according to criteria. Sort, group, add data.</li>
@@ -4375,22 +4463,18 @@ And that <code>&lt;student&gt;</code> will have two data fields which are <code>
 <li>Search for information in a document or group of documents.</li>
 <li>Join data from multiple documents.</li>
 <li>Transform and restructure XML.</li>
-<li>Don't be limited to search, as it can perform numerical and character manipulation operations.</li>
+<li>Don’t be limited to search, as it can perform numerical and character manipulation operations.</li>
 <li>You can work with namespaces and documents defined by DTD or XSD.</li>
 </ul>
 <p>An important part of XQuery 1.0 is the XPath 2.0 language, which is the part that allows you to make selections of information and browse the document.</p>
-<h2 id="07-xml-storage-01-intro-native-xml-databases">Native XML databases<a class="headerlink" href="#07-xml-storage-01-intro-native-xml-databases" title="Permanent link">&para;</a></h2>
-<p>If we do not go into technical details, the definition of a database is a place where data can be stored. In the case of an XML database, it is simply a matter of storing the XML files at a specific point in the operating system.</p>
-<p>The increase in XML documents to be stored has made it difficult to have some way to automate the process, even though the storage can be done manually. To facilitate this automation, native XML (NXD) databases have appeared.</p>
-<p>When we talk about native XML databases, we are referring to databases designed to contain and store data in XML format.</p>
-<p>Unlike relational databases, which have been in operation for many years and have an important theoretical basis behind them, NXDs do not have definite standards for doing things, and the theory behind them is not very well defined. As a result, each database often does things in a way that may be completely different from another.</p>
-<p>Native XML databases are primarily used to store data that contains:</p>
+<h2 id="07-xml-storage-01-intro-programming-tools-to-work-with-xml">Programming tools to work with XML<a class="headerlink" href="#07-xml-storage-01-intro-programming-tools-to-work-with-xml" title="Permanent link">&para;</a></h2>
+<h2 id="07-xml-storage-01-intro-credits-bibliography-and-webography">Credits, bibliography and webography<a class="headerlink" href="#07-xml-storage-01-intro-credits-bibliography-and-webography" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Narrative content.</li>
-<li>Which are less predictable than those normally stored in relational databases.</li>
-<li>That should generate outputs for web environments.</li>
-<li>They have to be transported from one system to another.</li>
-</ul></section><h1 class='nav-section-title-end'>Ended: 7. XML Storage</h1>
+<li>Xavier Sala. <em>Bases de dades natives XML</em> available at <a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u3/a3/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u3/a3/continguts.html</a>.</li>
+<li>Wikipedia contributors. (2022, April 19). NoSQL. In Wikipedia, The Free Encyclopedia. Retrieved 10:40, April 20, 2022, from <a href="https://en.wikipedia.org/w/index.php?title=NoSQL&amp;oldid=1083635963">https://en.wikipedia.org/w/index.php?title=NoSQL&amp;oldid=1083635963</a> </li>
+<li>José Luis Comesaña, 2010. <em>Almacenamiento de la información</em>. Lenguajes de marca del curso de “Desarrollo de Aplicaciones Web”.</li>
+<li>Wikipedia contributors. (2021, December 16). Document-oriented database. In Wikipedia, The Free Encyclopedia. Retrieved 19:48, April 25, 2022, from <a href="https://en.wikipedia.org/w/index.php?title=Document-oriented_database&amp;oldid=1060575076">https://en.wikipedia.org/w/index.php?title=Document-oriented_database&amp;oldid=1060575076</a> </li>
+</ul></section><h1 class='nav-section-title-end'>Ended: 7. Information Storage</h1>
                         <h1 class='nav-section-title' id='section-8-an-introduction-to-javascript'>
                             8. An introduction to javascript <a class='headerlink' href='#section-8-an-introduction-to-javascript' title='Permanent link'>↵</a>
                         </h1>
