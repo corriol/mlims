@@ -4485,6 +4485,11 @@ And that <code>&lt;student&gt;</code> will have two data fields which are <code>
 <li>You can work with namespaces and documents defined by DTD or XSD.</li>
 </ul>
 <p>An important part of XQuery 1.0 is the XPath 2.0 language, which is the part that allows you to make selections of information and browse the document.</p>
+<h3 id="07-xml-storage-01-intro-xquery-resources">XQuery resources<a class="headerlink" href="#07-xml-storage-01-intro-xquery-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.w3schools.com/xml/xquery_intro.asp">XQuery tutorial</a> at W3Schools.</li>
+<li><a href="https://www.tutorialspoint.com/xquery/index.htm">XQuery tutorial</a> at Tuorialspoint</li>
+</ul>
 <h2 id="07-xml-storage-01-intro-programming-tools-to-work-with-xml">Programming tools to work with XML<a class="headerlink" href="#07-xml-storage-01-intro-programming-tools-to-work-with-xml" title="Permanent link">&para;</a></h2>
 <h2 id="07-xml-storage-01-intro-credits-bibliography-and-webography">Credits, bibliography and webography<a class="headerlink" href="#07-xml-storage-01-intro-credits-bibliography-and-webography" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4498,6 +4503,26 @@ And that <code>&lt;student&gt;</code> will have two data fields which are <code>
 <p>BaseX for dummies</p>
 <p>Do the exercises contained in the step by step guide of <a href="../07-xml-storage/assets/BaseX_for_dummies.pdf">BaseX for dummies</a> document. You can download the XML document <a href="../07-xml-storage/assets/factbook.xml">factbook.xml</a>.</p>
 <p>Create an screenshot for each exercise and save them in the <code>unit 7</code> directory of your repository.</p>
+</li>
+<li>
+<p>Given the following XML document <a href="../07-xml-storage/assets/bookstore.xml">bookstore.xml</a>:</p>
+<ol>
+<li>Create new XML database called <code>bookstore</code>.</li>
+<li>Do the following tasks (save every query in a document, <code>702-##.xq</code>):<ol>
+<li>List the title of all the books.</li>
+<li>List year and title of all books, ordered by year.</li>
+<li>List the books whose price is 19.95</li>
+<li>List books published before the year 2000</li>
+<li>List year and title of books published in English after 2004.</li>
+<li>Show the names of the authors that appear in the document, without repetitions, in alphabetical order.</li>
+<li>For each book, list its title and authors grouped in a <result> element.</li>
+<li>For each book, get its title and the number of authors, grouped in a <book> element.</li>
+<li>Generate an HTML document with a header that says "Book List" followed by a 3-column table showing the title, author and price of each book. The table should have borders and the first row should be specially formatted with column names. The title and editorial columns will be aligned to the left, and the price to the right.</li>
+<li>Generate an HTML document with the information of the books on web category. The total price value is a field calculated using a query with a let clause.</li>
+</ol>
+</li>
+<li>Add another document, following the same structure, with two books to the database.</li>
+</ol>
 </li>
 </ol></section><h1 class='nav-section-title-end'>Ended: 7. Information Storage</h1>
                         <h1 class='nav-section-title' id='section-8-an-introduction-to-javascript'>
