@@ -671,6 +671,11 @@ And that <code>&lt;student&gt;</code> will have two data fields which are <code>
 <li><a href="https://www.tutorialspoint.com/xquery/index.htm">XQuery tutorial</a> at Tuorialspoint</li>
 </ul>
 <h2 id="programming-tools-to-work-with-xml">Programming tools to work with XML<a class="headerlink" href="#programming-tools-to-work-with-xml" title="Permanent link">¶</a></h2>
+<p>An alternative to treating XML documents is to do it through a programming 
+language instead of using databases. The most commons API are:</p>
+<p>− <code>SAX</code> (Simple API for XML). It was the first collection of functions used to deal with JAVA XML files. It is event based and therefore differs a bit in treating the document by means of a tree. This API as it reads the document sends notifications in real time. It is recommended for large documents, as its way of processing data is not stored in memory.</p>
+<p>− <code>DOM</code> (Document Object Model). In this case, the API is used to access and process XML documents as tree structures. It is independent of the language used in this case, Java, since what it does are object models that can be treated in any markup-oriented language. The DOM object hierarchy stores the relationships between the different nodes of an XML document to facilitate its treatment. The difference with the previous API is that in this case all the data is stored in the memory of the document. This feature makes the memory space have a considerable capacity and the most recommended files for this way of working are the smaller documents.</p>
+<p>All of the above are included in the Java, PHP and other lenguages.</p>
 <h2 id="credits-bibliography-and-webography">Credits, bibliography and webography<a class="headerlink" href="#credits-bibliography-and-webography" title="Permanent link">¶</a></h2>
 <ul>
 <li>Xavier Sala. <em>Bases de dades natives XML</em> available at <a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u3/a3/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m04_/web/fp_asx_m04_htmlindex/WebContent/u3/a3/continguts.html</a>.</li>
