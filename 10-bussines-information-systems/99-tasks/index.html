@@ -267,11 +267,33 @@
         Introduction
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-ERP-installation-management/">
+        ERP management
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Tasks
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Tasks
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erp-odoo">
+    ERP: ODOO
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -285,6 +307,17 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erp-odoo">
+    ERP: ODOO
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -311,13 +344,143 @@
   Find Vertical ERP for three or four productive sectors and define its characteristics.</p>
 </li>
 </ol>
+<h2 id="erp-odoo">ERP: ODOO<a class="headerlink" href="#erp-odoo" title="Permanent link">¶</a></h2>
+<p>Configure the following requirements in Odoo</p>
+<ol start="1011">
+<li>
+<p>Setup of a company</p>
+<p>The company we want to do the configuration is:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>#####, SL
+<span class="linenos" data-linenos="2 "></span>C/ Duanes, 17
+<span class="linenos" data-linenos="3 "></span>03780 Pego (Alacant)
+</code></pre></div>
+<p>Set up the company, the name must include your last name, and set it up until it is ready to enter the data.</p>
+<p>Add a personalized logo for your company.</p>
+</li>
+<li>
+<p>Workers </p>
+<p>The company has four employees who must be able to access the application:</p>
+<ul>
+<li>Manel Soler (Administrator)</li>
+<li>Pere Soler (sales)</li>
+<li>Miquel Puig (sales)</li>
+<li>Maria Ferrer (purchases)</li>
+</ul>
+<p>Create users by assigning the right permits.</p>
+</li>
+<li>
+<p>Items</p>
+<p>Your company is only for the sale of coloured balls and dice. Your catalogue is as follows:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Category</th>
+<th align="right">Price</th>
+<th align="right">Current stock</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red ball</td>
+<td>Balls</td>
+<td align="right">€ 1.00</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td>Blue ball</td>
+<td>Balls</td>
+<td align="right">€ 1.50</td>
+<td align="right">56</td>
+</tr>
+<tr>
+<td>Green ball</td>
+<td>Balls</td>
+<td align="right">€ 1.25</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>Yellow ball</td>
+<td>Balls</td>
+<td align="right">€ 1.50</td>
+<td align="right">68</td>
+</tr>
+<tr>
+<td>White ball</td>
+<td>Balls</td>
+<td align="right">€ 0.50</td>
+<td align="right">1,030</td>
+</tr>
+<tr>
+<td>White dice</td>
+<td>Dice</td>
+<td align="right">€ 0.25</td>
+<td align="right">540</td>
+</tr>
+<tr>
+<td>Red dice</td>
+<td>Dice</td>
+<td align="right">€ 0.50</td>
+<td align="right">400</td>
+</tr>
+<tr>
+<td>Blue dice</td>
+<td>Dice</td>
+<td align="right">€ 0.50</td>
+<td align="right">350</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>  Prepare the system so that the items have stock and can be sold.
+</code></pre></div>
+<ol start="1014">
+<li>
+<p>Customers</p>
+<p>Add the following customers to the system (you can invent those data that are not specified).</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Discount received</th>
+<th>Payment deadline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Balls, SL</td>
+<td>5%</td>
+<td>2 days</td>
+</tr>
+<tr>
+<td>Dices INC</td>
+<td>0%</td>
+<td>2 days</td>
+</tr>
+</tbody>
+</table>
+<ol start="1015">
+<li>
+<p>Invoicing</p>
+<p>Create a few sales (the ones you want) and generate some bill.</p>
+<p>The following information will need to be delivered:</p>
+<ul>
+<li>Screenshot of the page with the permission of the 4 workers.</li>
+<li>Screenshot of the items you have created with the stock.</li>
+<li>3 invoices in pdf format of at least the two clients created.</li>
+</ul>
+</li>
+</ol>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Introduction" class="md-footer__link md-footer__link--prev" href="../01-intro/" rel="prev">
+<a aria-label="Previous: ERP management" class="md-footer__link md-footer__link--prev" href="../02-ERP-installation-management/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -326,7 +489,7 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Introduction
+              ERP management
             </div>
 </div>
 </a>

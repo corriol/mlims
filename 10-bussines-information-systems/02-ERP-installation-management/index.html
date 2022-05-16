@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Instal·lació d'un ERP: ODOO - MLIMS</title>
+<title>ERP management - MLIMS</title>
 <link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <meta content="#8bc34b" name="theme-color"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#installacio-dun-erp-odoo">
+<a class="md-skip" href="#installation-of-an-erp-odoo">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Instal·lació d'un ERP: ODOO
+              ERP management
             
           </span>
 </div>
@@ -250,8 +250,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
 <label class="md-nav__link" for="__nav_9">
         10. Bussines information systems
         <span class="md-nav__icon md-icon"></span>
@@ -267,10 +267,33 @@
         Introduction
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02-ERP-installation-management/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          ERP management
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         ERP management
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#odoo">
+    Odoo
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation">
+    Installation
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../99-tasks/">
@@ -296,52 +319,13 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#odoo">
-    ODOO
+    Odoo
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installacio">
-    Instal·lació
+<a class="md-nav__link" href="#installation">
+    Installation
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#activitats">
-    Activitats
-  </a>
-<nav aria-label="Activitats" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-configuracio-duna-empresa">
-    1. Configuració d’una empresa
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-treballadors-a-lempresa">
-    2. Treballadors a l'empresa
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-articles">
-    3. Articles
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-clients">
-    4. Clients
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-facturacio">
-    5. Facturació
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#entregable">
-    Entregable
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -350,162 +334,65 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="installacio-dun-erp-odoo">Instal·lació d'un ERP: ODOO<a class="headerlink" href="#installacio-dun-erp-odoo" title="Permanent link">¶</a></h1>
-<h2 id="odoo">ODOO<a class="headerlink" href="#odoo" title="Permanent link">¶</a></h2>
-<p>Odoo és un conjunt d'eines de programari de gestió empresarial que inclouen, 
-per exemple, CRM, comerç electrònic, facturació, comptabilitat, fabricació, 
-magatzem, gestió de projectes i gestió d'inventaris. La versió de la comunitat 
-és un programari lliure, amb llicència GNU LGPLv3. La versió <em>Enterprise</em> 
-té funcions i serveis addicionals propietaris. El codi font per al marc i 
-els mòduls ERP bàsics està organitzat per Odoo S.A., amb seu a Bèlgica.</p>
-<p>Oddo s'instal·la com un servei web i està escrit en Python, Javascript i XML.</p>
-<h2 id="installacio">Instal·lació<a class="headerlink" href="#installacio" title="Permanent link">¶</a></h2>
-<p>El següent fitxer defineix els serveis necessaris per posar en marxa Oddo 12 en un
-contenidor Docker.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>version: '2'
-<span class="linenos" data-linenos=" 2 "></span>services:
-<span class="linenos" data-linenos=" 3 "></span>  web:
-<span class="linenos" data-linenos=" 4 "></span>    image: odoo:12.0
-<span class="linenos" data-linenos=" 5 "></span>    depends_on:
-<span class="linenos" data-linenos=" 6 "></span>      - db
-<span class="linenos" data-linenos=" 7 "></span>    ports:
-<span class="linenos" data-linenos=" 8 "></span>      - "8069:8069"
-<span class="linenos" data-linenos=" 9 "></span>    volumes:
-<span class="linenos" data-linenos="10 "></span>      - odoo-web-data:/var/lib/odoo
-<span class="linenos" data-linenos="11 "></span>      - ./config:/etc/odoo
-<span class="linenos" data-linenos="12 "></span>      - ./addons:/mnt/extra-addons
-<span class="linenos" data-linenos="13 "></span>    environment:
-<span class="linenos" data-linenos="14 "></span>        LANG: 'ca_ES.UTF-8'
-<span class="linenos" data-linenos="15 "></span>  db:
-<span class="linenos" data-linenos="16 "></span>    image: postgres:10
-<span class="linenos" data-linenos="17 "></span>    environment:
-<span class="linenos" data-linenos="18 "></span>      - POSTGRES_DB=postgres
-<span class="linenos" data-linenos="19 "></span>      - POSTGRES_PASSWORD=odoo
-<span class="linenos" data-linenos="20 "></span>      - POSTGRES_USER=odoo
-<span class="linenos" data-linenos="21 "></span>      - PGDATA=/var/lib/postgresql/data/pgdata
-<span class="linenos" data-linenos="22 "></span>    volumes:
-<span class="linenos" data-linenos="23 "></span>      - odoo-db-data:/var/lib/postgresql/data/pgdata
-<span class="linenos" data-linenos="24 "></span>volumes:
-<span class="linenos" data-linenos="25 "></span>  odoo-web-data:
-<span class="linenos" data-linenos="26 "></span>  odoo-db-data:
+<h1 id="installation-of-an-erp-odoo">Installation of an ERP: Odoo<a class="headerlink" href="#installation-of-an-erp-odoo" title="Permanent link">¶</a></h1>
+<h2 id="odoo">Odoo<a class="headerlink" href="#odoo" title="Permanent link">¶</a></h2>
+<p>Odoo is a set of business management software tools that include, for example, CRM, eCommerce, invoicing, accounting, manufacture,
+warehouse, project management and inventory management. The community version is a free software, with GNU LGPLV3 licence. The <em>enterprise</em> version has additional owners' functions and services. The source code for the framework and The basic ERP modules are organized by Odoo S.A., based in Belgium.</p>
+<p>Oddo is installed as a web service and is written in Python, JavaScript and XML.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<p>The following file defines the services needed to launch Oddo 14 in Docker containers.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">version</span><span class="p">:</span> <span class="s">'3.1'</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">services</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nt">web</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">odoo:14.0</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">depends_on</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 6 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mydb</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">ports</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="p p-Indicator">-</span> <span class="s">"8069:8069"</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nt">environment</span><span class="p">:</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">HOST=mydb</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">USER=odoo</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PASSWORD=myodoo</span>
+<span class="linenos" data-linenos="13 "></span>  <span class="nt">mydb</span><span class="p">:</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres:13</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nt">environment</span><span class="p">:</span>
+<span class="linenos" data-linenos="16 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB=postgres</span>
+<span class="linenos" data-linenos="17 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD=myodoo</span>
+<span class="linenos" data-linenos="18 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER=odoo</span>
 </code></pre></div>
-<h2 id="activitats">Activitats<a class="headerlink" href="#activitats" title="Permanent link">¶</a></h2>
-<h3 id="1-configuracio-duna-empresa">1. Configuració d’una empresa<a class="headerlink" href="#1-configuracio-duna-empresa" title="Permanent link">¶</a></h3>
-<p>L’empresa de la qual volem fer la configuració és:</p>
-<p>Germans Soler, SL
-C/ Duanes, 17
-03780 Pego (Alacant)</p>
-<p>Creeu l’empresa i configureu-la fins que estiga preparada per entrar-hi les dades.
-Afegiu un logotip personalitzat per a l'empresa.</p>
-<h3 id="2-treballadors-a-lempresa">2. Treballadors a l'empresa<a class="headerlink" href="#2-treballadors-a-lempresa" title="Permanent link">¶</a></h3>
-<p>L’empresa té quatre treballadors que han de poder accedir l'aplicació:</p>
-<ul>
-<li>Manel Soler (administrador)</li>
-<li>Pere Soler (vendes)</li>
-<li>Miquel Puig (vendes)</li>
-<li>Maria Ferrer (compres)</li>
-</ul>
-<p>Creeu-los els usuaris assignant-los els permisos adequats. </p>
-<h3 id="3-articles">3. Articles<a class="headerlink" href="#3-articles" title="Permanent link">¶</a></h3>
-<p>Germans Soler, SL, només es dedica a la venda de pilotes i daus de colors. El seu catàleg és el següent:</p>
-<table>
-<thead>
-<tr>
-<th>Article</th>
-<th>Categoria</th>
-<th align="right">Preu</th>
-<th align="right">Estoc actual</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Pilota vermella</td>
-<td>Pilotes</td>
-<td align="right">1,00 €</td>
-<td align="right">100</td>
-</tr>
-<tr>
-<td>Pilota blava</td>
-<td>Pilotes</td>
-<td align="right">1,50 €</td>
-<td align="right">56</td>
-</tr>
-<tr>
-<td>Pilota verda</td>
-<td>Pilotes</td>
-<td align="right">1,25 €</td>
-<td align="right">12</td>
-</tr>
-<tr>
-<td>Pilota groga</td>
-<td>Pilotes</td>
-<td align="right">1,50 €</td>
-<td align="right">68</td>
-</tr>
-<tr>
-<td>Pilota blanca</td>
-<td>Pilotes</td>
-<td align="right">0,50 €</td>
-<td align="right">1.030</td>
-</tr>
-<tr>
-<td>Dau blanc</td>
-<td>Daus</td>
-<td align="right">0,25 €</td>
-<td align="right">540</td>
-</tr>
-<tr>
-<td>Dau vermell</td>
-<td>Daus</td>
-<td align="right">0,50 €</td>
-<td align="right">400</td>
-</tr>
-<tr>
-<td>Dau blau</td>
-<td>Daus</td>
-<td align="right">0,50 €</td>
-<td align="right">350</td>
-</tr>
-</tbody>
-</table>
-<p>Prepareu el sistema perquè els articles tinguen estoc i es puguen vendre. </p>
-<h3 id="4-clients">4. Clients<a class="headerlink" href="#4-clients" title="Permanent link">¶</a></h3>
-<p>Afegiu al sistema els clients següents (podeu inventar-vos aquelles dades que no queden especificades).</p>
-<table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Descompte rebut</th>
-<th>Termini de Pagament</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Pilotes, SL</td>
-<td>5%</td>
-<td>2 dies</td>
-</tr>
-<tr>
-<td>Daus INC</td>
-<td>0%</td>
-<td>2 dies</td>
-</tr>
-</tbody>
-</table>
-<h3 id="5-facturacio">5. Facturació<a class="headerlink" href="#5-facturacio" title="Permanent link">¶</a></h3>
-<p>Creeu unes quantes vendes (les que vulgueu) i genereu alguna factura. </p>
-<h3 id="entregable">Entregable<a class="headerlink" href="#entregable" title="Permanent link">¶</a></h3>
-<p>Caldrà entregar la següent informació:</p>
-<ol>
-<li>Captura de la fitxa amb els permisos dels 4 treballadors.</li>
-<li>Captura dels productes on es vegen els que heu creat amb l'estoc.</li>
-<li>3 Factures en format PDF d'almenys els dos clients creats.</li>
-</ol>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Introduction" class="md-footer__link md-footer__link--prev" href="../01-intro/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+</div>
+</a>
+<a aria-label="Next: Tasks" class="md-footer__link md-footer__link--next" href="../99-tasks/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Tasks
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">
