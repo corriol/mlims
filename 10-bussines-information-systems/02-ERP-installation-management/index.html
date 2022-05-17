@@ -341,7 +341,7 @@ warehouse, project management and inventory management. The community version is
 <p>Oddo is installed as a web service and is written in Python, JavaScript and XML.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>The following file defines the services needed to launch Oddo 14 in Docker containers.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">version</span><span class="p">:</span> <span class="s">'3.1'</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">version</span><span class="p">:</span> <span class="s">'3.1'</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="nt">services</span><span class="p">:</span>
 <span class="linenos" data-linenos=" 3 "></span>  <span class="nt">web</span><span class="p">:</span>
 <span class="linenos" data-linenos=" 4 "></span>    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">odoo:14.0</span>
@@ -359,6 +359,9 @@ warehouse, project management and inventory management. The community version is
 <span class="linenos" data-linenos="16 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB=postgres</span>
 <span class="linenos" data-linenos="17 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD=myodoo</span>
 <span class="linenos" data-linenos="18 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER=odoo</span>
+</code></pre></div>
+Copy the previous code into a file called <code>Docker-Compose.yaml</code> and executes the following command to start the services:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="go">docker-compose up -d</span>
 </code></pre></div>
 </article>
 </div>

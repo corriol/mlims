@@ -4942,7 +4942,7 @@ warehouse, project management and inventory management. The community version is
 <p>Oddo is installed as a web service and is written in Python, JavaScript and XML.</p>
 <h2 id="10-bussines-information-systems-02-erp-installation-management-installation">Installation<a class="headerlink" href="#10-bussines-information-systems-02-erp-installation-management-installation" title="Permanent link">&para;</a></h2>
 <p>The following file defines the services needed to launch Oddo 14 in Docker containers.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3.1&#39;</span>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3.1&#39;</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="nt">services</span><span class="p">:</span>
 <span class="linenos" data-linenos=" 3 "></span>  <span class="nt">web</span><span class="p">:</span>
 <span class="linenos" data-linenos=" 4 "></span>    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">odoo:14.0</span>
@@ -4960,6 +4960,9 @@ warehouse, project management and inventory management. The community version is
 <span class="linenos" data-linenos="16 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB=postgres</span>
 <span class="linenos" data-linenos="17 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD=myodoo</span>
 <span class="linenos" data-linenos="18 "></span>      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER=odoo</span>
+</code></pre></div>
+Copy the previous code into a file called <code>Docker-Compose.yaml</code> and executes the following command to start the services:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="go">docker-compose up -d</span>
 </code></pre></div></section><section class="print-page" id="10-bussines-information-systems-99-tasks"><h1 id="10-bussines-information-systems-99-tasks-tasks">Tasks<a class="headerlink" href="#10-bussines-information-systems-99-tasks-tasks" title="Permanent link">&para;</a></h1>
 <ol start="1001">
 <li>
